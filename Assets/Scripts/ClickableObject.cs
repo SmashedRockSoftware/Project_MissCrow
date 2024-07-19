@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnMouseOverExample : MonoBehaviour
+public class ClickableObject : MonoBehaviour
 {
     public Renderer rend;
+    public Transform locationOverride;
 
     void Start() {
         rend = GetComponent<Renderer>();
+        //locationOverride = GetComponentInChildren<Transform>();
     }
 
     // The mesh goes red when the mouse is over it...
