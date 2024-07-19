@@ -45,8 +45,9 @@ public class AnimateOnMouse : MonoBehaviour
     // The mesh goes red when the mouse is over it...
     void OnMouseEnter() {
         glisteningTransform.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
+
         floatingObject.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
-        floatingObject.DORotate(localRotation * Random.Range(-1, 1), duration).SetEase(ease);
+        floatingObject.DORotate(localRotation, duration).SetEase(ease);
 
         glisteningBackground.material.DOFade(maxAlpha, duration);
     }
@@ -61,6 +62,7 @@ public class AnimateOnMouse : MonoBehaviour
     // ...and the mesh finally turns white when the mouse moves away.
     void OnMouseExit() {
         glisteningTransform.DOMove(glisteningStartPos, duration).SetEase(ease);
+
         floatingObject.DOMove(startingPosition, duration).SetEase(ease);
         floatingObject.DORotate(startingRotation, duration).SetEase(ease);
         floatingObject.DOScale(startingScale, duration).SetEase(ease);
