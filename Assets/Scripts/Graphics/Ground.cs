@@ -7,10 +7,28 @@ public class Ground : MonoBehaviour
     [SerializeField] float speed = 1f;
     [SerializeField] Vector3 startPoint = new Vector3(-7.5f, -0.5469999f, -0.1525998f);
     [SerializeField] float restartIfValue = 10f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    float origSpeed;
+
+    private void Start() {
+        origSpeed = speed;
+    }
+
+    public void UnPauseGame() {
+        speed = origSpeed;
+    }
+
+    public void PauseGame() {
+        speed = 0f;
+    }
+
+    private void OnEnable() {
+        GameManager.OnPaused += PauseGame;
+        GameManager.OnUnPaused += UnPauseGame;
+    }
+
+    private void OnDisable() {
+        GameManager.OnPaused -= PauseGame;
+        GameManager.OnUnPaused -= UnPauseGame;
     }
 
     // Update is called once per frame

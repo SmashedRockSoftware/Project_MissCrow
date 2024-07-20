@@ -23,6 +23,8 @@ public class PickupableObject : MonoBehaviour
     }
 
     void OnMouseOver() {
+        if (GameManager.Instance.currentGameState != GameState.InGame) return;
+
         if (Input.GetMouseButtonDown(0)) {
             if (pickUpWhenNear) return;
 

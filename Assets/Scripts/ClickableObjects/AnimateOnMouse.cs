@@ -44,6 +44,8 @@ public class AnimateOnMouse : MonoBehaviour
 
 
     void OnMouseEnter() {
+        if (GameManager.Instance.currentGameState != GameState.InGame) return;
+
         glisteningTransform.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
 
         floatingObject.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
@@ -54,13 +56,17 @@ public class AnimateOnMouse : MonoBehaviour
 
 
     void OnMouseOver() {
-        if(Input.GetMouseButtonDown(0)) {
+        if (GameManager.Instance.currentGameState != GameState.InGame) return;
+
+        if (Input.GetMouseButtonDown(0)) {
             floatingObject.DOPunchScale(punchScale, punchDuration);
         }
     }
 
 
     void OnMouseExit() {
+        if (GameManager.Instance.currentGameState != GameState.InGame) return;
+
         glisteningTransform.DOMove(glisteningStartPos, duration).SetEase(ease);
 
         floatingObject.DOMove(startingPosition, duration).SetEase(ease);

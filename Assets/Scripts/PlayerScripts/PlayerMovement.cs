@@ -15,12 +15,34 @@ public class PlayerMovement : MonoBehaviour
     const float MAXRAYLENGTH = 100f;
 
     [SerializeField] bool requireClickableForMovement = true;
+    float origSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
         m_Camera = Camera.main;
         m_agent = gameObject.GetComponent<NavMeshAgent>();
+        origSpeed = m_agent.speed;
     }
+
+    public void UnPauseGame() {
+        m_agent.speed = origSpeed;
+    }
+
+    public void PauseGame() {
+        m_agent.speed = 0;
+    }
+
+    private void OnEnable() {
+        GameManager.OnPaused += PauseGame;
+        GameManager.OnUnPaused += UnPauseGame;
+    }
+
+    private void OnDisable() {
+        GameManager.OnPaused -= PauseGame;
+        GameManager.OnUnPaused -= UnPauseGame;
+    }
+
     private void CastRay() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
