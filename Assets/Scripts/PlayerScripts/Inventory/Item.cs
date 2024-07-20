@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
     public Sprite sprite;
 
+    public List<Combination> combinations = new List<Combination>();
+
     // Start is called before the first frame update
     void Start()
     {
