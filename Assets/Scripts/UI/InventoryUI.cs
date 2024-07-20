@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour
     List<GameObject> inventory = new List<GameObject>();
     [SerializeField] GameObject itemPrefab;
     [SerializeField] Transform itemParent;
+    [SerializeField] float minDistance = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,31 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void DropItem(GameObject objectDropped) {
+        float distance = Mathf.Infinity;
+        GameObject closestItem = null;
+
+        foreach(var item in inventory) {
+            if(item ==  objectDropped) { continue; }
+
+            var dist = Vector3.Distance(item.transform.position, objectDropped.transform.position);
+
+            if (dist < distance)
+            {
+                distance = dist;
+
+                if(dist < minDistance)
+                    closestItem = item;
+            }
+        }
+
+        if (closestItem != null)
+            CombineItems(objectDropped, closestItem);
+    }
+
+    public void CombineItems(GameObject objectDropped, GameObject closestItem) {
+        Debug.Log("Combine these items " + objectDropped.name + " " + closestItem.name);
+    }
 
 
     // Update is called once per frame

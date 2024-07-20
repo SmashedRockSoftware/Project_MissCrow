@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler  {
     [SerializeField] Canvas canvas;
     Vector3 startingPosition;
+    InventoryUI inventoryUI;
 
     public void OnBeginDrag(PointerEventData eventData) {
         startingPosition = transform.position;
@@ -21,6 +22,9 @@ public class DragAndDropUI : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        if(inventoryUI == null) inventoryUI = FindObjectOfType<InventoryUI>();
+        inventoryUI.DropItem(gameObject);
+
         transform.position = startingPosition;
     }
 
