@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool requireClickableForMovement = true;
     float origSpeed;
 
+    public static event System.Action OnGoto;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +73,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void GoTo(Vector3 _location) {
         m_PlayerLocationTarget.position = _location;
-        m_agent.SetDestination(m_PlayerLocationTarget.position);    
+        m_agent.SetDestination(m_PlayerLocationTarget.position);
+        OnGoto.Invoke();
     }
 
     // Update is called once per frame
