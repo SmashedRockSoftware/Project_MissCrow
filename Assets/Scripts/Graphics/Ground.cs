@@ -36,8 +36,15 @@ public class Ground : MonoBehaviour
     {
         transform.Translate(transform.right * speed * Time.deltaTime);
 
-        if(transform.position.x > restartIfValue) {
-            transform.position = startPoint;
+        Debug.Log("transform.localPosition.z " + transform.localPosition.z + " restartIfValue " + restartIfValue);
+
+        if(transform.localPosition.z > restartIfValue) {
+            transform.localPosition = startPoint;
         }
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.DrawLine(startPoint, startPoint + (Vector3.up * 1000f));
+        //Gizmos.DrawLine(new Vector3, startPoint + (Vector3.up * 1000f));
     }
 }
