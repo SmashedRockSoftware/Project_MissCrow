@@ -27,8 +27,9 @@ public class InventoryUI : MonoBehaviour
         foreach (var item in Inventory.Instance.items) {
             var itemUi = Instantiate(itemPrefab) as GameObject;
             itemUi.transform.SetParent(itemParent, false);
-            itemUi.GetComponent<Image>().sprite = item.sprite;
-            //TODO add a ref to the item
+            itemUi.GetComponent<Image>().sprite = item.itemSprite;
+            itemUi.name = item.name;
+            itemUi.GetComponent<Item>().itemData = item;
             inventory.Add(itemUi);
         }
     }
@@ -47,18 +48,13 @@ public class InventoryUI : MonoBehaviour
                 distance = dist;
 
                 if(dist < minDistance)
-                    closestItem = item;
+                    closestItem = item.gameObject;
             }
         }
 
         if (closestItem != null)
-            CombineItems(objectDropped, closestItem);
+            Inventory.Instance.CombineItems(objectDropped, closestItem);
     }
-
-    public void CombineItems(GameObject objectDropped, GameObject closestItem) {
-        Debug.Log("Combine these items " + objectDropped.name + " " + closestItem.name);
-    }
-
 
     // Update is called once per frame
     void Update()

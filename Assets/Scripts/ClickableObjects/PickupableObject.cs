@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickupableObject : MonoBehaviour
 {
     [SerializeField] Item item;
+    [SerializeField] ItemScriptableObject item_so;
 
     bool pickUpWhenNear;
     [SerializeField] float pickupRadius = 1.25f;
@@ -30,7 +31,7 @@ public class PickupableObject : MonoBehaviour
 
             player = FindObjectOfType<PlayerMovement>().transform;
 
-            Inventory.Instance.AddItem(item);
+            Inventory.Instance.AddItem(item_so);
 
             pickUpWhenNear = true;
             Invoke(nameof(PickInWorldItem), forcePickupAfter);
