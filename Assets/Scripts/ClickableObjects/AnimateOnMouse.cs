@@ -29,11 +29,13 @@ public class AnimateOnMouse : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        startingPosition = floatingObject.position;
-        startingRotation = floatingObject.rotation.eulerAngles;
-        startingScale = floatingObject.localScale;
+        if (floatingObject != null) {
+            startingPosition = floatingObject.position;
+            startingRotation = floatingObject.rotation.eulerAngles;
+            startingScale = floatingObject.localScale;
 
-        glisteningStartPos = glisteningTransform.position;
+            glisteningStartPos = glisteningTransform.position;
+        }
     }
 
     // Update is called once per frame
@@ -46,10 +48,13 @@ public class AnimateOnMouse : MonoBehaviour
     void OnMouseEnter() {
         if (GameManager.Instance.currentGameState != GameState.InGame) return;
 
-        glisteningTransform.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
 
-        floatingObject.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
-        floatingObject.DORotate(localRotation, duration).SetEase(ease);
+
+        if (floatingObject != null) {  //only move if we have a floating object
+            glisteningTransform.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
+            floatingObject.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
+            floatingObject.DORotate(localRotation, duration).SetEase(ease);
+        }
 
         glisteningBackground.material.DOFade(maxAlpha, duration);
     }
@@ -58,7 +63,7 @@ public class AnimateOnMouse : MonoBehaviour
     void OnMouseOver() {
         if (GameManager.Instance.currentGameState != GameState.InGame) return;
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && floatingObject != null) {
             floatingObject.DOPunchScale(punchScale, punchDuration);
         }
     }
@@ -67,11 +72,12 @@ public class AnimateOnMouse : MonoBehaviour
     void OnMouseExit() {
         if (GameManager.Instance.currentGameState != GameState.InGame) return;
 
-        glisteningTransform.DOMove(glisteningStartPos, duration).SetEase(ease);
-
-        floatingObject.DOMove(startingPosition, duration).SetEase(ease);
-        floatingObject.DORotate(startingRotation, duration).SetEase(ease);
-        floatingObject.DOScale(startingScale, duration).SetEase(ease);
+        if (floatingObject != null) {
+            glisteningTransform.DOMove(glisteningStartPos, duration).SetEase(ease);
+            floatingObject.DOMove(startingPosition, duration).SetEase(ease);
+            floatingObject.DORotate(startingRotation, duration).SetEase(ease);
+            floatingObject.DOScale(startingScale, duration).SetEase(ease);
+        }
 
         glisteningBackground.material.DOFade(0f, duration);
     }

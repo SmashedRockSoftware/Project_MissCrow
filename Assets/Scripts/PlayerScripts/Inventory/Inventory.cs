@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void CombineItems(GameObject objectDropped, GameObject closestItem) {
-        Debug.Log("Combine these items " + objectDropped.name + " to " + closestItem.name);
+        Debug.Log("Combine [" + objectDropped.name + " with " + closestItem.name + "]");
 
         List<ItemScriptableObject> currentObjects = new List<ItemScriptableObject>();
         currentObjects.Add(objectDropped.GetComponent<Item>().itemData);
@@ -54,7 +54,8 @@ public class Inventory : MonoBehaviour
                 items.Remove(item);
             }
 
-            items.Add(Combo.combinedItem);
+            if(Combo.combinedItem != null) 
+                items.Add(Combo.combinedItem);
         }
     }
 }
