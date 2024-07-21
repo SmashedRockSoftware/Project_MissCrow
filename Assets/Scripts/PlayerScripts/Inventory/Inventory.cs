@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public ObservableCollection<ItemScriptableObject> items = new ObservableCollection<ItemScriptableObject>();
     public static Inventory Instance;
     [SerializeField] List<Combination> combinations = new List<Combination>();
+    [SerializeField] List<EventOnCombo> comboEvents = new List<EventOnCombo>();
 
     // Start is called before the first frame update
     void Awake()
@@ -49,13 +50,24 @@ public class Inventory : MonoBehaviour
 
         var Combo = CheckCombinations(currentObjects);
 
-        if(Combo != null) {
+        if (Combo != null) {
+            FireRelatedEvents(Combo);
+
             foreach (var item in Combo.requiredItems) {
                 items.Remove(item);
             }
 
-            if(Combo.combinedItem != null) 
+            if (Combo.combinedItem != null)
                 items.Add(Combo.combinedItem);
+        }
+    }
+
+    private void FireRelatedEvents(Combination Combo) {
+        foreach (var comboEvent in comboEvents) {
+            if (comboEvent.requiredCombo == Combo) {
+                comboEvent.OnCombinationFireEvent();
+                break;
+            }
         }
     }
 }
