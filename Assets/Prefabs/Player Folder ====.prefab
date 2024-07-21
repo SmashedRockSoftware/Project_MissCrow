@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 8297499111713731011}
   - component: {fileID: 5008625176371619941}
   - component: {fileID: 5290276913417333864}
+  - component: {fileID: 1340009278031189848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -160,6 +161,28 @@ MonoBehaviour:
   m_layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  requireClickableForMovement: 1
+--- !u!114 &1340009278031189848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081667737448980051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e2f589c11ede34dac76d3daed0876d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quips:
+  - All this running around ... is too much.
+  - In a minute.
+  - Not as young as I once was.
+  - Why did they put it so far away.
+  - Oh.. yes..
+  - Be right there.
+  - These old bones weren't built for speed.
+  quipFrequency: 50
 --- !u!1001 &8926111713039120443
 PrefabInstance:
   m_ObjectHideFlags: 0

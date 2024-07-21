@@ -5,9 +5,13 @@ using DG.Tweening;
 
 public class AnimateOnMouse : MonoBehaviour
 {
+    [Tooltip("Leave the floating object blank, so it wont float, should be the visual model, floats on mouse over")]
     [SerializeField] Transform floatingObject;
+
+    [Tooltip("This is a quad that fades in with a circle texture, need the transform to make it float")]
     [SerializeField] Transform glisteningTransform;
 
+    [Tooltip("The time for the float, glisten to occur")]
     [SerializeField] float duration = 1f;
     [SerializeField] Ease ease = Ease.InBounce;
 
@@ -23,7 +27,7 @@ public class AnimateOnMouse : MonoBehaviour
     Vector3 startingScale;
 
     [Space]
-
+    [Tooltip("This is a quad that fades in with a circle texture, need the rend to make fade in and out")]
     [SerializeField] Renderer glisteningBackground;
     [SerializeField] float maxAlpha = 1f;
 
