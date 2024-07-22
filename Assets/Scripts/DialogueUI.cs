@@ -22,6 +22,8 @@ public class DialogueUI : MonoBehaviour
 
     private void Start() {
         cam = Camera.main;
+        dialoguePoint = GameObject.Find("DialogPoint").transform;  //TODO this is likely to break
+        if (dialoguePoint == null) Debug.LogError("DialogueUI::Start() Could not find the DialogPoint gameobject by name.  Create an empty object and place it above the player or else dialogue wont work");
     }
 
     public bool IsGrannyPanelInUse() {
