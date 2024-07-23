@@ -16,6 +16,8 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] Vector3 grannyPanelOffset = Vector3.up;
     Camera cam;
 
+    float lifeTime = 0;
+
     private void Awake() {
         Instance = this;
     }
@@ -34,7 +36,7 @@ public class DialogueUI : MonoBehaviour
         grannyPanel.SetActive(true); 
         grannyText.text = text;
 
-        Invoke(nameof(HideGrannyText), grannyDisplayTime);
+        lifeTime = grannyDisplayTime;
     }
 
     public void HideGrannyText() {
@@ -44,5 +46,9 @@ public class DialogueUI : MonoBehaviour
     private void Update() {
         if(grannyPanel.activeInHierarchy) 
             grannyPanel.transform.position = cam.WorldToScreenPoint(dialoguePoint.position);
+
+        if(lifeTime > 0) lifeTime -= Time.deltaTime;
+
+        if(lifeTime <= 0) HideGrannyText();
     }
 }

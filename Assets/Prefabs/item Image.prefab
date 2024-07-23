@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSize: {x: 1.2, y: 1.2, z: 1.2}
+  pickedUpSize: {x: 0.5, y: 0.5, z: 0.5}
   duration: 0.3
   ease: 22
   punchScaleSize: {x: 0.5, y: 0.5, z: 0.5}
@@ -121,5 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b09c5c31a8284479af7594ace1c180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  combinations: []
+  itemData: {fileID: 0}

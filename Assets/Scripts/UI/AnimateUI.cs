@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class AnimateUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler {
     [SerializeField] Vector3 scaleSize = Vector3.one;
+    [SerializeField] Vector3 pickedUpSize = Vector3.one;
     [SerializeField] float duration = 1f;
     [SerializeField] Ease ease = Ease.InOutCirc;
     Vector3 originalScale;
@@ -31,6 +32,7 @@ public class AnimateUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerDown(PointerEventData eventData) {
         transform.DOPunchScale(punchScaleSize, punchDuration);
+        transform.DOScale(pickedUpSize, duration).SetEase(ease);
     }
 
 

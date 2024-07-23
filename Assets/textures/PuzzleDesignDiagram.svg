@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="PuzzleDesignDiagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.7010662"
+     inkscape:cx="356.8961"
+     inkscape:cy="183.63119"
+     inkscape:window-width="3840"
+     inkscape:window-height="2137"
+     inkscape:window-x="1432"
+     inkscape:window-y="173"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="229.53899"
+       y="47.758918"
+       width="48.869591"
+       height="24.064571"
+       id="rect500" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333333px;fill:#000000;stroke-width:3"
+       x="128.81102"
+       y="40.455471"
+       id="text236"><tspan
+         sodipodi:role="line"
+         id="tspan234"
+         style="stroke-width:3;font-size:4.23333333px;fill:#000000"
+         x="128.81102"
+         y="40.455471" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="183.17612"
+       y="8.8159618"
+       id="text404"><tspan
+         sodipodi:role="line"
+         id="tspan402"
+         style="stroke-width:3"
+         x="183.17612"
+         y="8.8159618">Exit car 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="151.83047"
+       y="8.5220976"
+       id="text408"><tspan
+         sodipodi:role="line"
+         style="stroke-width:3"
+         x="151.83047"
+         y="8.5220976"
+         id="tspan410">wrap worm</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3"
+         x="151.83047"
+         y="13.81376"
+         id="tspan414" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="82.772102"
+       y="20.9624"
+       id="text426"><tspan
+         sodipodi:role="line"
+         id="tspan424"
+         style="stroke-width:3"
+         x="82.772102"
+         y="20.9624">get potion</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="80.127289"
+       y="9.109828"
+       id="text480"><tspan
+         sodipodi:role="line"
+         id="tspan478"
+         style="stroke-width:3"
+         x="80.127289"
+         y="9.109828">get bandages</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="114.01979"
+       y="8.718008"
+       id="text484"><tspan
+         sodipodi:role="line"
+         id="tspan482"
+         style="stroke-width:3"
+         x="114.01979"
+         y="8.718008">clean bandages</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="113.72591"
+       y="17.925793"
+       id="text488"><tspan
+         sodipodi:role="line"
+         id="tspan486"
+         style="stroke-width:3"
+         x="113.72591"
+         y="17.925793">combine potion</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3"
+         x="113.72591"
+         y="23.217455"
+         id="tspan490">&amp; bandages</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:#000000;stroke-width:3"
+       x="41.924805"
+       y="9.109828"
+       id="text494"><tspan
+         sodipodi:role="line"
+         style="stroke-width:3"
+         x="41.924805"
+         y="9.109828"
+         id="tspan496">worm wants</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:3"
+         x="41.924805"
+         y="14.40149"
+         id="tspan506">wrapping</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text498"
+       style="fill:#000000;stroke-width:11.33858268;font-size:16px;white-space:pre;shape-inside:url(#rect500)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 68.274736,8.6200527 78.657981,8.5220976"
+       id="path1258" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 105.39974,20.080805 6.7589,-0.09796"
+       id="path1260" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 108.92612,8.1302769 4.11412,-0.097955"
+       id="path1262" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 129.39875,14.399406 -0.098,-4.7018467"
+       id="path1264" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 146.63885,7.542546 4.31003,-0.097955"
+       id="path1266" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="m 175.63357,7.4445909 6.75891,-0.097955"
+       id="path1268" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;fill:none;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="82.576187"
+       y="29.288589"
+       id="text1272"><tspan
+         sodipodi:role="line"
+         id="tspan1270"
+         style="stroke-width:0;stroke-dasharray:none"
+         x="82.576187"
+         y="29.288589" /></text>
+  </g>
+</svg>

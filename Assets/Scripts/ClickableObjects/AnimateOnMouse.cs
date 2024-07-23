@@ -31,6 +31,8 @@ public class AnimateOnMouse : MonoBehaviour
     [SerializeField] Renderer glisteningBackground;
     [SerializeField] float maxAlpha = 1f;
 
+    KeyCode revelInteractableKey = KeyCode.H;
+
     // Start is called before the first frame update
     void Start() {
         if (floatingObject != null) {
@@ -45,7 +47,13 @@ public class AnimateOnMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(revelInteractableKey)) {
+            glisteningBackground.material.DOFade(maxAlpha, duration);
+        }
+
+        if (Input.GetKeyUp(revelInteractableKey)) {
+            glisteningBackground.material.DOFade(0f, duration);
+        }
     }
 
 

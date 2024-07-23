@@ -15,4 +15,7 @@ MonoBehaviour:
   requiredItems:
   - {fileID: 11400000, guid: 9b500379fa6be514a8c3fc8f2ed7d1f1, type: 2}
   - {fileID: 11400000, guid: e678f354f2787f84098e03fd588b62bf, type: 2}
+  cleanUpAfterCombo:
+  - {fileID: 11400000, guid: 9b500379fa6be514a8c3fc8f2ed7d1f1, type: 2}
+  - {fileID: 11400000, guid: e678f354f2787f84098e03fd588b62bf, type: 2}
   combinedItem: {fileID: 11400000, guid: fc721200d2533c044873cdd39faf4068, type: 2}

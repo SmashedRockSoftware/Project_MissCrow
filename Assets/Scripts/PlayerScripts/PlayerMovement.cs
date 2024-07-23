@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
+using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Transform m_PlayerLocationTarget;
-    NavMeshAgent m_agent;
+    NavMeshAgent agent;
 
     [SerializeField] LayerMask m_layerMask = ~0;
     Camera m_Camera;
@@ -19,20 +20,27 @@ public class PlayerMovement : MonoBehaviour
 
     public static event System.Action OnGoto;
 
+    bool stillMoving;
+
+    const float minDistanceBeforeCheckingIfMoving = 10f;
+    [SerializeField] float rotateSpeed = 15f;
+    [SerializeField] float duration = 1f;
+    Tween rotateToFace;
+
     // Start is called before the first frame update
     void Start()
     {
         m_Camera = Camera.main;
-        m_agent = gameObject.GetComponent<NavMeshAgent>();
-        origSpeed = m_agent.speed;
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        origSpeed = agent.speed;
     }
 
     public void UnPauseGame() {
-        m_agent.speed = origSpeed;
+        agent.speed = origSpeed;
     }
 
     public void PauseGame() {
-        m_agent.speed = 0;
+        agent.speed = 0;
     }
 
     private void OnEnable() {
@@ -73,8 +81,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void GoTo(Vector3 _location) {
         m_PlayerLocationTarget.position = _location;
-        m_agent.SetDestination(m_PlayerLocationTarget.position);
+        agent.SetDestination(m_PlayerLocationTarget.position);
         OnGoto.Invoke();
+
+        stillMoving = true;
+        rotateToFace = null;
     }
 
     // Update is called once per frame
@@ -82,6 +93,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             CastRay();
+        }
+
+        if (agent.velocity.magnitude <= 0 && Vector3.Distance(agent.transform.position, agent.destination) < minDistanceBeforeCheckingIfMoving) {
+            stillMoving = false;
+        }
+
+        if (!stillMoving && rotateToFace == null) {
+            rotateToFace = transform.DOLookAt(new Vector3(m_PlayerLocationTarget.position.x, transform.position.y, m_PlayerLocationTarget.position.z), duration);
         }
     }
 }
