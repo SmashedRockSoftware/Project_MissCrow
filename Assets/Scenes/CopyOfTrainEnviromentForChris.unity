@@ -22392,6 +22392,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Folder ====
       objectReference: {fileID: 0}
+    - target: {fileID: 4323958755424930927, guid: 23213e3680d7cf944a3a1a40c9e086bc,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4323958755424930927, guid: 23213e3680d7cf944a3a1a40c9e086bc,
+        type: 3}
+      propertyPath: currentCursorState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7876671616234082591, guid: 23213e3680d7cf944a3a1a40c9e086bc,
         type: 3}
       propertyPath: m_RootOrder
@@ -27984,13 +27994,14 @@ GameObject:
   - component: {fileID: 2074589662}
   - component: {fileID: 2074589661}
   - component: {fileID: 2074589660}
+  - component: {fileID: 2074589663}
   m_Layer: 0
   m_Name: CursorCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2074589659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28073,6 +28084,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2074589663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074589658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee6c969683a7eb4683ca75e8ed7132d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTextures:
+  - {fileID: 2800000, guid: 04c99d04f29b8814a80c273990fcff96, type: 3}
+  - {fileID: 2800000, guid: d29a465eb0a174844aa46f2b46d42219, type: 3}
+  - {fileID: 2800000, guid: 5fa8d25d9454ea24e91b4f11c74bb3ee, type: 3}
+  - {fileID: 2800000, guid: 2ae8c3463f3842642b2cba37aef5ffeb, type: 3}
+  cursorIndex: 0
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!43 &2077433769
 Mesh:
   m_ObjectHideFlags: 0

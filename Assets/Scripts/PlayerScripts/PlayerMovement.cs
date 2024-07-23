@@ -96,16 +96,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             CastRay();
         }
-
-        //if (stillMoving && agent.velocity.magnitude <= 0 && Vector3.Distance(agent.transform.position, agent.destination) < minDistanceBeforeCheckingIfMoving) {
-        //    stillMoving = false;
-        //}
-
-        //if (!stillMoving && rotateToFace == null) {
-        //    Vector3 comboPosition = m_PlayerLocationTarget.position + m_PlayerLocationTarget.forward;  //Get the facing on the location override
-        //    Vector3 position = new Vector3(comboPosition.x, transform.position.y, comboPosition.z);  //Cancel vertical rotation
-        //    rotateToFace = transform.DOLookAt(position, duration);
-        //}
     }
 
     [SerializeField] float length = 1f;

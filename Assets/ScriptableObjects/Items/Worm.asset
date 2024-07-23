@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: Worm
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 0f3d00ddd667c944b9ab098b39eb4497, type: 3}
+  lookable: 1
+  takeable: 0
+  talkable: 1
+  inspectDialogue: A worm in a jar, poor things shaking
