@@ -31,7 +31,7 @@ Transform:
   - {fileID: 8541732315109040448}
   - {fileID: 5964005012686255724}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3265876808410643757
 GameObject:
@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3265876808410643757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.796, y: 8.938, z: -3.698}
+  m_LocalPosition: {x: -11.12, y: 3.799, z: 4.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2806126466820574701}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 6359909411866544616}
   - component: {fileID: 6251240790413467699}
   - component: {fileID: 1257737663020174642}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crowsizereference_visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,9 +216,10 @@ GameObject:
   - component: {fileID: 1340009278031189848}
   - component: {fileID: 107421444691893586}
   - component: {fileID: 239011715830244090}
-  m_Layer: 0
+  - component: {fileID: 9034474722170552533}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +282,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.9
   m_Height: 3
@@ -300,12 +301,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerLocationTarget: {fileID: 5964005012686255724}
-  m_layerMask:
+  layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   requireClickableForMovement: 0
   rotateSpeed: 15
   duration: 1
+  length: 1
 --- !u!114 &1340009278031189848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e11901e430ee6c428839e29296538e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToStep: 0.25
+  distanceToStep: 0.8
   footstepSource: {fileID: 239011715830244090}
   minPitch: 0.8
   maxPitch: 1.2
@@ -443,6 +445,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &9034474722170552533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8081667737448980051}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8111392574712780235
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3113367023977719193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DialogPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -537,6 +566,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6617727074767417042, guid: 058253bf967e60d41b994f7c739bb8c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 058253bf967e60d41b994f7c739bb8c1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -547,6 +581,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 58c53a2c1d14c714aa320217a17f0f68, type: 2}
+    - target: {fileID: -516098083770646512, guid: 058253bf967e60d41b994f7c739bb8c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 058253bf967e60d41b994f7c739bb8c1,
         type: 3}
       propertyPath: m_Name
@@ -554,8 +593,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 058253bf967e60d41b994f7c739bb8c1,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 058253bf967e60d41b994f7c739bb8c1,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820542772251406005, guid: 058253bf967e60d41b994f7c739bb8c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 058253bf967e60d41b994f7c739bb8c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

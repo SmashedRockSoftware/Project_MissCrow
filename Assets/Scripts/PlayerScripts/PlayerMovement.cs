@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UIElements;
 using DG.Tweening;
+using static UnityEditor.FilePathAttribute;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Transform m_PlayerLocationTarget;
     NavMeshAgent agent;
 
-    [SerializeField] LayerMask m_layerMask = ~0;
+    [SerializeField] LayerMask layerMask = ~0;
     Camera m_Camera;
 
     const float MAXRAYLENGTH = 100f;
@@ -56,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     private void CastRay() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, m_layerMask)) {
+        if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
             if (hit.collider.TryGetComponent<ClickableObject>(out ClickableObject clickableObject)) {
                 GoToOverideOrHit(hit, clickableObject);
             }
@@ -67,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         void GoToOverideOrHit(RaycastHit hit, ClickableObject clickableObject) {
             if (clickableObject.locationOverride != null) {
-                GoTo(clickableObject.locationOverride.position);
+                GoTo(clickableObject.locationOverride);
             }
             else {
                 GoTo(hit.point);
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void GoTo(Transform _transform) {
+        m_PlayerLocationTarget.rotation = _transform.rotation;
         GoTo(_transform.position);
     }
 
@@ -84,8 +86,8 @@ public class PlayerMovement : MonoBehaviour
         agent.SetDestination(m_PlayerLocationTarget.position);
         OnGoto.Invoke();
 
-        stillMoving = true;
-        rotateToFace = null;
+        //stillMoving = true;
+        //rotateToFace = null;
     }
 
     // Update is called once per frame
@@ -95,12 +97,22 @@ public class PlayerMovement : MonoBehaviour
             CastRay();
         }
 
-        if (agent.velocity.magnitude <= 0 && Vector3.Distance(agent.transform.position, agent.destination) < minDistanceBeforeCheckingIfMoving) {
-            stillMoving = false;
-        }
+        //if (stillMoving && agent.velocity.magnitude <= 0 && Vector3.Distance(agent.transform.position, agent.destination) < minDistanceBeforeCheckingIfMoving) {
+        //    stillMoving = false;
+        //}
 
-        if (!stillMoving && rotateToFace == null) {
-            rotateToFace = transform.DOLookAt(new Vector3(m_PlayerLocationTarget.position.x, transform.position.y, m_PlayerLocationTarget.position.z), duration);
-        }
+        //if (!stillMoving && rotateToFace == null) {
+        //    Vector3 comboPosition = m_PlayerLocationTarget.position + m_PlayerLocationTarget.forward;  //Get the facing on the location override
+        //    Vector3 position = new Vector3(comboPosition.x, transform.position.y, comboPosition.z);  //Cancel vertical rotation
+        //    rotateToFace = transform.DOLookAt(position, duration);
+        //}
+    }
+
+    [SerializeField] float length = 1f;
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawLine(m_PlayerLocationTarget.position, m_PlayerLocationTarget.position + (m_PlayerLocationTarget.forward * length));
     }
 }
