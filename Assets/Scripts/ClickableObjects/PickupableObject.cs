@@ -4,41 +4,45 @@ using UnityEngine;
 
 public class PickupableObject : MonoBehaviour
 {
-    [SerializeField] Item item;
-    [SerializeField] ItemScriptableObject item_so;
+    //[SerializeField] Item item;
+    //[SerializeField] ItemScriptableObject item_so;
 
-    bool pickUpWhenNear;
-    [SerializeField] float pickupRadius = 1.25f;
-    float forcePickupAfter = 5f;
-    Transform player;
+    //bool pickUpWhenNear;
+    //[SerializeField] float pickupRadius = 1.25f;
+    //float forcePickupAfter = 5f;
+    //Transform player;
 
 
-    private void Update() {
-        if(pickUpWhenNear && Vector3.Distance(player.position, transform.position) < pickupRadius) {
-            PickInWorldItem();
-        }
-    }
+    //private void Update() {
+    //    if(pickUpWhenNear && Vector3.Distance(player.position, transform.position) < pickupRadius) {
+    //        PickInWorldItem();
+    //    }
+    //}
 
-    private void PickInWorldItem() {
-        gameObject.SetActive(false);  //TODO this should happen when granny gets there or another things is pickedup
-    }
+    //private void PickInWorldItem() {
+    //    gameObject.SetActive(false);  //TODO this should happen when granny gets there or another things is pickedup
+    //}
 
-    void OnMouseOver() {
-        if (GameManager.Instance.currentGameState != GameState.InGame) return;
+    //void OnMouseOver() {
+    //    if (GameManager.Instance.currentGameState != GameState.InGame) return;
 
-        if (Input.GetMouseButtonDown(0)) {
-            if (pickUpWhenNear) return;
+    //    if (Input.GetMouseButtonDown(0)) {
 
-            player = FindObjectOfType<PlayerMovement>().transform;
+    //    }
+    //}
 
-            Inventory.Instance.AddItem(item_so);
+    //public void PickUp() {
+    //    if (pickUpWhenNear) return;
 
-            pickUpWhenNear = true;
-            Invoke(nameof(PickInWorldItem), forcePickupAfter);
-        }
-    }
+    //    player = FindObjectOfType<PlayerMovement>().transform;
 
-    private void OnDrawGizmosSelected() {
-        Gizmos.DrawWireSphere(transform.position, pickupRadius);
-    }
+    //    Inventory.Instance.AddItem(item_so);
+
+    //    pickUpWhenNear = true;
+    //    Invoke(nameof(PickInWorldItem), forcePickupAfter);
+    //}
+
+    //private void OnDrawGizmosSelected() {
+    //    Gizmos.DrawWireSphere(transform.position, pickupRadius);
+    //}
 }

@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public bool inTalkingMode;
+
     private void Awake() {
         Instance = this;
     }
@@ -60,6 +62,14 @@ public class GameManager : MonoBehaviour
         //if (scrollInput != 0f) {
         //    SwitchCursor(scrollInput);
         //}
+    }
+
+    public void EnterTalkingMode() {
+        inTalkingMode = true;
+    }
+
+    public void ExitTalkingMode() {
+        inTalkingMode = false;
     }
 
     //void SwitchCursor(float scrollDirection) {

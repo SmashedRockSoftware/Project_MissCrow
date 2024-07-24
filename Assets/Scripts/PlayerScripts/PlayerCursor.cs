@@ -13,12 +13,6 @@ public class PlayerCursor : MonoBehaviour
     public CursorState currentCursorState = CursorState.Look;
     public static event System.Action OnCursorChange;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
     public static PlayerCursor Instance;
 
     private void Awake() {
@@ -26,22 +20,68 @@ public class PlayerCursor : MonoBehaviour
     }
 
     void Update() {
+        if(GameManager.Instance.currentGameState != GameState.InGame) {
+            if (currentCursorState != CursorState.None) {
+                currentCursorState = CursorState.None;
+                OnCursorChange.Invoke();
+            }
+            return;
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ChooseCursorBasedOnItem(ray);
+
+        MouseInputOverItem();
+
+        HandleScrollingInputs();
+    }
+
+    private void ChooseCursorBasedOnItem(Ray ray) {
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
             if (hit.collider.TryGetComponent<Item>(out Item item)) {
                 HandleItems(item);
-            } else {
+            }
+            else {
                 currentItem = null;
                 SwitchCursor(0.1f);
             }
-
-        } else {
+        }
+        else {
             currentItem = null;
             SwitchCursor(0.1f);
         }
+    }
 
+    private void MouseInputOverItem() {
+        if(currentItem != null && Input.GetMouseButtonDown(0)) {
+            if(currentCursorState == CursorState.Look) {
+                InpectAnItem(currentItem);
+            }
+            else if (currentCursorState == CursorState.Take) {
+                TakeAnItem(currentItem);
+            }
+            else if (currentCursorState == CursorState.Talk) {
+                TalkToAnItem(currentItem);
+            }
+        }
+    } 
 
+    private void InpectAnItem(Item _item) {
+        DialogueUI.Instance.DisplayGrannyText(_item.itemData.inspectDialogue);
+        PlayerMovement.instance.LookAt(_item.transform);
+    }
+
+    private void TakeAnItem(Item _item) {
+        PlayerMovement.instance.GoTo(_item);
+        _item.PickUp();
+    }
+
+    private void TalkToAnItem(Item _item) {
+        _item.TalkToObject();
+    }
+
+    private void HandleScrollingInputs() {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
         if (scrollInput != 0f) {
             SwitchCursor(scrollInput);
@@ -58,7 +98,6 @@ public class PlayerCursor : MonoBehaviour
     }
 
     void SwitchCursor(float scrollDirection) {
-
         int totalCursors = Enum.GetValues(typeof(CursorState)).Length;
 
         if(currentItem == null) {

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UIElements;
 using DG.Tweening;
 using static UnityEditor.FilePathAttribute;
+using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float rotateSpeed = 15f;
     [SerializeField] float duration = 1f;
     Tween rotateToFace;
+
+    public static PlayerMovement instance;
+
+    private void Awake() {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -55,25 +62,37 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void CastRay() {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
-            if (hit.collider.TryGetComponent<ClickableObject>(out ClickableObject clickableObject)) {
-                GoToOverideOrHit(hit, clickableObject);
-            }
-            else if(!requireClickableForMovement) {
-                GoTo(hit.point);
-            }
-        }
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit hit;
+        //if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
+        //    if (hit.collider.TryGetComponent<ClickableObject>(out ClickableObject clickableObject)) {
+        //        GoToOverideOrHit(hit, clickableObject);
+        //    }
+        //    else if(!requireClickableForMovement) {
+        //        GoTo(hit.point);
+        //    }
+        //}
 
-        void GoToOverideOrHit(RaycastHit hit, ClickableObject clickableObject) {
-            if (clickableObject.locationOverride != null) {
-                GoTo(clickableObject.locationOverride);
-            }
-            else {
-                GoTo(hit.point);
-            }
-        }
+        //void GoToOverideOrHit(RaycastHit hit, ClickableObject clickableObject) {
+        //    if (clickableObject.locationOverride != null) {
+        //        GoTo(clickableObject.locationOverride);
+        //    }
+        //    else {
+        //        GoTo(hit.point);
+        //    }
+        //}
+    }
+
+    public void LookAt(Transform target) {
+        agent.transform.DOLookAt(new Vector3(target.position.x, transform.position.y, target.position.z), 1f);
+    }
+
+    public void GoTo(Item _item) {
+        Transform itemTransform = _item.transform;
+        if(_item.locationOverride != null)
+            itemTransform = _item.locationOverride.transform;
+
+        GoTo(itemTransform);
     }
 
     public void GoTo(Transform _transform) {
