@@ -20,6 +20,9 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] Camera dialogueCamera;
     [SerializeField] LayerMask layerMask;
+    int originalLayerMask;
+    Item dialogueItem;
+    bool inDialogue;
 
 
     float lifeTime = 0;
@@ -34,10 +37,9 @@ public class DialogueUI : MonoBehaviour
         if (dialoguePoint == null) Debug.LogError("DialogueUI::Start() Could not find the DialogPoint gameobject by name.  Create an empty object and place it above the player or else dialogue wont work");
     }
 
-    void RecursivelyChangeLayer(GameObject obj, LayerMask layerMask) {
-        int dialogueLayer = LayerMask.NameToLayer("DialogueLayer");
+    void RecursivelyChangeLayer(GameObject obj, int layerMask) {
         // Set the layer of the current object
-        obj.layer = dialogueLayer;
+        obj.layer = layerMask;
 
         // Recursively traverse the children
         foreach (Transform child in obj.transform) {
@@ -47,12 +49,24 @@ public class DialogueUI : MonoBehaviour
     }
 
     public void EnterDialogue(Transform camera, Item item) {
-        RecursivelyChangeLayer(item.gameObject, layerMask);
+        dialogueItem = item;
+
+        originalLayerMask = item.gameObject.layer;
+        var mask = LayerMask.NameToLayer("DialogueLayer");
+        RecursivelyChangeLayer(item.gameObject, mask);
 
         dialoguePanel.SetActive(true);
         dialogueCamera.transform.position = camera.transform.position;
         dialogueCamera.transform.rotation = camera.transform.rotation;
         dialogueCamera.gameObject.SetActive(true);
+    }
+
+    public void ExitDialogue() {
+        RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
+
+        dialoguePanel.SetActive(false);
+        dialogueCamera.gameObject.SetActive(false);
+        dialogueItem = null; 
     }
 
     public bool IsGrannyPanelInUse() {
@@ -77,5 +91,9 @@ public class DialogueUI : MonoBehaviour
         if(lifeTime > 0) lifeTime -= Time.deltaTime;
 
         if(lifeTime <= 0) HideGrannyText();
+
+        if(dialoguePanel.activeInHierarchy && Input.GetKeyUp(KeyCode.Tab)) {
+            ExitDialogue();
+        }
     }
 }
