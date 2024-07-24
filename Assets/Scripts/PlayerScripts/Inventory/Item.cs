@@ -20,9 +20,11 @@ public class Item : MonoBehaviour
     [SerializeField] UnityEvent onPickup;
 
     [Header("Talking item settings")]
+    [SerializeField] DialogueScript dialogueScript;
     [SerializeField] Camera itemCamera;
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] UnityEvent onTalk;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +66,7 @@ public class Item : MonoBehaviour
 
     #region Talking
     public void TalkToObject() {
-        GameManager.Instance.EnterTalkingMode(virtualCamera.transform, this);
+        GameManager.Instance.EnterTalkingMode(virtualCamera.transform, this, dialogueScript.scriptList);
         onInspect.Invoke();
     }
     #endregion

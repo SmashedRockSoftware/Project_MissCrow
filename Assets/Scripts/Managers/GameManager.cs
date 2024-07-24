@@ -64,13 +64,15 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    public void EnterTalkingMode(Transform camera, Item item) {
+    public void EnterTalkingMode(Transform camera, Item item, List<string> dialogueScript) {
         inTalkingMode = true;
-        DialogueUI.Instance.EnterDialogue(camera, item);
+        currentGameState = GameState.InDialogue;
+        DialogueUI.Instance.EnterDialogue(camera, item, dialogueScript);
     }
 
     public void ExitTalkingMode() {
         inTalkingMode = false;
+        currentGameState = GameState.InGame;
     }
 
     //void SwitchCursor(float scrollDirection) {
@@ -93,6 +95,7 @@ public class GameManager : MonoBehaviour
 
 public enum GameState {
     InGame,
+    InDialogue,
     Paused
 }
 

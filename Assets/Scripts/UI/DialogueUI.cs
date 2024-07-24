@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -24,6 +25,13 @@ public class DialogueUI : MonoBehaviour
     Item dialogueItem;
     bool inDialogue;
 
+    [Header("Long Form Dialogue")]
+    [SerializeField] List<string> dialogueText = new List<string>();
+    [SerializeField] GameObject dialogueTextPanel;
+    [SerializeField] TextMeshProUGUI dialogueButton;
+    [SerializeField] TextMeshProUGUI textMeshDialogue;
+    [SerializeField] TextMeshProUGUI nameTextMeshDialogue;
+    int dialogueIndex;
 
     float lifeTime = 0;
 
@@ -48,7 +56,7 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(Transform camera, Item item) {
+    public void EnterDialogue(Transform camera, Item item, List<string> dialogueScript) {
         dialogueItem = item;
 
         originalLayerMask = item.gameObject.layer;
@@ -59,14 +67,55 @@ public class DialogueUI : MonoBehaviour
         dialogueCamera.transform.position = camera.transform.position;
         dialogueCamera.transform.rotation = camera.transform.rotation;
         dialogueCamera.gameObject.SetActive(true);
+
+        dialogueTextPanel.SetActive(true);
+        dialogueText = dialogueScript;
+
+        dialogueIndex = 0;
+        DisplayNextDialogue();
     }
 
     public void ExitDialogue() {
         RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
 
+        GameManager.Instance.ExitTalkingMode();
+
         dialoguePanel.SetActive(false);
         dialogueCamera.gameObject.SetActive(false);
-        dialogueItem = null; 
+        dialogueItem = null;
+
+        dialogueTextPanel.SetActive(false);
+        dialogueText = null;
+
+        nameTextMeshDialogue.text = "";
+        textMeshDialogue.text = "";
+    }
+
+    public void DisplayNextDialogue() {
+        if (dialogueIndex == dialogueText.Count) {
+            ExitDialogue();
+            return;
+        }
+
+        string nextLine = dialogueText[dialogueIndex];
+        string[] splitLine = nextLine.Split('|');
+
+        if(splitLine.Length > 1) {
+            nameTextMeshDialogue.text = splitLine[0];
+            textMeshDialogue.text = splitLine[1];
+        }
+        else {
+            nameTextMeshDialogue.text = "";
+            textMeshDialogue.text = splitLine[0];
+        }
+           
+        if (dialogueIndex >= dialogueText.Count - 1) {
+            dialogueButton.text = "End";
+        } else {
+            dialogueButton.text = "Next";
+        }
+
+        dialogueIndex++;
     }
 
     public bool IsGrannyPanelInUse() {
@@ -94,6 +143,10 @@ public class DialogueUI : MonoBehaviour
 
         if(dialoguePanel.activeInHierarchy && Input.GetKeyUp(KeyCode.Tab)) {
             ExitDialogue();
+        }
+
+        if(dialogueItem != null && Input.GetKeyDown(KeyCode.Space)) {
+            DisplayNextDialogue();
         }
     }
 }
