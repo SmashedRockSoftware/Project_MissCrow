@@ -62,25 +62,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void CastRay() {
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hit;
-        //if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
-        //    if (hit.collider.TryGetComponent<ClickableObject>(out ClickableObject clickableObject)) {
-        //        GoToOverideOrHit(hit, clickableObject);
-        //    }
-        //    else if(!requireClickableForMovement) {
-        //        GoTo(hit.point);
-        //    }
-        //}
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
 
-        //void GoToOverideOrHit(RaycastHit hit, ClickableObject clickableObject) {
-        //    if (clickableObject.locationOverride != null) {
-        //        GoTo(clickableObject.locationOverride);
-        //    }
-        //    else {
-        //        GoTo(hit.point);
-        //    }
-        //}
+        if (Physics.Raycast(ray, out hit, MAXRAYLENGTH, layerMask)) {
+            if (!requireClickableForMovement) {
+                GoTo(hit.point);
+            }
+        }
+
+        void GoToOverideOrHit(RaycastHit hit, ClickableObject clickableObject) {
+            if (clickableObject.locationOverride != null) {
+                GoTo(clickableObject.locationOverride);
+            }
+            else {
+                GoTo(hit.point);
+            }
+        }
     }
 
     public void LookAt(Transform target) {
@@ -112,9 +110,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            CastRay();
-        }
+        //if (Input.GetMouseButtonDown(0)) {
+        //    CastRay();
+        //}
     }
 
     [SerializeField] float length = 1f;

@@ -16,6 +16,12 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] Vector3 grannyPanelOffset = Vector3.up;
     Camera cam;
 
+    [Header("Zoom in settings")]
+    [SerializeField] GameObject dialoguePanel;
+    [SerializeField] Camera dialogueCamera;
+    [SerializeField] LayerMask layerMask;
+
+
     float lifeTime = 0;
 
     private void Awake() {
@@ -26,6 +32,27 @@ public class DialogueUI : MonoBehaviour
         cam = Camera.main;
         dialoguePoint = GameObject.Find("DialogPoint").transform;  //TODO this is likely to break
         if (dialoguePoint == null) Debug.LogError("DialogueUI::Start() Could not find the DialogPoint gameobject by name.  Create an empty object and place it above the player or else dialogue wont work");
+    }
+
+    void RecursivelyChangeLayer(GameObject obj, LayerMask layerMask) {
+        int dialogueLayer = LayerMask.NameToLayer("DialogueLayer");
+        // Set the layer of the current object
+        obj.layer = dialogueLayer;
+
+        // Recursively traverse the children
+        foreach (Transform child in obj.transform) {
+            // Call this function for each child
+            RecursivelyChangeLayer(child.gameObject, layerMask);
+        }
+    }
+
+    public void EnterDialogue(Transform camera, Item item) {
+        RecursivelyChangeLayer(item.gameObject, layerMask);
+
+        dialoguePanel.SetActive(true);
+        dialogueCamera.transform.position = camera.transform.position;
+        dialogueCamera.transform.rotation = camera.transform.rotation;
+        dialogueCamera.gameObject.SetActive(true);
     }
 
     public bool IsGrannyPanelInUse() {

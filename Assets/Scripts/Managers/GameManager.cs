@@ -64,8 +64,9 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    public void EnterTalkingMode() {
+    public void EnterTalkingMode(Transform camera, Item item) {
         inTalkingMode = true;
+        DialogueUI.Instance.EnterDialogue(camera, item);
     }
 
     public void ExitTalkingMode() {

@@ -45,6 +45,10 @@ public class PlayerCursor : MonoBehaviour
             else {
                 currentItem = null;
                 SwitchCursor(0.1f);
+
+                if (Input.GetMouseButton(0)) {
+                    PlayerMovement.instance.GoTo(hit.point);
+                }
             }
         }
         else {
