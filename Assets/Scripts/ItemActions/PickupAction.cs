@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PickupAction : MonoBehaviour
 {
-    public ItemScriptableObject itemData;
+    [HideInInspector] public ItemScriptableObject itemData;
     [HideInInspector] public Transform locationOverride;
     [SerializeField] float pickupRadius = 1.25f;
     [SerializeField] float forcePickupAfter = 5f;

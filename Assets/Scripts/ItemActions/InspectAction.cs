@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class InspectAction : MonoBehaviour
 {
-    public ItemScriptableObject itemData;
+    [HideInInspector] public ItemScriptableObject itemData;
     //[SerializeField] string grannyInspectDialogue;
     [SerializeField] UnityEvent onInspect;
 
