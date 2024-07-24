@@ -36,8 +36,6 @@ public class Ground : MonoBehaviour
     {
         transform.Translate(transform.right * speed * Time.deltaTime);
 
-        Debug.Log("transform.localPosition.z " + transform.localPosition.z + " restartIfValue " + restartIfValue);
-
         if(transform.localPosition.z > restartIfValue) {
             transform.localPosition = startPoint;
         }

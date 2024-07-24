@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: CleanBandage
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 93a88805f89ab4a4488d5f39e2e8ad00, type: 3}
+  lookable: 1
+  takeable: 0
+  talkable: 0
+  inspectDialogue: These bandages should be clean now

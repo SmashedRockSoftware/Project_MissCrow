@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: DirtyBandage
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 89d4ed3608c24674bb339b6ccfbe85eb, type: 3}
+  lookable: 1
+  takeable: 1
+  talkable: 0
+  inspectDialogue: 'Gross, these cant be used they are filthy '

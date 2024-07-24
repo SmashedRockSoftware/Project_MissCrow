@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: HappyWorm
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 3ca9c977851be1b4889ce7a1e07af2de, type: 3}
-  combinations: []
+  lookable: 1
+  takeable: 0
+  talkable: 0
+  inspectDialogue: The worm is now swaddled, I should let them rest
