@@ -67,6 +67,8 @@ public class PlayerCursor : MonoBehaviour
             }
             else if (currentCursorState == CursorState.Talk) {
                 TalkToAnItem(currentItem);
+            } else if (currentCursorState == CursorState.Use) {
+                //TalkToAnItem(currentItem); TODO add Use Action
             }
         }
     } 
@@ -78,11 +80,15 @@ public class PlayerCursor : MonoBehaviour
 
     private void TakeAnItem(Item _item) {
         PlayerMovement.instance.GoTo(_item);
-        _item.PickUp();
+        //_item.PickUp(); //TODO fix
+        var pickupAction = _item.gameObject.GetComponent<PickupAction>();
+        pickupAction.PickUp();
     }
 
     private void TalkToAnItem(Item _item) {
-        _item.TalkToObject();
+        //_item.TalkToObject(); //TODO fix
+        var talkAction = _item.gameObject.GetComponent<TalkAction>();
+        talkAction.TalkToObject();
     }
 
     private void HandleScrollingInputs() {
@@ -110,9 +116,10 @@ public class PlayerCursor : MonoBehaviour
         }
 
         List<CursorState> cursorStates = new List<CursorState>();
-        if(currentItem.itemData.lookable) { cursorStates.Add(CursorState.Look); }
-        if (currentItem.itemData.talkable) { cursorStates.Add(CursorState.Talk); }
-        if (currentItem.itemData.takeable) { cursorStates.Add(CursorState.Take); }
+        if(currentItem.inspectAction != null) { cursorStates.Add(CursorState.Look); }
+        if (currentItem.talkAction != null) { cursorStates.Add(CursorState.Talk); }
+        if (currentItem.pickupAction != null) { cursorStates.Add(CursorState.Take); }
+        if (currentItem.useAction != null) { cursorStates.Add(CursorState.Use); }
 
         int currentCursorIndex = cursorStates.IndexOf(currentCursorState);
 
@@ -148,5 +155,6 @@ public enum CursorState {
     None,
     Look,
     Talk,
-    Take
+    Take,
+    Use
 }
