@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredItems:
   - {fileID: 11400000, guid: c7136e5a19490894f92ff3d9f2d45d77, type: 2}
-  - {fileID: 11400000, guid: 42fd7452bed353148b1e2f69a500061c, type: 2}
+  - {fileID: 11400000, guid: f60218f9b3c674746965945bcad2347e, type: 2}
   cleanUpAfterCombo:
   - {fileID: 11400000, guid: c7136e5a19490894f92ff3d9f2d45d77, type: 2}
   combinedItem: {fileID: 11400000, guid: 42410009d1aaca24daecb792378e3ce8, type: 2}
