@@ -6,5 +6,5 @@ using UnityEngine;
 public class ItemScriptableObject : ScriptableObject {
     public Sprite itemSprite;
     //public bool lookable = true, takeable, talkable;
-    public string inspectDialogue = "FIX_ME";
+    [TextArea(4, 100)] public string inspectDialogue = "FIX_ME";
 }

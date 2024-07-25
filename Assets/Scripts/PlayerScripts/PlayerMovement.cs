@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UIElements;
-using DG.Tweening;
-using static UnityEditor.FilePathAttribute;
 using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour

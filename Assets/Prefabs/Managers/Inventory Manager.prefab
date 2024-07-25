@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1977702196158985421}
   - component: {fileID: 7389792963893364664}
+  - component: {fileID: 386396262434589911}
+  - component: {fileID: 7693578543897232992}
   m_Layer: 0
   m_Name: Inventory Manager
   m_TagString: Untagged
@@ -47,4 +49,155 @@ MonoBehaviour:
   combinations:
   - {fileID: 11400000, guid: 4434377b9310fe1408d41a7871e8b97c, type: 2}
   - {fileID: 11400000, guid: f277e857c6020be43812cbcdc03f69d8, type: 2}
-  comboEvents: []
+  - {fileID: 11400000, guid: f035557de27ffb04cafae072e4aab626, type: 2}
+  - {fileID: 11400000, guid: 728f6e7ca2dd0624fa70c0358cc118fe, type: 2}
+  comboEvents:
+  - {fileID: 386396262434589911}
+  - {fileID: 7693578543897232992}
+  badCombos:
+  - {fileID: 11400000, guid: 8d716b752fa740448a85e6c865fa3957, type: 2}
+  - {fileID: 11400000, guid: fa5c1b18c7c99b4499fc6543c78d02b9, type: 2}
+  - {fileID: 11400000, guid: 9f696b263694ff449bf0349ea74b9fc3, type: 2}
+  - {fileID: 11400000, guid: 8684f250763392e489e5cbf9ee3ea950, type: 2}
+  - {fileID: 11400000, guid: 15ffe3971ac317c48a234f77a723aaaa, type: 2}
+--- !u!114 &386396262434589911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721373025410772468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba9395f56bd94ca9142933a5020c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredCombo: {fileID: 11400000, guid: 728f6e7ca2dd0624fa70c0358cc118fe, type: 2}
+  OnCombination:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 0
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: DisplayGrannyText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: I hope you can rest now little one
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InspectAction, Assembly-CSharp
+        m_MethodName: SetInspectionText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Finally resting, I shouldn't bother them
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TalkAction, Assembly-CSharp
+        m_MethodName: RemoveTalkingAbility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: I hope you can rest now little one
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InspectAction, Assembly-CSharp
+        m_MethodName: SetInspectionText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A sliding door that takes me to the next car
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &7693578543897232992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2721373025410772468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba9395f56bd94ca9142933a5020c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredCombo: {fileID: 11400000, guid: f035557de27ffb04cafae072e4aab626, type: 2}
+  OnCombination:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: ChangeItemScriptableObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f60218f9b3c674746965945bcad2347e,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ItemScriptableObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1

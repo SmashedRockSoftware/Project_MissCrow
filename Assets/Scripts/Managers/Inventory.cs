@@ -12,6 +12,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] List<Combination> combinations = new List<Combination>();
     [SerializeField] List<EventOnCombo> comboEvents = new List<EventOnCombo>();
 
+    [SerializeField] List<BadCombo> badCombos = new List<BadCombo>();
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,7 +38,20 @@ public class Inventory : MonoBehaviour
             return result;
         }
         else {
-            Debug.Log("Inventory::CheckCombinations()  No match found.");
+            Debug.Log("Inventory::CheckCombinations()  No match found. [" + currentItems[0] + ", " + currentItems[1] + "]");
+            return null;
+        }
+    }
+
+    public BadCombo CheckBadCombinations(List<ItemScriptableObject> currentItems) {
+        BadCombo result = badCombos.FirstOrDefault(c => new HashSet<ItemScriptableObject>(c.requiredItems).SetEquals(new HashSet<ItemScriptableObject>(currentItems)));
+
+        if (result != null) {
+            Debug.Log("Inventory::CheckBadCombinations() Matched combination: " + string.Join(", ", result.requiredItems));
+            return result;
+        }
+        else {
+            Debug.Log("Inventory::CheckBadCombinations()  No match found. [" + currentItems[0] + ", " + currentItems[1] + "]");
             return null;
         }
     }
@@ -59,6 +74,14 @@ public class Inventory : MonoBehaviour
 
             if (Combo.combinedItem != null)
                 items.Add(Combo.combinedItem);
+        } else {
+            var BadCombo = CheckBadCombinations(currentObjects);
+
+            if (BadCombo != null)
+                DialogueUI.Instance.DisplayGrannyText(BadCombo.dialogueForBadCombo);
+            else {
+                DialogueUI.Instance.DisplayGrannyText("That won't work");
+            }
         }
     }
 
