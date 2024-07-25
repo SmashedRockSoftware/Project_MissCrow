@@ -9,6 +9,11 @@ public class FadingCanvas : MonoBehaviour
     [SerializeField] Image fadeImage;
     [SerializeField] private float fadeInDuration = 1f;
     [SerializeField] private float fadeOutDuration = 1f;
+    public static FadingCanvas instance;
+
+    private void Awake() {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
