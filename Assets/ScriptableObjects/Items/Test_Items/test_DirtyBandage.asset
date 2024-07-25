@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
-  m_Name: potion
+  m_Name: test_DirtyBandage
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: ce3e54ee9eebce04e95ad1bd0f23c88f, type: 3}
+  itemSprite: {fileID: 21300000, guid: 89d4ed3608c24674bb339b6ccfbe85eb, type: 3}
   lookable: 1
   takeable: 1
   talkable: 0
-  inspectDialogue: My favorite cleaning fluid
+  inspectDialogue: Gross, this won't do! They are filthy, I must clean them

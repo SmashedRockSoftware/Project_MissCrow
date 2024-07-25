@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
-  m_Name: DirtyBandage
+  m_Name: test_HappyWorm
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: 89d4ed3608c24674bb339b6ccfbe85eb, type: 3}
+  itemSprite: {fileID: 21300000, guid: 3ca9c977851be1b4889ce7a1e07af2de, type: 3}
   lookable: 1
-  takeable: 1
+  takeable: 0
   talkable: 0
-  inspectDialogue: Gross, this won't do! They are filthy, I must clean them
+  inspectDialogue: The worm is now swaddled, I should let them rest

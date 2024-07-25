@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: HeatingTonic
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  lookable: 1
-  takeable: 1
-  talkable: 0
-  inspectDialogue: Oh my stars, what a mess! All this clutter just gathering dust.
+  itemSprite: {fileID: 21300000, guid: e5fe4798e820b9d439ef5e3ae63e1db0, type: 3}
+  inspectDialogue: Perfect for keeping something warm

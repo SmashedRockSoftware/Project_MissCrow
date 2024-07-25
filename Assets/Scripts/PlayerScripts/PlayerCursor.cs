@@ -68,13 +68,19 @@ public class PlayerCursor : MonoBehaviour
             else if (currentCursorState == CursorState.Talk) {
                 TalkToAnItem(currentItem);
             } else if (currentCursorState == CursorState.Use) {
-                //TalkToAnItem(currentItem); TODO add Use Action
+                UseAnItem();
             }
         }
-    } 
+    }
+
+    private void UseAnItem() {
+        currentItem.GetComponent<UseAction>().UseItem();
+        //TODO delay the use until at the item...?
+    }
 
     private void InpectAnItem(Item _item) {
-        DialogueUI.Instance.DisplayGrannyText(_item.itemData.inspectDialogue);
+        //DialogueUI.Instance.DisplayGrannyText(_item.itemData.inspectDialogue);
+        _item.GetComponent<InspectAction>().Inspect();
         PlayerMovement.instance.LookAt(_item.transform);
     }
 

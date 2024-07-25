@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DropTargets : MonoBehaviour
 {
+    public bool isDropable = true;
+
+    public void SetDropAllowance(bool allowance) {
+        isDropable = allowance;
+    }
     // Start is called before the first frame update
     void Start()
     {

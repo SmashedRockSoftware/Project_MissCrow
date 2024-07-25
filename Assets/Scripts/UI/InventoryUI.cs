@@ -31,6 +31,8 @@ public class InventoryUI : MonoBehaviour
         inventory.Clear();
 
         foreach (var item in Inventory.Instance.items) {
+            if (item.itemSprite == null) continue;
+            
             var itemUi = Instantiate(itemPrefab) as GameObject;
             itemUi.transform.SetParent(itemParent, false);
             itemUi.GetComponent<Image>().sprite = item.itemSprite;
@@ -69,8 +71,9 @@ public class InventoryUI : MonoBehaviour
             if (dist < distance) {
                 distance = dist;
 
-                if (dist < minDropTargetDistance)
-                    closestItem = item.gameObject;
+                if (dist < minDropTargetDistance) {
+                        closestItem = item.gameObject;
+                    }
             }
         }
 

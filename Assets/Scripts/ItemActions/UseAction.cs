@@ -18,4 +18,8 @@ public class UseAction : MonoBehaviour
     {
         
     }
+
+    public void UseItem() {
+        onUse.Invoke();
+    }
 }

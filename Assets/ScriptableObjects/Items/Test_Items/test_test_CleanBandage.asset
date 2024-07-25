@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
-  m_Name: CleanBandage
+  m_Name: test_test_CleanBandage
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 93a88805f89ab4a4488d5f39e2e8ad00, type: 3}
   lookable: 1

@@ -24,10 +24,10 @@ public class Item : MonoBehaviour
     //[SerializeField] CinemachineVirtualCamera virtualCamera;
     //[SerializeField] UnityEvent onTalk;
 
-    public InspectAction inspectAction;
-    public TalkAction talkAction;
-    public PickupAction pickupAction;
-    public UseAction useAction;
+    [HideInInspector] public InspectAction inspectAction;
+    [HideInInspector] public TalkAction talkAction;
+    [HideInInspector] public PickupAction pickupAction;
+    [HideInInspector] public UseAction useAction;
 
     // Start is called before the first frame update
     void Start()
