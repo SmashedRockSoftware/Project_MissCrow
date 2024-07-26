@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    private const string COMBOSOUNDNAME = "combination";
+    private const string BADCOMBOSOUNDNAME = "badcombination";
     public ObservableCollection<ItemScriptableObject> items = new ObservableCollection<ItemScriptableObject>();
     public static Inventory Instance;
     [SerializeField] List<Combination> combinations = new List<Combination>();
@@ -66,22 +68,35 @@ public class Inventory : MonoBehaviour
         var Combo = CheckCombinations(currentObjects);
 
         if (Combo != null) {
-            FireRelatedEvents(Combo);
+            PerformCombo(Combo);
+        }
+        else {
+            PerformBadCombos(currentObjects);
+        }
+    }
 
-            foreach (var item in Combo.requiredItems) {
-                items.Remove(item);
-            }
+    private void PerformCombo(Combination Combo) {
+        FireRelatedEvents(Combo);
 
-            if (Combo.combinedItem != null)
-                items.Add(Combo.combinedItem);
-        } else {
-            var BadCombo = CheckBadCombinations(currentObjects);
+        AudioAssistant.instance.PlayResourceSoundAtPoint(Combo, COMBOSOUNDNAME, transform.position);
 
-            if (BadCombo != null)
-                DialogueUI.Instance.DisplayGrannyText(BadCombo.dialogueForBadCombo);
-            else {
-                DialogueUI.Instance.DisplayGrannyText("That won't work");
-            }
+        foreach (var item in Combo.requiredItems) {
+            items.Remove(item);
+        }
+
+        if (Combo.combinedItem != null)
+            items.Add(Combo.combinedItem);
+    }
+
+    private void PerformBadCombos(List<ItemScriptableObject> currentObjects) {
+        var BadCombo = CheckBadCombinations(currentObjects);
+
+        AudioAssistant.instance.PlayResourceSoundAtPoint(BadCombo, BADCOMBOSOUNDNAME, transform.position);
+
+        if (BadCombo != null)
+            DialogueUI.Instance.DisplayGrannyText(BadCombo.dialogueForBadCombo);
+        else {
+            DialogueUI.Instance.DisplayGrannyText("That won't work");
         }
     }
 

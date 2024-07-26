@@ -3325,6 +3325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -848330687405713311, guid: c6106d14d2369d14a9e5cab59a2beeb5,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -848330687405713311, guid: c6106d14d2369d14a9e5cab59a2beeb5,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4846,8 +4851,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.013570547, y: 0.012650302, z: 0.003936303}
-  m_Center: {x: 0.00079075724, y: -0.00033064326, z: 0.0008810812}
+  m_Size: {x: 0.013570546, y: 0.012650304, z: 0.010888713}
+  m_Center: {x: 0.0007907571, y: -0.0003306431, z: 0.00032957058}
 --- !u!54 &2964524651138687604
 Rigidbody:
   m_ObjectHideFlags: 0

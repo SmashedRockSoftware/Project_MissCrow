@@ -28,6 +28,10 @@ public class PickupAction : MonoBehaviour
     }
 
     public void PickInWorldItem() {
+        if (!gameObject.activeInHierarchy)
+            return;
+
+
         gameObject.SetActive(false);
         
         AudioAssistant.instance.PlayResourceSoundAtPoint(itemData, PICKUPSOUNDSTR, transform.position);
