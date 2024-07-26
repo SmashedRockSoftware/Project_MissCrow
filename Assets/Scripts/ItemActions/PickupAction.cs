@@ -21,11 +21,11 @@ public class PickupAction : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (pickUpWhenNear && Vector3.Distance(player.position, transform.position) < pickupRadius)
-            PickInWorldItem();
+        //if (pickUpWhenNear && Vector3.Distance(player.position, transform.position) < pickupRadius)
+        //    PickInWorldItem();
     }
 
-    private void PickInWorldItem() {
+    public void PickInWorldItem() {
         gameObject.SetActive(false);
     }
 

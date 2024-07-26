@@ -60,6 +60,7 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
+        bool droppedItem = false;
         if (closestItem == null)
             foreach (var item in dropTargets) {
             if (item == objectDropped) { continue; }
@@ -73,9 +74,13 @@ public class InventoryUI : MonoBehaviour
 
                 if (dist < minDropTargetDistance) {
                         closestItem = item.gameObject;
-                    }
+                        droppedItem = true;
+                }
             }
         }
+
+        if (closestItem != null && droppedItem)
+            PlayerMovement.instance.GoTo(closestItem.GetComponent<Item>());
 
         if (closestItem != null)
             Inventory.Instance.CombineItems(objectDropped, closestItem);
