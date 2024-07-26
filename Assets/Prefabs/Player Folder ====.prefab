@@ -32,7 +32,7 @@ Transform:
   - {fileID: 8541732315109040448}
   - {fileID: 5964005012686255724}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7352350441027661448
 MonoBehaviour:
@@ -278,7 +278,7 @@ NavMeshAgent:
   m_Acceleration: 32
   avoidancePriority: 50
   m_AngularSpeed: 240
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -68,12 +68,13 @@ public class PlayerCursor : MonoBehaviour
             else if (currentCursorState == CursorState.Talk) {
                 TalkToAnItem(currentItem);
             } else if (currentCursorState == CursorState.Use) {
-                UseAnItem();
+                UseAnItem(currentItem);
             }
         }
     }
 
-    private void UseAnItem() {
+    private void UseAnItem(Item _item) {
+        PlayerMovement.instance.GoTo(_item);
         currentItem.GetComponent<UseAction>().UseItem();
         //TODO delay the use until at the item...?
     }
@@ -93,6 +94,7 @@ public class PlayerCursor : MonoBehaviour
 
     private void TalkToAnItem(Item _item) {
         //_item.TalkToObject(); //TODO fix
+        PlayerMovement.instance.GoTo(_item);
         var talkAction = _item.gameObject.GetComponent<TalkAction>();
         talkAction.TalkToObject();
     }
