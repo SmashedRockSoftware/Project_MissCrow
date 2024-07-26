@@ -349,7 +349,7 @@ MonoBehaviour:
   - Oh.. yes..
   - Be right there.
   - These old bones weren't built for speed.
-  quipFrequency: 40
+  quipFrequency: 10
 --- !u!114 &107421444691893586
 MonoBehaviour:
   m_ObjectHideFlags: 0
