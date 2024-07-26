@@ -8966,7 +8966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46b9930c9132d7498c108239de3da8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 30
   startPoint: {x: 0, y: 0, z: -392}
   restartIfValue: 392
 --- !u!114 &894379851
@@ -15131,7 +15131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46b9930c9132d7498c108239de3da8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 30
   startPoint: {x: 0, y: 0, z: -392}
   restartIfValue: 392
 --- !u!114 &1545652505
@@ -15348,7 +15348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46b9930c9132d7498c108239de3da8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 30
   startPoint: {x: 0, y: 0, z: -392}
   restartIfValue: 392
 --- !u!114 &1564708967
@@ -17510,7 +17510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46b9930c9132d7498c108239de3da8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 30
   startPoint: {x: 0, y: 0, z: -392}
   restartIfValue: 392
 --- !u!114 &1909978818
