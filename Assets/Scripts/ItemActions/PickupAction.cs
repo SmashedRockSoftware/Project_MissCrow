@@ -13,6 +13,8 @@ public class PickupAction : MonoBehaviour
     bool pickUpWhenNear;
     [SerializeField] UnityEvent onPickup;
 
+    const string PICKUPSOUNDSTR = "pickup";
+
     // Start is called before the first frame update
     void Start() {
         locationOverride = transform.Find("locationOverride");
@@ -27,6 +29,8 @@ public class PickupAction : MonoBehaviour
 
     public void PickInWorldItem() {
         gameObject.SetActive(false);
+        
+        AudioAssistant.instance.PlayResourceSoundAtPoint(itemData, PICKUPSOUNDSTR, transform.position);
     }
 
     public void PickUp() {
