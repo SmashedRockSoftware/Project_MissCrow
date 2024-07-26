@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioAssistant : MonoBehaviour
 {
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
     public static AudioAssistant instance;
 
@@ -15,7 +15,7 @@ public class AudioAssistant : MonoBehaviour
     }
 
     private void Start() {
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +37,10 @@ public class AudioAssistant : MonoBehaviour
         if (audioClip == null)
             audioClip = Resources.Load<AudioClip>("Sounds/Generic/pickup");
 
-        AudioSource.PlayClipAtPoint(audioClip, position);
+        var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
+        audiosrc.clip = audioClip;
+        audiosrc.Play();
+
+        Destroy(audiosrc, audioClip.length);
     }
 }
