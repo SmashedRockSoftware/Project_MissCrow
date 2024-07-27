@@ -55,7 +55,7 @@ public class AudioAssistant : MonoBehaviour
     public void PlayResourceSoundAtPoint(Combination comboData, string soundName, Vector3 position) {
         var name = GetComboName(comboData);
 
-        string str = "Sounds/" + name;
+        string str = "Sounds/Combo/" + name;
         var audioClip = Resources.Load<AudioClip>(str);
 
         if (audioClip == null)
@@ -75,7 +75,7 @@ public class AudioAssistant : MonoBehaviour
         if (badComboData != null) {
             var name = GetComboName(badComboData);
 
-            string str = "Sounds/" + name;
+            string str = "Sounds/BadCombo/" + name;
             audioClip = Resources.Load<AudioClip>(str);
         }
 
