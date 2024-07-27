@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
-public class Item : MonoBehaviour
-{
+public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     public ItemScriptableObject itemData;
     [HideInInspector] public Transform locationOverride;
 
@@ -24,6 +24,33 @@ public class Item : MonoBehaviour
         pickupAction = gameObject.GetComponent<PickupAction>();
         useAction = gameObject.GetComponent<UseAction>();
     }
+
+    public void OnPointerEnter(PointerEventData eventData) {
+        //HoverNameUI.instance.ShowHoverText(item.itemData.itemName);
+        VerbWheel.instance.HoverEnter(this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData) {
+        //HoverNameUI.instance.HideHoverText();
+        VerbWheel.instance.HoverExit(this);
+    }
+
+    void OnMouseEnter() {
+        VerbWheel.instance.HoverEnter(this);
+    }
+
+    void OnMouseExit() {
+        VerbWheel.instance.HoverExit(this);
+    }
+
+    private void OnDisable() {
+        VerbWheel.instance.HoverExit(this);
+    }
+
+    private void OnDestroy() {
+        VerbWheel.instance.HoverExit(this);
+    }
+
 
     // Update is called once per frame
     void Update()

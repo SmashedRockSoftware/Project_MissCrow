@@ -15,6 +15,8 @@ public class PlayerCursor : MonoBehaviour
 
     public static PlayerCursor Instance;
 
+    [SerializeField] Vector3[] offsets = { new Vector3(0, -50, 0), new Vector3(0, -70, 0), new Vector3(0, -90, 0), new Vector3(0, -110, 0), };
+
     private void Awake() {
         Instance = this;
     }
