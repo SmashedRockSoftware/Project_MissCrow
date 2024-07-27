@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class VerbWheel : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class VerbWheel : MonoBehaviour
     [SerializeField] float closeDuration = 0.1f;
     Tween tweenBg;
     Tween tweenTx;
+
+    [Space]
+    Material comboMaterial;
 
     private void Awake() {
         instance = this;
@@ -105,13 +109,25 @@ public class VerbWheel : MonoBehaviour
 
         }
         else if (hoveringItems.Count == 2) {
-            //TODO add combo
-            itemNameText.text = hoveringItems[0].itemData.itemName + " " + hoveringItems[1].itemData.itemName;
-            textObject.gameObject.SetActive(false);
-            //backgroundObject.gameObject.SetActive(false);
-            comboText.gameObject.SetActive(true);
+            
+            ////TODO add combo
+            //TODO grab render underneath and change the secondary material to a different color outline, then clean it up somehow
+            //itemNameText.text = hoveringItems[0].itemData.itemName + " " + hoveringItems[1].itemData.itemName;
 
-            comboText.text = "Combine <u>" + hoveringItems[0].itemData.itemName + "</u> with <u>" + hoveringItems[1].itemData.itemName + "</u>";
+            //TODO grab render underneath and change the secondary material to a different color outline, then clean it up somehow
+            textObject.gameObject.SetActive(false);
+            hoveringItems[0].MarkIsCombining();
+            hoveringItems[1].MarkIsCombining();
+            //if (hoveringItems[0].TryGetComponent<Renderer>(out Renderer rend)) {
+            //    rend.materials[1] = comboMaterial;
+            //}
+            //if (hoveringItems[1].TryGetComponent<Renderer>(out Renderer rendr)) {
+
+            //}
+            backgroundObject.gameObject.SetActive(false);
+            //comboText.gameObject.SetActive(true);
+
+            //comboText.text = "Combine <u>" + hoveringItems[0].itemData.itemName + "</u> with <u>" + hoveringItems[1].itemData.itemName + "</u>";
         }
     }
 

@@ -14,6 +14,8 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     [HideInInspector] public PickupAction pickupAction;
     [HideInInspector] public UseAction useAction;
 
+    ItemGlow glower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,18 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
         talkAction = gameObject.GetComponent<TalkAction>();
         pickupAction = gameObject.GetComponent<PickupAction>();
         useAction = gameObject.GetComponent<UseAction>();
+
+        glower = gameObject.GetComponent<ItemGlow>();
+    }
+
+    public void MarkIsCombining() {
+        if (glower == null) return;
+        glower.MarkAsCombined();
+    }
+
+    public void MarkNormOutline() {
+        if (glower == null) return;
+        glower.MarkAsRegular();
     }
 
     public void OnPointerEnter(PointerEventData eventData) {
@@ -33,6 +47,8 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     public void OnPointerExit(PointerEventData eventData) {
         //HoverNameUI.instance.HideHoverText();
         VerbWheel.instance.HoverExit(this);
+        MarkNormOutline();
+
     }
 
     void OnMouseEnter() {
@@ -41,10 +57,12 @@ public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     void OnMouseExit() {
         VerbWheel.instance.HoverExit(this);
+        MarkNormOutline();
     }
 
     private void OnDisable() {
         VerbWheel.instance.HoverExit(this);
+        MarkNormOutline();
     }
 
     private void OnDestroy() {

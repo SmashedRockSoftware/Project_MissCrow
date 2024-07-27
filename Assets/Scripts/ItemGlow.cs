@@ -10,10 +10,16 @@ public class ItemGlow : MonoBehaviour
 
     KeyCode revelInteractableKey = KeyCode.H;
 
+    Material defaultOutline;
+    Material combinedOutline;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         rend = rend.GetComponent<Renderer>();
+        defaultOutline = Resources.Load<Material>("Material/defaultOutline");
+        combinedOutline = Resources.Load<Material>("Material/combinedOutline");
+
+        MarkAsRegular();
     }
 
 
@@ -29,6 +35,13 @@ public class ItemGlow : MonoBehaviour
         };
 
         rend.materials = materials;
+    }
+
+    public void MarkAsCombined() {
+        outlineMaterial = combinedOutline;
+    }
+    public void MarkAsRegular() {
+        outlineMaterial = defaultOutline;
     }
 
     void OnMouseOver() {
