@@ -13583,7 +13583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1202736460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17994,11 +17994,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5776261170983588946, guid: 9a4f3c4c974884044a40e08a94e829ed,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6932909994611746966, guid: 9a4f3c4c974884044a40e08a94e829ed,
         type: 3}
       propertyPath: m_Name
@@ -22162,6 +22157,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097877325}
   m_Mesh: {fileID: 7896485600242186461, guid: 35314c00b66d45748bcf537c51cf1d89, type: 3}
+--- !u!114 &2099374900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6858148207684114670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105439078
 GameObject:
   m_ObjectHideFlags: 0
@@ -23085,6 +23092,16 @@ PrefabInstance:
       propertyPath: showTransform
       value: 
       objectReference: {fileID: 842122005}
+    - target: {fileID: 5101928395810001373, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: offset.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101928395810001373, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: textMeshProUGUI
+      value: 
+      objectReference: {fileID: 2099374900}
     - target: {fileID: 5726606436647589051, guid: 3019af2a194a81c4ab2f961c740b576e,
         type: 3}
       propertyPath: m_Name
@@ -23195,10 +23212,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6768462785933671917, guid: 3019af2a194a81c4ab2f961c740b576e,
+    - target: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 3.088684
+      propertyPath: m_fontSize
+      value: 10.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914149088217175054, guid: 3019af2a194a81c4ab2f961c740b576e,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

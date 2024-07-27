@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ExitDoor
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  itemName: Exit door
   inspectDialogue: 

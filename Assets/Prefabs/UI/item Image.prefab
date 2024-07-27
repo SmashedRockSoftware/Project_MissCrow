@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3773762201800668118}
   - component: {fileID: -4913319832189045963}
   - component: {fileID: -8556123548438897031}
+  - component: {fileID: -7353118307859432081}
   m_Layer: 5
   m_Name: item Image
   m_TagString: Untagged
@@ -123,3 +124,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
+  locationOverride: {fileID: 0}
+  inspectAction: {fileID: 0}
+  talkAction: {fileID: 0}
+  pickupAction: {fileID: 0}
+  useAction: {fileID: 0}
+--- !u!114 &-7353118307859432081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913103390449705919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7011dbcbab740d945bbf837084eacda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

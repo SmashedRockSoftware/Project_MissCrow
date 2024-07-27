@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Junk-WashBucket
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  itemName: A bucket full of junk
   inspectDialogue: A wash bucket, but someone left all their junk here.

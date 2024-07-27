@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Empty-WashBucket
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  itemName: An empty bucket
   inspectDialogue: A wash bucket, how quaint. But an empty bucket cant do much.

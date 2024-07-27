@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: WireWorm
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  lookable: 1
-  takeable: 0
-  talkable: 1
+  itemName: A Wire worm
   inspectDialogue: A wire worm in a jar. Ah! poor thing is shaking, must be cold.

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CleanRag
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 6750bb439a895fe44946b4a58035d714, type: 3}
+  itemName: Clean rag
   inspectDialogue: Now this is more like it! A clean rag is a happy rag!

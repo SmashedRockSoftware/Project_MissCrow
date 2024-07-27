@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Water-WashBucket
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  itemName: A bucket filled with water
   inspectDialogue: Without soap, this won't clean anything

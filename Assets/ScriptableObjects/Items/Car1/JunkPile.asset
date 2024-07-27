@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: JunkPile
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  lookable: 1
-  takeable: 1
-  talkable: 0
+  itemName: A pile of junk
   inspectDialogue: Oh my stars, what a mess! All this clutter just gathering dust.

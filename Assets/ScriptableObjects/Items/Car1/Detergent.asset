@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Detergent
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 5d08fcb705c24a444bc991bb9584c7f6, type: 3}
+  itemName: Soap powder
   inspectDialogue: ' Ah, soap powder. Good for cleaning, but not much else.'

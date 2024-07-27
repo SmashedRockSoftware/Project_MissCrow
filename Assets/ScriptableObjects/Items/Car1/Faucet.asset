@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Faucet
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  lookable: 1
-  takeable: 0
-  talkable: 0
+  itemName: Faucet
   inspectDialogue: Well, it's still working, I suppose. Though the water pressure
     could use a bit of a boost.

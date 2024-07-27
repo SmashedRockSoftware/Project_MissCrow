@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: soapy-WashBucket
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  itemName: A bucket with soapy water
   inspectDialogue: Now we can do some cleaning

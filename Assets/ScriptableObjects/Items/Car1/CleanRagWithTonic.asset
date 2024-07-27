@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CleanRagWithTonic
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: c30c6ce2e749c2c409b43e8e8bd00f6f, type: 3}
+  itemName: Clean rag with heating tonic
   inspectDialogue: 

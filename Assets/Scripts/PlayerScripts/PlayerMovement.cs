@@ -127,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
             pickUpAction.PickInWorldItem();
         }
 
-        OnMovementFinishes.Invoke();
+        OnMovementFinishes?.Invoke();
 
         LookAt(nextPosition);
     }

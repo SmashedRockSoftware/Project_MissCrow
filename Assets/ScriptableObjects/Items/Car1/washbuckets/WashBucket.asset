@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: WashBucket
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  lookable: 1
-  takeable: 0
-  talkable: 0
+  itemName: A bucket for washing
   inspectDialogue: A bucket, how quaint. Though I'm sure it's seen its fair share
     of dirty cleaning water.
