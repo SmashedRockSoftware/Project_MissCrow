@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
 
     Item nextItem;
     Vector3 nextPosition;
+
+    public static event System.Action OnMovementFinishes;
 
     private void Awake() {
         instance = this;
@@ -125,6 +126,8 @@ public class PlayerMovement : MonoBehaviour
         if (nextItem && nextItem.TryGetComponent<PickupAction>(out PickupAction pickUpAction)) {
             pickUpAction.PickInWorldItem();
         }
+
+        OnMovementFinishes.Invoke();
 
         LookAt(nextPosition);
     }
