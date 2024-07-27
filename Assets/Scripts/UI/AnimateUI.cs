@@ -18,6 +18,8 @@ public class AnimateUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     void Start()
     {
         originalScale = transform.localScale;
+        //transform.localScale = Vector3.zero;
+        //transform.DOScale(originalScale, duration).SetEase(ease);  //items get removed and added over and over, this looks bad
     }
 
     // Update is called once per frame
