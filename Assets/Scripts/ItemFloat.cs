@@ -44,8 +44,8 @@ public class ItemFloat : MonoBehaviour {
 
         if (floatingObject != null) {  //only move if we have a floating object
 
-            floatingObject.DOBlendableLocalMoveBy(localMovement, duration).SetEase(ease);
-            floatingObject.DORotate(localRotation, duration).SetEase(ease);
+            floatingObject.DOPunchPosition(localMovement, duration, 0, 0).SetEase(ease);
+            //floatingObject.DORotate(localRotation, duration).SetEase(ease);
         }
 
 
@@ -56,7 +56,7 @@ public class ItemFloat : MonoBehaviour {
         if (GameManager.Instance.currentGameState != GameState.InGame) return;
 
         if (Input.GetMouseButtonDown(0) && floatingObject != null) {
-            floatingObject.DOPunchScale(punchScale, punchDuration);
+            //floatingObject.DOPunchScale(punchScale, punchDuration);
         }
     }
 
@@ -67,8 +67,8 @@ public class ItemFloat : MonoBehaviour {
         if (floatingObject != null) {
 
             floatingObject.DOMove(startingPosition, duration).SetEase(ease);
-            floatingObject.DORotate(startingRotation, duration).SetEase(ease);
-            floatingObject.DOScale(startingScale, duration).SetEase(ease);
+            //floatingObject.DORotate(startingRotation, duration).SetEase(ease);
+            //floatingObject.DOScale(startingScale, duration).SetEase(ease);
         }
 
 
