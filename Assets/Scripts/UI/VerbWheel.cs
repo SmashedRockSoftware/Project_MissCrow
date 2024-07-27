@@ -15,6 +15,7 @@ public class VerbWheel : MonoBehaviour
     [SerializeField] List<Item> hoveringItems = new List<Item>();
 
     [SerializeField] TextMeshProUGUI itemNameText;
+    [SerializeField] TextMeshProUGUI comboText;
 
     Camera cam;
 
@@ -105,7 +106,12 @@ public class VerbWheel : MonoBehaviour
         }
         else if (hoveringItems.Count == 2) {
             //TODO add combo
-            itemNameText.text = "TODO Combo " + item.itemData.itemName;
+            itemNameText.text = hoveringItems[0].itemData.itemName + " " + hoveringItems[1].itemData.itemName;
+            textObject.gameObject.SetActive(false);
+            //backgroundObject.gameObject.SetActive(false);
+            comboText.gameObject.SetActive(true);
+
+            comboText.text = "Combine <u>" + hoveringItems[0].itemData.itemName + "</u> with <u>" + hoveringItems[1].itemData.itemName + "</u>";
         }
     }
 
@@ -131,6 +137,7 @@ public class VerbWheel : MonoBehaviour
     }
 
     private void HideVerbWheel() {
+        comboText.gameObject.SetActive(false);
         tweenBg.Kill(false);
         tweenTx.Kill(false);
 
