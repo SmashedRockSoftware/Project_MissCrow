@@ -13,6 +13,8 @@ public class CameraTrigger : MonoBehaviour {
     [Tooltip("The Camera that will be active when we are triggered, If left empty we will attempt to get a virtual camera in a child object at start.")]
     [SerializeField] private CinemachineVirtualCamera Camera;
 
+    [SerializeField] bool isDebug = false;
+
     private void Start() {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
 
@@ -24,7 +26,7 @@ public class CameraTrigger : MonoBehaviour {
 
             if (Camera == null) return;
 
-            Debug.Log("Set the visible Camera to " + Camera.name);
+            if(isDebug) Debug.Log("Set the visible Camera to " + Camera.name);
             CameraManager.instance.SetCameraToVisible(Camera);
         }
     }
@@ -43,7 +45,7 @@ public class CameraTrigger : MonoBehaviour {
 
         if (Camera == null) return;
 
-        Debug.Log("Set the visible Camera to " + Camera.name);
+        if (isDebug) Debug.Log("Set the visible Camera to " + Camera.name);
         CameraManager.instance.SetCameraToVisible(Camera);
     }
 
