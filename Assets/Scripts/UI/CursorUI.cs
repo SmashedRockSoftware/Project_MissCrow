@@ -23,7 +23,7 @@ public class CursorUI : MonoBehaviour
     }
 
     private void OnCursorChange() {
-        Cursor.SetCursor(cursorTextures[(int)PlayerCursor.Instance.currentCursorState], hotSpot, cursorMode);
+        //Cursor.SetCursor(cursorTextures[(int)PlayerCursor.Instance.currentCursorState], hotSpot, cursorMode);
     }
 
     // Update is called once per frame
