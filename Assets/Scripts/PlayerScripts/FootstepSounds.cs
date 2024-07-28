@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FootstepSounds : MonoBehaviour
 {
-    Vector3 lastPostion;
-    [SerializeField] float distanceToStep = 4f;
+    //Vector3 lastPostion;
+    //[SerializeField] float distanceToStep = 4f;
 
     [Space]
     [SerializeField] AudioSource footstepSource;
@@ -15,7 +15,7 @@ public class FootstepSounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastPostion = transform.position;
+        //lastPostion = transform.position;
     }
 
     private void PlayFootstep() {
@@ -23,7 +23,7 @@ public class FootstepSounds : MonoBehaviour
 
         footstepSource.clip = clips[Random.Range(0, clips.Count-1)];
         footstepSource.pitch = startingPitch + Random.Range(minPitch, maxPitch);
-        lastPostion = transform.position;
+        //lastPostion = transform.position;
 
         footstepSource.Play();
     }
@@ -31,8 +31,8 @@ public class FootstepSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(lastPostion, transform.position) > distanceToStep) {
-            PlayFootstep();
-        }
+        //if(Vector3.Distance(lastPostion, transform.position) > distanceToStep) {
+        //    PlayFootstep();
+        //}
     }
 }
