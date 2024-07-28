@@ -12,7 +12,7 @@ public class DrawerAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     Camera cam;
 
-    [SerializeField] Transform hideTransform, showTransform;
+    Transform hideTransform, showTransform;
 
     [SerializeField] Ease ease = Ease.InOutCirc;
 
@@ -31,6 +31,12 @@ public class DrawerAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         startingPosition = transform.localPosition;
         start = transform.position.y;
+
+        hideTransform = GameObject.Find("hideTransform").transform;
+        showTransform = GameObject.Find("showTransform").transform;
+
+        if(hideTransform == null) { Debug.LogError("DrawerAnimation::Start() hideTransform is missing or renamed!"); }
+        if (showTransform == null) { Debug.LogError("DrawerAnimation::Start() showTransform is missing or renamed!"); }
 
         cam = Camera.main;
 

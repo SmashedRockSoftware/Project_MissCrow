@@ -14,6 +14,7 @@ public class PickupAction : MonoBehaviour
     [SerializeField] UnityEvent onPickup;
 
     const string PICKUPSOUNDSTR = "pickup";
+    [SerializeField] bool hideGameobject = true;
 
     // Start is called before the first frame update
     void Start() {
@@ -31,8 +32,12 @@ public class PickupAction : MonoBehaviour
         if (!gameObject.activeInHierarchy)
             return;
 
-
-        gameObject.SetActive(false);
+        if(hideGameobject)
+            gameObject.SetActive(false);
+        else {
+            GetComponent<Collider>().enabled = false;
+            GetComponent<ItemGlow>().enabled = false;
+        }
         
         AudioAssistant.instance.PlayResourceSoundAtPoint(itemData, PICKUPSOUNDSTR, transform.position);
     }

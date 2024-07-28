@@ -1,0 +1,45 @@
+CleanRag+wireworm: Oh dearie, this rag is clean, but its cold, I can help them with it yet!
+CleanRag+soapy-WashBucket: Its already clean, I dont want to clean it again?!
+wireworm+detergent: Stop! I cant pour soap powder on the worm, that could kill it! 
+wireworm+dirtyrag: This rag is too filthy to wrap the worm in, I need to clean it first!
+wireworm+heatingtonic: That's just too much heat for our little worm friend!
+Empty-WashBucket+dirtyrag: This bucket is empty! I need soapy water to clean this rag.
+Empty-WashBucket+detergent: What's the point of pouring soap powder into an empty bucket? 
+Empty-WashBucket+heatingtonic: No sense putting hot tonic in an empty bucket, dearie!
+Junk-WashBucket+detergent: Ugh, what a mess! I don't want to add more soap powder to this bucket!
+Junk-WashBucket+dirtyrag: This rag is too dirty for my bucket, I need to clean it first!
+Junk-WashBucket+heatingtonic: Oh no! Don't put hot tonic in this old bucket, it might break!
+soapy-WashBucket+CleanRagWithTonic: That's just too much soap for this poor rag!
+soapy-WashBucket+heatingtonic: Oh dearie, I think I'd burn the soap if I added hot tonic to it!
+Water-WashBucket+dirtyrag: This rag needs soap and water to get clean, not just plain water!
+Water-WashBucket+heatingtonic: No sense putting hot tonic in a bucket of plain water, dearie!
+detergent+dirtyrag: This rag needs soap and water to get clean, not just soap powder!
+detergent+heatingtonic: What a waste! Hot tonic won't make the soap powder work any better!
+dirtyrag+heatingtonic: Oh dearie, that's just too hot for this poor rag!
+
+appleSlice+furnace:I need a skillet first and I need to season the slice too
+crushedninth+furnace:No sense putting crushed leaves in a furnace, dearie!
+firepoker+appleSlice:I would perfer to not poke holes in my apple slice
+firepoker+crushedninth:Its crushed, I can't poke holes in it!
+firepoker+leaf:I need to crush it, not poke holes in it!
+firepoker+furnace:I tortured a guy once like that, I want to calm our friend
+firepoker+ratskilletseasonedappleslice:I dont need to put holes in this
+firepoker+roastedappleslice:I would perfer to not poke holes in my apple slice
+firepoker+seasonedappleslice:I would perfer to not poke holes in my apple slice
+leaf+appleSlice:I need to crush the leaf to realease the oils first
+leaf+exposedrat:Before we can give it to our friend we need to crush the leaf
+leaf+furnace:No sense putting a leaf in a furnace, dearie!
+leaf+roastedappleslice:That's already roasted, I don't think a leaf would go well with it!
+mortarandpestle+appleSlice:I don't need applesauce!
+mortarandpestle+crushedninth:Its already crushed, I don't need dust
+mortarandpestle+ratskilletseasonedappleslice:I don't need applesauce!
+mortarandpestle+roastedappleslice:I don't need applesauce!
+mortarandpestle+seasonedappleslice:I don't need applesauce!
+mortarandpestle+firepoker:I need the mortar and pestle, I don't want to break it!
+ratshelf+appleSlice:Apples slices belong in the kitchen, not on a shelf!
+ratshelf+crushedninth:the shelf doesn't need to be calmed or seasoned
+ratshelf+leaf:I dont think rubbing the leaf on the shelf will calm our friend, it needs to be crushed and eaten.
+ratshelf+ratskilletseasonedappleslice:I want to finish the dish now, not store it
+ratshelf+roastedappleslice:That's already roasted, I don't want to store it on a shelf!
+ratshelf+seasonedappleslice:That's already seasoned, I don't want to store it on a shelf!
+seasonedappleslice+ratfurnaceI need a skillet first!
