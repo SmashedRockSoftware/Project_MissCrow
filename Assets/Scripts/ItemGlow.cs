@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemGlow : MonoBehaviour
 {
     [SerializeField] Renderer rend;
-    [SerializeField] Material outlineMaterial;
+    Material outlineMaterial;
 
     KeyCode revelInteractableKey = KeyCode.H;
 

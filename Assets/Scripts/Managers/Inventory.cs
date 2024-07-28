@@ -16,10 +16,42 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] List<BadCombo> badCombos = new List<BadCombo>();
 
+    [SerializeField] List<ItemScriptableObject> itemObjects = new List<ItemScriptableObject>();
+
     // Start is called before the first frame update
     void Awake()
     {
         Instance = this;
+    }
+
+    private void Start() {
+        var textFile = Resources.Load<TextAsset>("badcombos");
+        string[] lines = textFile.text.Split('\n');
+
+        for (int i = 0; i < lines.Length; i++) {
+            var splitComboDialog = lines[i].Split(":");
+            var splitCombo = splitComboDialog[0].Split("+");
+
+            ItemScriptableObject item1 = null;
+            ItemScriptableObject item2 = null;
+            foreach (var item in itemObjects) {
+                if (item1 == null && item.name.Contains(splitCombo[0])) {
+                    item1 = item;
+                }
+
+                if (item2 == null && item.name.Contains(splitCombo[1])) {
+                    item2 = item;
+                }
+
+                if (item1 == null && item2 == null)
+                    break;
+            }
+
+            if (item1 != null && item2 != null)
+                badCombos.Add(new BadCombo(item1, item2, splitComboDialog[1]));
+            else
+                Debug.Log("No bad combo for " + splitCombo[0] + " " + splitCombo[1]);
+        }
     }
 
     // Update is called once per frame

@@ -1,0 +1,25 @@
+appleslice+ratfurnace:I need a skillet first and I need to season the slice too
+crushedninth+ratfurnace:No sense putting crushed leaves in a furnace, dearie!
+firepoker+appleslice:I would perfer to not poke holes in my apple slice
+firepoker+crushedninth:Its crushed, I can't poke holes in it!
+firepoker+leaf:I need to crush it, not poke holes in it!
+firepoker+ratfurnace:I tortured a guy once like that, I want to calm our friend
+firepoker+ratskilletseasonedappleslice:I dont need to put holes in this
+firepoker+roastedappleslice:I would perfer to not poke holes in my apple slice
+firepoker+seasonedappleslice:I would perfer to not poke holes in my apple slice
+leaf+appleslice:I need to crush the leaf to realease the oils first
+leaf+exposedrat:Before we can give it to our friend we need to crush the leaf
+leaf+ratfurnace:No sense putting a leaf in a furnace, dearie!
+leaf+roastedappleslice:That's already roasted, I don't think a leaf would go well with it!
+mortarandpestle+appleslice:I don't need applesauce!
+mortarandpestle+crushedninth:Its already crushed, I don't need dust
+mortarandpestle+ratskilletseasonedappleslice:I don't need applesauce!
+mortarandpestle+roastedappleslice:I don't need applesauce!
+mortarandpestle+seasonedappleslice:I don't need applesauce!
+ratshelf+appleslice:Apples slices belong in the kitchen, not on a shelf!
+ratshelf+crushedninth:the shelf doesn't need to be calmed or seasoned
+ratshelf+leaf:I dont think rubbing the leaf on the shelf will calm our friend, it needs to be crushed and eaten.
+ratshelf+ratskilletseasonedappleslice:I want to finish the dish now, not store it
+ratshelf+roastedappleslice:That's already roasted, I don't want to store it on a shelf!
+ratshelf+seasonedappleslice:That's already seasoned, I don't want to store it on a shelf!
+seasonedappleslice+ratfurnaceI need a skillet first!
