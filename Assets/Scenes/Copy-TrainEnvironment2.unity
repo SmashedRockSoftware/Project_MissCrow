@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: b35de38aa5f08c949a7cafb598a75a82
+  m_OcclusionCullingData: {fileID: 36300000, guid: 410a80b8d4b366846acc78858315ee61,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2015,6 +2016,7 @@ GameObject:
   - component: {fileID: 186961094}
   - component: {fileID: 186961096}
   - component: {fileID: 186961095}
+  - component: {fileID: 186961097}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -2122,6 +2124,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &186961097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186961093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &195447547 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9193106238417961944, guid: 35314c00b66d45748bcf537c51cf1d89,
@@ -7618,6 +7635,7 @@ GameObject:
   - component: {fileID: 240289764}
   - component: {fileID: 240289766}
   - component: {fileID: 240289765}
+  - component: {fileID: 240289767}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -7725,6 +7743,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &240289767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240289763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &241648395
 GameObject:
   m_ObjectHideFlags: 0
@@ -9005,6 +9038,7 @@ GameObject:
   - component: {fileID: 353050395}
   - component: {fileID: 353050397}
   - component: {fileID: 353050396}
+  - component: {fileID: 353050398}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -9112,6 +9146,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &353050398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353050394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &359210184
 GameObject:
   m_ObjectHideFlags: 0
@@ -9289,6 +9338,7 @@ GameObject:
   - component: {fileID: 364441290}
   - component: {fileID: 364441292}
   - component: {fileID: 364441291}
+  - component: {fileID: 364441293}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -9396,6 +9446,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &364441293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364441289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &378697011
 GameObject:
   m_ObjectHideFlags: 0
@@ -9479,6 +9544,7 @@ GameObject:
   - component: {fileID: 390589536}
   - component: {fileID: 390589538}
   - component: {fileID: 390589537}
+  - component: {fileID: 390589539}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -9586,6 +9652,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &390589539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390589535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &397918994
 GameObject:
   m_ObjectHideFlags: 0
@@ -15025,6 +15106,7 @@ GameObject:
   - component: {fileID: 486337477}
   - component: {fileID: 486337479}
   - component: {fileID: 486337478}
+  - component: {fileID: 486337480}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -15132,6 +15214,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &486337480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486337476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &490599181
 GameObject:
   m_ObjectHideFlags: 0
@@ -15226,6 +15323,7 @@ GameObject:
   - component: {fileID: 492304522}
   - component: {fileID: 492304521}
   - component: {fileID: 492304520}
+  - component: {fileID: 492304523}
   m_Layer: 0
   m_Name: Headlamplight
   m_TagString: Untagged
@@ -15335,6 +15433,21 @@ Transform:
   m_Father: {fileID: 2004707124}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 26.373, y: -178.479, z: -0.602}
+--- !u!114 &492304523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492304519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &496739182
 GameObject:
   m_ObjectHideFlags: 0
@@ -16362,6 +16475,7 @@ GameObject:
   - component: {fileID: 591212553}
   - component: {fileID: 591212555}
   - component: {fileID: 591212554}
+  - component: {fileID: 591212556}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -16398,7 +16512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 3
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 0
+  m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
   m_RenderingLayers: 1
   m_CustomShadowLayers: 0
@@ -16469,6 +16583,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &591212556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591212552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &604767467
 GameObject:
   m_ObjectHideFlags: 0
@@ -22023,6 +22152,7 @@ GameObject:
   - component: {fileID: 680724246}
   - component: {fileID: 680724248}
   - component: {fileID: 680724247}
+  - component: {fileID: 680724249}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -22130,6 +22260,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &680724249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680724245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &694415554
 GameObject:
   m_ObjectHideFlags: 0
@@ -22506,6 +22651,7 @@ GameObject:
   - component: {fileID: 781356855}
   - component: {fileID: 781356857}
   - component: {fileID: 781356856}
+  - component: {fileID: 781356858}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -22614,6 +22760,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &781356858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781356854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &793262524
 GameObject:
   m_ObjectHideFlags: 0
@@ -22661,6 +22822,7 @@ GameObject:
   - component: {fileID: 797336694}
   - component: {fileID: 797336696}
   - component: {fileID: 797336695}
+  - component: {fileID: 797336697}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -22768,6 +22930,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &797336697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797336693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &803017726 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9134004320542568185, guid: 514a0ee905855394f872bd202779a408,
@@ -25406,6 +25583,7 @@ GameObject:
   - component: {fileID: 908773305}
   - component: {fileID: 908773307}
   - component: {fileID: 908773306}
+  - component: {fileID: 908773308}
   m_Layer: 0
   m_Name: Point Light (5)
   m_TagString: Untagged
@@ -25513,6 +25691,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &908773308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908773304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &922294470
 GameObject:
   m_ObjectHideFlags: 0
@@ -25607,6 +25800,7 @@ GameObject:
   - component: {fileID: 925172492}
   - component: {fileID: 925172494}
   - component: {fileID: 925172493}
+  - component: {fileID: 925172495}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -25714,6 +25908,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &925172495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925172491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &927265910
 GameObject:
   m_ObjectHideFlags: 0
@@ -26973,6 +27182,7 @@ GameObject:
   - component: {fileID: 1018106860}
   - component: {fileID: 1018106862}
   - component: {fileID: 1018106861}
+  - component: {fileID: 1018106863}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -27080,6 +27290,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1018106863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018106859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1027483516
 GameObject:
   m_ObjectHideFlags: 0
@@ -27966,6 +28191,7 @@ GameObject:
   - component: {fileID: 1091599319}
   - component: {fileID: 1091599321}
   - component: {fileID: 1091599320}
+  - component: {fileID: 1091599322}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -28073,6 +28299,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1091599322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091599318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1091649582
 GameObject:
   m_ObjectHideFlags: 0
@@ -28084,6 +28325,7 @@ GameObject:
   - component: {fileID: 1091649583}
   - component: {fileID: 1091649585}
   - component: {fileID: 1091649584}
+  - component: {fileID: 1091649586}
   m_Layer: 0
   m_Name: Point Light (7)
   m_TagString: Untagged
@@ -28191,6 +28433,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1091649586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091649582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1100474189
 GameObject:
   m_ObjectHideFlags: 0
@@ -28570,6 +28827,7 @@ GameObject:
   - component: {fileID: 1135236841}
   - component: {fileID: 1135236843}
   - component: {fileID: 1135236842}
+  - component: {fileID: 1135236844}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -28677,6 +28935,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1135236844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135236840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1146808063
 GameObject:
   m_ObjectHideFlags: 0
@@ -28922,6 +29195,7 @@ GameObject:
   - component: {fileID: 1173363232}
   - component: {fileID: 1173363234}
   - component: {fileID: 1173363233}
+  - component: {fileID: 1173363235}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -29029,6 +29303,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1173363235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173363231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1174082936
 GameObject:
   m_ObjectHideFlags: 0
@@ -29040,6 +29329,7 @@ GameObject:
   - component: {fileID: 1174082937}
   - component: {fileID: 1174082939}
   - component: {fileID: 1174082938}
+  - component: {fileID: 1174082940}
   m_Layer: 0
   m_Name: Headlamplight (1)
   m_TagString: Untagged
@@ -29147,6 +29437,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1174082940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174082936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1001 &1177334931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29236,6 +29541,7 @@ GameObject:
   - component: {fileID: 1184561348}
   - component: {fileID: 1184561350}
   - component: {fileID: 1184561349}
+  - component: {fileID: 1184561351}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -29343,6 +29649,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1184561351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184561347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1198231971
 GameObject:
   m_ObjectHideFlags: 0
@@ -29935,6 +30256,7 @@ GameObject:
   - component: {fileID: 1255780535}
   - component: {fileID: 1255780537}
   - component: {fileID: 1255780536}
+  - component: {fileID: 1255780538}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -30042,6 +30364,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1255780538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255780534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1259322800
 GameObject:
   m_ObjectHideFlags: 0
@@ -30367,6 +30704,7 @@ GameObject:
   - component: {fileID: 1323098195}
   - component: {fileID: 1323098197}
   - component: {fileID: 1323098196}
+  - component: {fileID: 1323098198}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -30474,6 +30812,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1323098198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323098194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1326849922
 GameObject:
   m_ObjectHideFlags: 0
@@ -30769,6 +31122,7 @@ GameObject:
   - component: {fileID: 1409539138}
   - component: {fileID: 1409539140}
   - component: {fileID: 1409539139}
+  - component: {fileID: 1409539141}
   m_Layer: 0
   m_Name: Point Light (4)
   m_TagString: Untagged
@@ -30876,6 +31230,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1409539141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409539137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1412760402
 GameObject:
   m_ObjectHideFlags: 0
@@ -31219,6 +31588,7 @@ GameObject:
   - component: {fileID: 1428861980}
   - component: {fileID: 1428861982}
   - component: {fileID: 1428861981}
+  - component: {fileID: 1428861983}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -31326,6 +31696,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1428861983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428861979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1457951372
 GameObject:
   m_ObjectHideFlags: 0
@@ -36308,7 +36693,7 @@ PrefabInstance:
     - target: {fileID: 8541732315109040448, guid: 23213e3680d7cf944a3a1a40c9e086bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.48
+      value: 5.28
       objectReference: {fileID: 0}
     - target: {fileID: 8541732315109040448, guid: 23213e3680d7cf944a3a1a40c9e086bc,
         type: 3}
@@ -38011,6 +38396,7 @@ GameObject:
   - component: {fileID: 1677041715}
   - component: {fileID: 1677041717}
   - component: {fileID: 1677041716}
+  - component: {fileID: 1677041718}
   m_Layer: 0
   m_Name: Point Light (6)
   m_TagString: Untagged
@@ -38118,6 +38504,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1677041718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677041714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1680628686
 GameObject:
   m_ObjectHideFlags: 0
@@ -38971,6 +39372,7 @@ GameObject:
   - component: {fileID: 1822328761}
   - component: {fileID: 1822328763}
   - component: {fileID: 1822328762}
+  - component: {fileID: 1822328764}
   m_Layer: 0
   m_Name: Point Light (4)
   m_TagString: Untagged
@@ -39078,6 +39480,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1822328764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822328760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &1830290805
 GameObject:
   m_ObjectHideFlags: 0
@@ -45902,6 +46319,7 @@ GameObject:
   - component: {fileID: 2034943620}
   - component: {fileID: 2034943622}
   - component: {fileID: 2034943621}
+  - component: {fileID: 2034943623}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -46009,6 +46427,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2034943623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034943619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &2054885091
 GameObject:
   m_ObjectHideFlags: 0
@@ -46020,6 +46453,7 @@ GameObject:
   - component: {fileID: 2054885092}
   - component: {fileID: 2054885094}
   - component: {fileID: 2054885093}
+  - component: {fileID: 2054885095}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -46127,6 +46561,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2054885095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054885091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &2059037973
 GameObject:
   m_ObjectHideFlags: 0
@@ -46258,6 +46707,7 @@ GameObject:
   - component: {fileID: 2079266239}
   - component: {fileID: 2079266241}
   - component: {fileID: 2079266240}
+  - component: {fileID: 2079266242}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -46365,6 +46815,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2079266242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079266238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &2081354379
 GameObject:
   m_ObjectHideFlags: 0
@@ -46376,6 +46841,7 @@ GameObject:
   - component: {fileID: 2081354380}
   - component: {fileID: 2081354382}
   - component: {fileID: 2081354381}
+  - component: {fileID: 2081354383}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -46483,6 +46949,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2081354383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081354379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &2083268485
 GameObject:
   m_ObjectHideFlags: 0
@@ -47105,6 +47586,7 @@ GameObject:
   - component: {fileID: 2117168785}
   - component: {fileID: 2117168787}
   - component: {fileID: 2117168786}
+  - component: {fileID: 2117168788}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
@@ -47212,6 +47694,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2117168788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117168784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 45
+  distance: 0
 --- !u!1 &2122346277
 GameObject:
   m_ObjectHideFlags: 0
