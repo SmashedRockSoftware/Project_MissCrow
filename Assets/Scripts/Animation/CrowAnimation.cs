@@ -15,8 +15,6 @@ public class CrowAnimation : MonoBehaviour
 
     const string WALK1 = "ArmatureCrow1|Crowwalk1-60";
 
-    private bool isClipChanged;
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,19 +36,13 @@ public class CrowAnimation : MonoBehaviour
                 // Animation has completed a loop
                 // Change the animation clip here
                 animator.Play(ChooseRandomIdle());
-
-                // Prevent multiple changes within the same loop
-                isClipChanged = true;
             }
             else if (stateInfo.normalizedTime < 1.0f) {
-                // Reset the flag when the animation is in progress
-                isClipChanged = false;
             }
         }
         else
         {
             animator.Play(WALK1);
-            isClipChanged = false;
         }
     }
 

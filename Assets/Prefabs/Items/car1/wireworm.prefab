@@ -1922,7 +1922,10 @@ MonoBehaviour:
   onTalk:
     m_PersistentCalls:
       m_Calls: []
-  objectsToMoveToLayer: {fileID: 6467623327781561520}
+  objectsToMoveToLayer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1334727758759496929}
   isTalkAble: 1
 --- !u!114 &2718345294139660908
 MonoBehaviour:
@@ -1940,12 +1943,6 @@ MonoBehaviour:
 --- !u!23 &3186036694485760859 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2715110859914093032, guid: 514a0ee905855394f872bd202779a408,
-    type: 3}
-  m_PrefabInstance: {fileID: 691603325045627571}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6467623327781561520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5789531978523082243, guid: 514a0ee905855394f872bd202779a408,
     type: 3}
   m_PrefabInstance: {fileID: 691603325045627571}
   m_PrefabAsset: {fileID: 0}

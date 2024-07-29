@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_Name
-      value: RightDoor
+      value: c1-RightDoor
       objectReference: {fileID: 0}
     - target: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1554,6 +1554,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1558872978907327781}
+    - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9012508737056046613}
     - targetCorrespondingSourceObject: {fileID: 1370851052595870615, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
@@ -1723,6 +1727,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 1
+--- !u!208 &9012508737056046613
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3541036574570952264}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.49, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.63, y: -3.7, z: -6.58}
+  m_TimeToStationary: 0.5
 --- !u!137 &7620628776690938846 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5908631464110156419, guid: 514a0ee905855394f872bd202779a408,
