@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7390807743358692122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 581634667098521160, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: InpectionDialogue
+      value: The door to the next car, better see what else is going on
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541036574570952264, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_Name
+      value: Use-RightDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541036574570952264, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829291051958821035, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 87861c5aa1a62274f85ef580090424d8,
+        type: 2}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236321537153758096, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843307114959436646, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1558872978907327781, guid: d3de854b71c641f4f868fef99c62993e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3114372978150826698, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4924218382131195502}
+    - targetCorrespondingSourceObject: {fileID: 3114372978150826698, guid: d3de854b71c641f4f868fef99c62993e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736805842687454555}
+  m_SourcePrefab: {fileID: 100100000, guid: d3de854b71c641f4f868fef99c62993e, type: 3}
+--- !u!1 &5596027948220582352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3114372978150826698, guid: d3de854b71c641f4f868fef99c62993e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7390807743358692122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4924218382131195502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596027948220582352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de092b1d9f68b2044b32a70f130b230f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1736805842687454555}
+        m_TargetAssemblyTypeName: SlidingDoorAnimation, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &1736805842687454555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596027948220582352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5dff96fce55774086b087f44c69b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorTransform: {fileID: 6701064669917743080}
+  openPosition: {x: -12.18, y: 7.07, z: 7.61}
+  duration: 1
+  openTime: 10
+--- !u!4 &6701064669917743080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4210754241234988274, guid: d3de854b71c641f4f868fef99c62993e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7390807743358692122}
+  m_PrefabAsset: {fileID: 0}

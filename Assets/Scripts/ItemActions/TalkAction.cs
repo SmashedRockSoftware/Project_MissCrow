@@ -10,7 +10,7 @@ public class TalkAction : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] UnityEvent onTalk;
 
-    [SerializeField] GameObject objectsToMoveToLayer;
+    [SerializeField] GameObject[] objectsToMoveToLayer;
 
     [SerializeField] bool isTalkAble = true;
 
@@ -25,7 +25,7 @@ public class TalkAction : MonoBehaviour
     public void TalkToObject() {
         if(!isTalkAble) { return; }
 
-        GameManager.Instance.EnterTalkingMode(virtualCamera.transform, gameObject.GetComponent<Item>(), dialogueScript.scriptList);
+        GameManager.Instance.EnterTalkingMode(virtualCamera.transform, gameObject.GetComponent<Item>(), objectsToMoveToLayer, dialogueScript.scriptList);
         onTalk.Invoke();
     }
 }

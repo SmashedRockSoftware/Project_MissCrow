@@ -35,6 +35,8 @@ public class DialogueUI : MonoBehaviour
 
     float lifeTime = 0;
 
+    GameObject[] layerdSwappedObjs;
+
     private void Awake() {
         Instance = this;
     }
@@ -56,12 +58,17 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(Transform camera, Item item, List<string> dialogueScript) {
+    public void EnterDialogue(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         dialogueItem = item;
 
         originalLayerMask = item.gameObject.layer;
         var mask = LayerMask.NameToLayer("DialogueLayer");
         RecursivelyChangeLayer(item.gameObject, mask);
+        foreach (var obj in objsToMove) {
+            obj.layer = layerMask;
+        }
+
+        layerdSwappedObjs = objsToMove;
 
         dialoguePanel.SetActive(true);
         dialogueCamera.transform.position = camera.transform.position;
@@ -77,6 +84,11 @@ public class DialogueUI : MonoBehaviour
 
     public void ExitDialogue() {
         RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
+        foreach (var obj in layerdSwappedObjs) {
+            obj.layer = originalLayerMask;
+        }
+
+        layerdSwappedObjs = null;
 
         GameManager.Instance.ExitTalkingMode();
 

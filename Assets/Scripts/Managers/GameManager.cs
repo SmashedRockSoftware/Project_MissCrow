@@ -64,10 +64,10 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    public void EnterTalkingMode(Transform camera, Item item, List<string> dialogueScript) {
+    public void EnterTalkingMode(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
-        DialogueUI.Instance.EnterDialogue(camera, item, dialogueScript);
+        DialogueUI.Instance.EnterDialogue(camera, item, objsToMove, dialogueScript);
     }
 
     public void ExitTalkingMode() {

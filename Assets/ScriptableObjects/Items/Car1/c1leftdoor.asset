@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
-  m_Name: ExitDoor
+  m_Name: c1leftdoor
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: Exit door
-  inspectDialogue: 
+  itemName: Door
+  inspectDialogue: A door to the back, I bet its lovely out there
