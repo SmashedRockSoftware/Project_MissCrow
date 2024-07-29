@@ -1,0 +1,154 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3341055194598420875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605016524887854728, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417440566198588466, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_Name
+      value: useable-faucet Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417440566198588466, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3617348895526156458, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1701464769231165416}
+  m_SourcePrefab: {fileID: 100100000, guid: 549d5a03785d6ad4e8d83562c1ccf4a3, type: 3}
+--- !u!114 &680198024427097372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2822986761282878615, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3341055194598420875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7fb64e050d74d46b0068c6e6c669dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2048759980093327649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3617348895526156458, guid: 549d5a03785d6ad4e8d83562c1ccf4a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3341055194598420875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1701464769231165416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048759980093327649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de092b1d9f68b2044b32a70f130b230f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 680198024427097372}
+        m_TargetAssemblyTypeName: AnimateObject, Assembly-CSharp
+        m_MethodName: PlayAnimaiton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ArmatureObjectfaucet|faucetactivate1-100
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AnimateObject, Assembly-CSharp
+        m_MethodName: PlayAnimaiton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ArmatureObjectwashbucket|washbucketwaterfill1-100
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: ChangeItemScriptableObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 382e2f85e8b0efd49a5962594e41b860,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ItemScriptableObject, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1

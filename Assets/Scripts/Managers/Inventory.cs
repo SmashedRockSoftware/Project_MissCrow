@@ -25,6 +25,12 @@ public class Inventory : MonoBehaviour
     }
 
     private void Start() {
+        comboEvents.AddRange(FindObjectsOfType<EventOnCombo>().ToList());
+
+        ReadInBadCombosText();
+    }
+
+    private void ReadInBadCombosText() {
         var textFile = Resources.Load<TextAsset>("badcombos");
         string[] lines = textFile.text.Split('\n');
 
@@ -51,43 +57,6 @@ public class Inventory : MonoBehaviour
         ItemScriptableObject FindItem(string itemName) {
             return itemObjects.FirstOrDefault(item => item.name.ToLower() == itemName.ToLower());
         }
-
-        //for (int i = 0; i < lines.Length; i++) {
-        //    var splitComboDialog = lines[i].Split(":");
-        //    var splitCombo = splitComboDialog[0].Split("+");
-
-        //    Debug.Log("[" +splitCombo[0] + ", " + splitCombo[1]+ "]  = "+ splitComboDialog[1]);
-
-        //    //ItemScriptableObject item1 = null;
-        //    //ItemScriptableObject item2 = null;
-        //    //foreach (var item in itemObjects) {
-        //    //    if (item1 == null && item.name.Contains(splitCombo[0])) {
-        //    //        item1 = item;
-        //    //    }
-
-        //    //    if (item2 == null && item.name.Contains(splitCombo[1])) {
-        //    //        item2 = item;
-        //    //    }
-
-        //    //    if (item1 == null && item.name.Contains(splitCombo[1])) {
-        //    //        item1 = item;
-        //    //    }
-
-        //    //    if (item2 == null && item.name.Contains(splitCombo[0])) {
-        //    //        item2 = item;
-        //    //    }
-
-        //    //    Debug.Log(item.name);
-
-        //    //    if (item1 == null && item2 == null)
-        //    //        break;
-        //    //}
-
-        //    //if (item1 != null && item2 != null)
-        //    //    badCombos.Add(new BadCombo(item1, item2, splitComboDialog[1]));
-        //    //else
-        //    //    Debug.Log("No bad combo for " + splitCombo[0] + " " + splitCombo[1]);
-        //}
     }
 
     // Update is called once per frame
