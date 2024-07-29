@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/OLDCopyOfTrainEnvironment 1.unity
     guid: 93e6262fe87cbd84398e620eb8eaf7c1
+  - enabled: 0
+    path: Assets/Scenes/Copy-TrainEnvironment2.unity
+    guid: b35de38aa5f08c949a7cafb598a75a82
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d9f37e7998a56f646ae81eb5686ef989
   - enabled: 1
-    path: Assets/Scenes/Copy-TrainEnvironment2.unity
-    guid: b35de38aa5f08c949a7cafb598a75a82
+    path: Assets/Scenes/TrainEnvironment.unity
+    guid: 39661a34b811e9742974d694189d9220
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 98e68c143fe59ec4bb80b45ac1cb9cc7

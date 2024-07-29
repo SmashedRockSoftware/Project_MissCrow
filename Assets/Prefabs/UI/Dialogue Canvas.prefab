@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grannyPanel: {fileID: 8293527635292146176}
   grannyText: {fileID: 1007361548776714654}
-  grannyDisplayTime: 3
+  grannyDisplayTime: 5
   dialoguePoint: {fileID: 0}
   grannyPanelOffset: {x: 0, y: 380, z: 0}
   dialoguePanel: {fileID: 765039356918669893}

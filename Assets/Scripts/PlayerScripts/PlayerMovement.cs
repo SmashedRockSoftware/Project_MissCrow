@@ -106,6 +106,8 @@ public class PlayerMovement : MonoBehaviour
     public void GoTo(Vector3 _location) {
         rotateToFace.Kill();
 
+        gameObject.SendMessage("GoingToLocation");
+
         m_PlayerLocationTarget.position = _location;
         agent.SetDestination(m_PlayerLocationTarget.position);
         nextPosition = _location;
