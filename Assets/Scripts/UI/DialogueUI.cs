@@ -65,7 +65,7 @@ public class DialogueUI : MonoBehaviour
         var mask = LayerMask.NameToLayer("DialogueLayer");
         RecursivelyChangeLayer(item.gameObject, mask);
         foreach (var obj in objsToMove) {
-            obj.layer = layerMask;
+            obj.layer = mask;
         }
 
         layerdSwappedObjs = objsToMove;

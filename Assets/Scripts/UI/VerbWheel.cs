@@ -151,6 +151,13 @@ public class VerbWheel : MonoBehaviour
     }
 
     private void HideVerbWheel() {
+        if (comboText == null) return;
+        if (tweenBg == null) return;
+        if (tweenTx == null) return;
+
+        if (backgroundObject == null) return;
+        if (textObject == null) return;
+
         comboText.gameObject.SetActive(false);
         tweenBg.Kill(false);
         tweenTx.Kill(false);

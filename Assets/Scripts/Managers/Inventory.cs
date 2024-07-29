@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance;
     [SerializeField] List<Combination> combinations = new List<Combination>();
     [SerializeField] List<EventOnCombo> comboEvents = new List<EventOnCombo>();
+    [SerializeField] List<EventOnPickup> pickupEvents = new List<EventOnPickup>();
+    [SerializeField] List<EventOnUse> useEvents = new List<EventOnUse>();
 
     [SerializeField] List<BadCombo> badCombos = new List<BadCombo>();
 
@@ -26,6 +28,8 @@ public class Inventory : MonoBehaviour
 
     private void Start() {
         comboEvents.AddRange(FindObjectsOfType<EventOnCombo>().ToList());
+        pickupEvents.AddRange(FindObjectsOfType<EventOnPickup>().ToList());
+        useEvents.AddRange(FindObjectsOfType<EventOnUse>().ToList());
 
         ReadInBadCombosText();
     }
@@ -67,13 +71,27 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemScriptableObject item) {
         items.Add(item);
+
+        foreach (var picked in pickupEvents) {
+            if(picked.requiredItem == item) {
+                picked.OnPickupFireEvent();
+            }
+        }
+    }
+
+    public void ItemBeingUsed(ItemScriptableObject item) {
+        foreach (var used in useEvents) {
+            if (used.requiredItem == item) {
+                used.OnUseFireEvent();
+            }
+        }
     }
 
     public Combination CheckCombinations(List<ItemScriptableObject> currentItems) {
         Combination result = combinations.FirstOrDefault(c => new HashSet<ItemScriptableObject>(c.requiredItems).SetEquals(new HashSet<ItemScriptableObject>(currentItems)));
 
         if (result != null) {
-            Debug.Log("Inventory::CheckCombinations() Matched combination: " + string.Join(", ", result.requiredItems));
+            Debug.Log("Inventory::CheckCombinations() Matched combination["+ result.name+ "]: " + string.Join(", ", result.requiredItems));
             return result;
         }
         else {
@@ -96,7 +114,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void CombineItems(GameObject objectDropped, GameObject closestItem) {
-        Debug.Log("Combine [" + objectDropped.name + " with " + closestItem.name + "]");
+        Debug.Log("Inventory::CombineItems [" + objectDropped.name + " with " + closestItem.name + "]");
 
         List<ItemScriptableObject> currentObjects = new List<ItemScriptableObject>();
         currentObjects.Add(objectDropped.GetComponent<Item>().itemData);
@@ -141,7 +159,6 @@ public class Inventory : MonoBehaviour
         foreach (var comboEvent in comboEvents) {
             if (comboEvent.requiredCombo == Combo) {
                 comboEvent.OnCombinationFireEvent();
-                break;
             }
         }
     }

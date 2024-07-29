@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class UseAction : MonoBehaviour
 {
-    ItemScriptableObject itemData;
+    Item item;
     [SerializeField] UnityEvent onUse;
 
     const string USESOUNDSTR = "use";
@@ -14,6 +14,7 @@ public class UseAction : MonoBehaviour
     void Start()
     {
         //itemData = gameObject.GetComponent<ItemScriptableObject>();
+        item = gameObject.GetComponent<Item>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class UseAction : MonoBehaviour
 
     public void UseItem() {
         onUse.Invoke();
+        Inventory.Instance.ItemBeingUsed(item.itemData);
 
         //AudioAssistant.instance.PlayResourceSoundAtPoint(itemData, USESOUNDSTR, transform.position);
     }

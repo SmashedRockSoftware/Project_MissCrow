@@ -1727,7 +1727,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8846496073160069724}
+      addedObject: {fileID: 7938061627686846904}
+    - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014444833149726516}
     - targetCorrespondingSourceObject: {fileID: 1953707215489881682, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
@@ -1773,7 +1777,7 @@ Animator:
   m_GameObject: {fileID: 36908348072162726}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 760000615f881c346a80d31eddcc0638, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1784,7 +1788,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8846496073160069724
+--- !u!114 &7938061627686846904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1793,10 +1797,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 36908348072162726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7fb64e050d74d46b0068c6e6c669dd, type: 3}
+  m_Script: {fileID: 11500000, guid: bf3b9f5be7cbdec4fac5650085133648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationString: 
+  randomSplit: 50
+--- !u!114 &2014444833149726516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36908348072162726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba9395f56bd94ca9142933a5020c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredCombo: {fileID: 11400000, guid: 728f6e7ca2dd0624fa70c0358cc118fe, type: 2}
+  OnCombination:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7938061627686846904}
+        m_TargetAssemblyTypeName: WormAnimation, Assembly-CSharp
+        m_MethodName: MakeCalm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!4 &849156536329973532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
@@ -1923,9 +1955,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   objectsToMoveToLayer:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6467623327781561520}
   - {fileID: 1334727758759496929}
+  - {fileID: 0}
   isTalkAble: 1
 --- !u!114 &2718345294139660908
 MonoBehaviour:
@@ -1943,6 +1975,12 @@ MonoBehaviour:
 --- !u!23 &3186036694485760859 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2715110859914093032, guid: 514a0ee905855394f872bd202779a408,
+    type: 3}
+  m_PrefabInstance: {fileID: 691603325045627571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6467623327781561520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5789531978523082243, guid: 514a0ee905855394f872bd202779a408,
     type: 3}
   m_PrefabInstance: {fileID: 691603325045627571}
   m_PrefabAsset: {fileID: 0}
