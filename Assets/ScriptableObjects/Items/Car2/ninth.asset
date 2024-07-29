@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: ninth
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: 7a3fbdc0ac118de4ca969d3bc14af951, type: 3}
+  itemSprite: {fileID: 21300000, guid: b7cc1b2e23d142343a587a94076283ed, type: 3}
   itemName: calming plant leaf
   inspectDialogue: A leaf of the docile plant, this should calm them.  but u cant
     eat the leaf like this.
