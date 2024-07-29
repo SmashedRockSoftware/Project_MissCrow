@@ -98,15 +98,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0.29036134, b: 0.29751152, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c669f3af65d78104d80677758fd7671a, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: f8af8726fb353d3479d2382de788f407, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -154,8 +154,6 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   start: 0
   hidePosition: {x: 0, y: 10, z: 0}
-  hideTransform: {fileID: 0}
-  showTransform: {fileID: 0}
   ease: 22
 --- !u!1 &5726606436647589051
 GameObject:
@@ -290,14 +288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2382dcc130b4f5a4cb7e4ebef1f26edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text1: {fileID: 0}
-  text2: {fileID: 0}
-  text3: {fileID: 0}
-  text4: {fileID: 0}
-  offset1: {x: 0, y: 10, z: 0}
-  offset2: {x: 0, y: 10, z: 0}
-  offset3: {x: 0, y: 10, z: 0}
-  offset4: {x: 0, y: 10, z: 0}
+  offsets:
+  - {x: 0, y: -50, z: 0}
+  - {x: 0, y: -70, z: 0}
+  - {x: 0, y: -90, z: 0}
+  - {x: 0, y: -110, z: 0}
+  actionText: {fileID: 0}
   items: []
   actions: []
   currentIndex: 0
