@@ -219,6 +219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
         type: 3}
+      propertyPath: comboEvents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
       propertyPath: comboEvents.Array.data[0]
       value: 
       objectReference: {fileID: 0}
