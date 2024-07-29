@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static event System.Action OnUnPaused;
     public static event System.Action OnCursorChange;
 
-    bool LOCKEDCURSORVISIBILTY = true;
+    bool LOCKEDCURSORVISIBILTY = false;
     CursorLockMode LOCKEDCURSORLOCKEDMODE = CursorLockMode.Confined;
 
     bool UNLOCKEDCURSORVISIBILTY = true;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        LockCursor();
     }
 
     public void UnPauseGame() {

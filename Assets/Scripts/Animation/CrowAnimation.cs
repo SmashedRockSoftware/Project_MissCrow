@@ -14,6 +14,7 @@ public class CrowAnimation : MonoBehaviour
     const string IDLETOME = "ArmatureTome1|Crowidle4-200";
 
     const string WALK1 = "ArmatureCrow1|Crowwalk1-60";
+    [SerializeField] private float minMoveSpeed = 0.5f;
 
 
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class CrowAnimation : MonoBehaviour
     void Update()
     {
         //animator.SetFloat("agentSpeed", agent.velocity.magnitude);
-        if(agent.velocity.magnitude < 1) {
+        if(agent.velocity.magnitude < minMoveSpeed) {
             // Assuming the animation is in the first layer (index 0)
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 

@@ -1859,7 +1859,7 @@ MonoBehaviour:
         m_CallState: 1
       - m_Target: {fileID: 6593177448150557509}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
