@@ -23,6 +23,14 @@ public class InventoryUI : MonoBehaviour
         cam = Camera.main;
     }
 
+    public void RemoveDropTarget(DropTargets dropTarget) {
+        dropTargets.Remove(dropTarget);
+    }
+
+    public void AddDropTarget(DropTargets dropTarget) {
+        dropTargets.Remove(dropTarget);
+    }
+
     void RebuildUI(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e) {
         foreach (var item in inventory) {
             Destroy(item);
