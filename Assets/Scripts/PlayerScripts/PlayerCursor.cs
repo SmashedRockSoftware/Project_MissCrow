@@ -17,8 +17,13 @@ public class PlayerCursor : MonoBehaviour
 
     [SerializeField] Vector3[] offsets = { new Vector3(0, -50, 0), new Vector3(0, -70, 0), new Vector3(0, -90, 0), new Vector3(0, -110, 0), };
 
+    Camera cam;
+
     private void Awake() {
         Instance = this;
+    }
+    private void Start() {
+        cam = Camera.main;
     }
 
     void Update() {
@@ -30,7 +35,7 @@ public class PlayerCursor : MonoBehaviour
             return;
         }
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         ChooseCursorBasedOnItem(ray);
 
         MouseInputOverItem();

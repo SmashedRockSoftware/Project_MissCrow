@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
+    private const float MaxDistance = 200f;
     [SerializeField] List<DropTargets> dropTargets = new List<DropTargets>();
     List<GameObject> inventory = new List<GameObject>();
     [SerializeField] GameObject itemPrefab;
@@ -14,6 +15,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] float minDistance = 1f;
     [SerializeField] float minDropTargetDistance = 70f;
     Camera cam;
+    [SerializeField] private LayerMask layerMask1;
 
     // Start is called before the first frame update
     void Start()
@@ -69,20 +71,16 @@ public class InventoryUI : MonoBehaviour
         }
 
         bool droppedItem = false;
-        if (closestItem == null)
-            foreach (var item in dropTargets) {
-            if (item == objectDropped) { continue; }
+        if (closestItem == null) {
+            Vector3 itemScreenPos = cam.WorldToScreenPoint(Input.mousePosition);
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-                Vector3 itemScreenPos = cam.WorldToScreenPoint(item.transform.position);
-
-                var dist = Vector3.Distance(itemScreenPos, objectDropped.transform.position);
-
-            if (dist < distance) {
-                distance = dist;
-
-                if (dist < minDropTargetDistance) {
-                        closestItem = item.gameObject;
-                        droppedItem = true;
+            Debug.DrawRay(ray.origin, ray.direction * 200f, Color.red, 5f);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, MaxDistance, layerMask1)) {
+                if (hit.collider.TryGetComponent<DropTargets>(out DropTargets dropTarget)) {
+                    closestItem = dropTarget.gameObject;
+                    droppedItem = true;
                 }
             }
         }
@@ -92,6 +90,9 @@ public class InventoryUI : MonoBehaviour
 
         if (closestItem != null)
             Inventory.Instance.CombineItems(objectDropped, closestItem);
+
+        if (closestItem == null)
+            Debug.LogError("DropItem() No drop target for " + objectDropped.name);
     }
 
     // Update is called once per frame
