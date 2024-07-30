@@ -138,7 +138,7 @@ public class Inventory : MonoBehaviour
 
         AudioAssistant.instance.PlayResourceSoundAtPoint(Combo, COMBOSOUNDNAME, location);
 
-        foreach (var item in Combo.requiredItems) {
+        foreach (var item in Combo.cleanUpAfterCombo) {
             items.Remove(item);
         }
 
