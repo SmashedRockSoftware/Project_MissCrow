@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    List<DropTargets> dropTargets = new List<DropTargets>();
+    [SerializeField] List<DropTargets> dropTargets = new List<DropTargets>();
     List<GameObject> inventory = new List<GameObject>();
     [SerializeField] GameObject itemPrefab;
     [SerializeField] Transform itemParent;
@@ -28,7 +28,7 @@ public class InventoryUI : MonoBehaviour
     }
 
     public void AddDropTarget(DropTargets dropTarget) {
-        dropTargets.Remove(dropTarget);
+        dropTargets.Add(dropTarget);
     }
 
     void RebuildUI(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e) {

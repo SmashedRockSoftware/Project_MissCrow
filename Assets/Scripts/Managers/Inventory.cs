@@ -20,10 +20,13 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] List<ItemScriptableObject> itemObjects = new List<ItemScriptableObject>();
 
+    Camera cam;
+
     // Start is called before the first frame update
     void Awake()
     {
         Instance = this;
+        cam = Camera.main;
     }
 
     private void Start() {
@@ -123,17 +126,17 @@ public class Inventory : MonoBehaviour
         var Combo = CheckCombinations(currentObjects);
 
         if (Combo != null) {
-            PerformCombo(Combo);
+            PerformCombo(Combo, closestItem.transform.position);
         }
         else {
             PerformBadCombos(currentObjects);
         }
     }
 
-    private void PerformCombo(Combination Combo) {
+    private void PerformCombo(Combination Combo, Vector3 location) {
         FireRelatedEvents(Combo);
 
-        AudioAssistant.instance.PlayResourceSoundAtPoint(Combo, COMBOSOUNDNAME, transform.position);
+        AudioAssistant.instance.PlayResourceSoundAtPoint(Combo, COMBOSOUNDNAME, location);
 
         foreach (var item in Combo.requiredItems) {
             items.Remove(item);
@@ -146,7 +149,7 @@ public class Inventory : MonoBehaviour
     private void PerformBadCombos(List<ItemScriptableObject> currentObjects) {
         var BadCombo = CheckBadCombinations(currentObjects);
 
-        AudioAssistant.instance.PlayResourceSoundAtPoint(BadCombo, BADCOMBOSOUNDNAME, transform.position);
+        AudioAssistant.instance.PlayResourceSoundAtPoint(BadCombo, BADCOMBOSOUNDNAME, cam.transform.position);
 
         if (BadCombo != null)
             DialogueUI.Instance.DisplayGrannyText(BadCombo.dialogueForBadCombo);

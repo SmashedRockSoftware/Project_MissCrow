@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: leafmortarpestle
   m_EditorClassIdentifier: 
   requiredItems:
-  - {fileID: 11400000, guid: 337a2ff22caa2a546a45b2e32bb3e37c, type: 2}
+  - {fileID: 11400000, guid: f7c3181ad58bccf459ae10180a8ba383, type: 2}
   - {fileID: 11400000, guid: 268b4e2957b967f41b68a95d0739517c, type: 2}
   cleanUpAfterCombo:
   - {fileID: 11400000, guid: 337a2ff22caa2a546a45b2e32bb3e37c, type: 2}

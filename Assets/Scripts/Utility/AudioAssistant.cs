@@ -42,8 +42,11 @@ public class AudioAssistant : MonoBehaviour
         string str = "Sounds/" + name + "/" + soundName;
         var audioClip = Resources.Load<AudioClip>(str);
 
-        if (audioClip == null)
+        if (audioClip == null) {
+            Debug.Log("1No sound for " + name);
             audioClip = Resources.Load<AudioClip>("Sounds/Generic/" + soundName);
+        }
+        else { Debug.Log("sound for " + name); }
 
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;
@@ -53,13 +56,16 @@ public class AudioAssistant : MonoBehaviour
     }
 
     public void PlayResourceSoundAtPoint(Combination comboData, string soundName, Vector3 position) {
-        var name = GetComboName(comboData);
+        var name = GetComboName(comboData).Replace(" (Combination)", "");
 
         string str = "Sounds/Combo/" + name;
         var audioClip = Resources.Load<AudioClip>(str);
 
-        if (audioClip == null)
+        if (audioClip == null) {
+            Debug.Log("No sound for " + name);
             audioClip = Resources.Load<AudioClip>("Sounds/Generic/" + soundName);
+        }
+        else { Debug.Log("sound for " + name); }
 
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;
