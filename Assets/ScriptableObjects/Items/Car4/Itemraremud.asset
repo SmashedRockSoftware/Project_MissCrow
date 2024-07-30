@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemraremud
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemSprite: {fileID: 21300000, guid: cb05de44ae743bb429bc861eb23a7a40, type: 3}
+  itemName: Tincture of rare mud
+  inspectDialogue: 'A drop of this earthy mud can coax life out of dry desert sand. '

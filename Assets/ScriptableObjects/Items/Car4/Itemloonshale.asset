@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemloonshale
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemSprite: {fileID: 21300000, guid: 36c6df5d8d6cfee4a9e9af7550d639d2, type: 3}
+  itemName: Loonshale
+  inspectDialogue: Found in the caves of the Long Scar with great abundance. A small
+    chip of this fungus can represent the moon in any alchemical solution.

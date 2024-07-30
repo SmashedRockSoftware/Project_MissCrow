@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Morningblushcrystalball
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemName: Crystal ball
+  inspectDialogue: 'Since Duskwild is the land of the Moon, it pays to have a little
+    bit of infused Sun around from time to time. '
