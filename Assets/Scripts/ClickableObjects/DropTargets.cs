@@ -20,4 +20,9 @@ public class DropTargets : MonoBehaviour
     {
         
     }
+
+    public void RemoveDropTarget() {
+        FindObjectOfType<InventoryUI>().drop
+        Destroy(this);
+    }
 }
