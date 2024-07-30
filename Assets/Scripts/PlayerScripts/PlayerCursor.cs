@@ -104,6 +104,8 @@ public class PlayerCursor : MonoBehaviour
 
     private void HandleScrollingInputs() {
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        if (Input.GetKeyDown(KeyCode.Q)) scrollInput = -0.1f;
+        if (Input.GetKeyDown(KeyCode.E)) scrollInput = 0.1f;
         if (scrollInput != 0f) {
             SwitchCursor(scrollInput);
         }

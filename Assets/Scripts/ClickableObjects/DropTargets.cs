@@ -22,7 +22,10 @@ public class DropTargets : MonoBehaviour
     }
 
     public void RemoveDropTarget() {
-        FindObjectOfType<InventoryUI>().drop
-        Destroy(this);
+        FindObjectOfType<InventoryUI>().RemoveDropTarget(this);
+    }
+
+    public void AddToDropTarget() {
+        FindObjectOfType<InventoryUI>().AddDropTarget(this);
     }
 }
