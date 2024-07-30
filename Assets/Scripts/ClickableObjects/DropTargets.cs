@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DropTargets : MonoBehaviour
 {
     public bool isDropable = true;
+    [SerializeField] UnityEvent onDroppedOn;
 
     public void SetDropAllowance(bool allowance) {
         isDropable = allowance;
@@ -19,6 +21,10 @@ public class DropTargets : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DroppedOn() {
+        onDroppedOn.Invoke();
     }
 
     public void RemoveDropTarget() {

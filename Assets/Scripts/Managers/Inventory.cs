@@ -127,6 +127,7 @@ public class Inventory : MonoBehaviour
 
         if (Combo != null) {
             PerformCombo(Combo, closestItem.transform.position);
+            closestItem.gameObject.SendMessage("DroppedOn");
         }
         else {
             PerformBadCombos(currentObjects);

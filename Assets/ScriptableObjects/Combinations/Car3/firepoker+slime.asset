@@ -17,4 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2aa894e3ed9d12b4ab57da847e87817f, type: 2}
   cleanUpAfterCombo:
   - {fileID: 11400000, guid: e688e661a97214d409590b34915ef616, type: 2}
-  combinedItem: {fileID: 0}
+  - {fileID: 11400000, guid: 2aa894e3ed9d12b4ab57da847e87817f, type: 2}
+  combinedItem: {fileID: 11400000, guid: 3c298379d5387094cae5f03c5b415443, type: 2}
