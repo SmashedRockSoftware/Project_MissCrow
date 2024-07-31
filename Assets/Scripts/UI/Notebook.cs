@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Notebook : MonoBehaviour
 {
+    [SerializeField] GameObject notebookPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class Notebook : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void EnterNotebook() {
+        notebookPanel.SetActive(true);
+        GameManager.Instance.NotebookGame();
+    }
+
+    public void ExitNotebook() {
+        notebookPanel.SetActive(false);
+        GameManager.Instance.UnNotebookGame();
     }
 }

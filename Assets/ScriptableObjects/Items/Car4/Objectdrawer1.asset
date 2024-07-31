@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Objectdrawer1
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: Puzzle drawer
-  inspectDialogue: As long as all three knobs are present, it opens right up.
+  itemName: drawer
+  inspectDialogue: I can't open this drawer, its missing a knob

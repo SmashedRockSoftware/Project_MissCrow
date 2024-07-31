@@ -44,6 +44,18 @@ public class GameManager : MonoBehaviour
         UnlockCursor();
     }
 
+    public void UnNotebookGame() {
+        currentGameState = GameState.InGame;
+        OnUnPaused.Invoke();
+        LockCursor();
+    }
+
+    public void NotebookGame() {
+        currentGameState = GameState.InNotebook;
+        OnPaused.Invoke();
+        UnlockCursor();
+    }
+
     public void UnlockCursor() {
         Cursor.lockState = UNLOCKEDCURSORLOCKEDMODE;
         Cursor.visible = UNLOCKEDCURSORVISIBILTY;
