@@ -1,6 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1878332245247344467
+--- !u!114 &-7421966108701996014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd8d7989a6eb2e4fb1451b45add7c32, type: 3}
+  m_Name: DitherRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_DitherShader: {fileID: -6465566751694194690, guid: f34660363fb34244dbe14a398d59c75f,
+    type: 3}
+  m_Settings:
+    _Strength: 0.05
+    _ColorDepth: 36
+    _RandomRate: 0.25
+    _DownsampleRatio: 2
+    _DownsampleFilterMode: 0
+    _RenderPassEvent: 600
+    _ProfilerTag: Dither Renderer Feature
+  m_CameraType: 3
+--- !u!114 &-2858731566549228877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,7 +34,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
-  m_Name: SSAO
+  m_Name: ScreenSpaceAmbientOcclusion
   m_EditorClassIdentifier: 
   m_Active: 1
   m_Settings:
@@ -22,7 +46,7 @@ MonoBehaviour:
     Intensity: 0.5
     DirectLightingStrength: 0.25
     Radius: 0.25
-    Samples: 0
+    Samples: 1
     BlurQuality: 0
     Falloff: 100
     SampleCount: -1
@@ -51,8 +75,10 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
   m_RendererFeatures:
-  - {fileID: -1878332245247344467}
-  m_RendererFeatureMap: adc0de57c6d2eee5
+  - {fileID: -2858731566549228877}
+  - {fileID: 5658493186982273108}
+  - {fileID: -7421966108701996014}
+  m_RendererFeatureMap: b322a353c9be53d854e00bd69201874e124cd4bb25e1ff98
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -92,3 +118,27 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
+--- !u!114 &5658493186982273108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0755886573accae459da9b09de171844, type: 3}
+  m_Name: GaussianSharpenRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_SharpenShader: {fileID: -6465566751694194690, guid: d08894c40daf9794e926f24d4ee62a32,
+    type: 3}
+  m_Settings:
+    _Amount: 3.63
+    _Threshold: 0
+    _ThresholdRange: 0
+    _Diameter: 3
+    _Detail: 10
+    _RenderPassEvent: 600
+    _ProfilerTag: Sharpen Renderer Feature
+  m_CameraType: 3
