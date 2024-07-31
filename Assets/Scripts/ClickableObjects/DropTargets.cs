@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class DropTargets : MonoBehaviour
 {
     public bool isDropable = true;
+    public bool shouldIgnoreCombo = false;
     [SerializeField] UnityEvent onDroppedOn;
 
     public void SetDropAllowance(bool allowance) {
@@ -23,7 +24,7 @@ public class DropTargets : MonoBehaviour
         
     }
 
-    public void DroppedOn() {
+    public void DroppedOn(GameObject objectDropped) {
         onDroppedOn.Invoke();
     }
 

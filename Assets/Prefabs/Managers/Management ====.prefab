@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
         type: 3}
       propertyPath: combinations.Array.size
-      value: 13
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
         type: 3}
@@ -462,6 +462,42 @@ PrefabInstance:
       propertyPath: combinations.Array.data[12]
       value: 
       objectReference: {fileID: 11400000, guid: e1926e018501901418f732cca9c53a1f,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: 603c0c8381df0764d98dc6d134d7786a,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[14]
+      value: 
+      objectReference: {fileID: 11400000, guid: 98955a2bb252fed47b99f303d00175b5,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 89abbfd05c6e2eb41a06174233376f25,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0dff8d6f0f397ce4f938055914fecce5,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a2b2cf4c7ce792479aa6147162debdf,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: d63ad13da1a21804d9409920ed4b1372,
         type: 2}
     m_RemovedComponents:
     - {fileID: 386396262434589911, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7, type: 3}

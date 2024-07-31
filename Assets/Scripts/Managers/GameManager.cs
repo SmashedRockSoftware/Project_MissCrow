@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
 public enum GameState {
     InGame,
     InDialogue,
+    InNotebook,
     Paused
 }
 

@@ -123,11 +123,17 @@ public class Inventory : MonoBehaviour
         currentObjects.Add(objectDropped.GetComponent<Item>().itemData);
         currentObjects.Add(closestItem.GetComponent<Item>().itemData);
 
+        if (closestItem.GetComponent<DropTargets>().shouldIgnoreCombo) { 
+            closestItem.gameObject.SendMessage("DroppedOn", objectDropped); 
+            Debug.Log("Ignorning combo for " + objectDropped.name + " " + closestItem.name); 
+            return;
+        }
+
         var Combo = CheckCombinations(currentObjects);
 
         if (Combo != null) {
             PerformCombo(Combo, closestItem.transform.position);
-            closestItem.gameObject.SendMessage("DroppedOn");
+            closestItem.gameObject.SendMessage("DroppedOn", objectDropped);
         }
         else {
             PerformBadCombos(currentObjects);

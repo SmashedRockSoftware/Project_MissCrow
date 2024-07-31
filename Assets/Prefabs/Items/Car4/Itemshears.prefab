@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46cf5e64a9062a429f771f0af27e790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
+  rend: {fileID: 8319511548709942440}
 --- !u!114 &1814700137530898090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,3 +464,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InpectionDialogue: 
+--- !u!23 &8319511548709942440 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8621480892816163759, guid: 514a0ee905855394f872bd202779a408,
+    type: 3}
+  m_PrefabInstance: {fileID: 347182467032921863}
+  m_PrefabAsset: {fileID: 0}

@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e14e7cd7eaf86ec44b627f4815d84dce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e14e7cd7eaf86ec44b627f4815d84dce,
         type: 3}
@@ -71,5 +71,84 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e14e7cd7eaf86ec44b627f4815d84dce,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5088922935130063196}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e14e7cd7eaf86ec44b627f4815d84dce,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5079821150442067370}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e14e7cd7eaf86ec44b627f4815d84dce,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796726954267716713}
   m_SourcePrefab: {fileID: 100100000, guid: e14e7cd7eaf86ec44b627f4815d84dce, type: 3}
+--- !u!1 &7361931040141242173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e14e7cd7eaf86ec44b627f4815d84dce,
+    type: 3}
+  m_PrefabInstance: {fileID: 7704458946295583340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5088922935130063196
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361931040141242173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d364c75f2a446ec4099bd99f6f043d96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5079821150442067370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361931040141242173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7fb64e050d74d46b0068c6e6c669dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationString: 
+--- !u!114 &1796726954267716713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361931040141242173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a91c16846783b1499bb9481899865dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5079821150442067370}
+        m_TargetAssemblyTypeName: AnimateObject, Assembly-CSharp
+        m_MethodName: PlayAnimaiton
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ArmatureBigfog1|Bigfogdead1-160
+          m_BoolArgument: 0
+        m_CallState: 1
