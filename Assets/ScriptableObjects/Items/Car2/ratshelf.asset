@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ratshelf
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: A rat on a shelf
-  inspectDialogue: Poor thing is trapped, I need to help, but cant reach
+  itemName: Shelf
+  inspectDialogue: If this can be knocked about so easily, we should see to fastening
+    it down.

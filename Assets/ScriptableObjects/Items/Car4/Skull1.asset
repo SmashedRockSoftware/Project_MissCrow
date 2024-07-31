@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Skull1
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemName: Skull
+  inspectDialogue: She always hides trinkets in this thing.

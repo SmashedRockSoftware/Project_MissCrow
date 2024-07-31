@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: roastedappleSlice
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 6f584003c7c15b544967e1ce660fc12c, type: 3}
-  itemName: roasted apple slice
-  inspectDialogue: A roasted apple slice
+  itemName: Roasted apple slice
+  inspectDialogue: 'This should convince our little Shadow to come down from his
+    hiding place. '

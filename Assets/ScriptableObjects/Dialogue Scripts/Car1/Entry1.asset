@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
+  m_Name: Entry1
+  m_EditorClassIdentifier: 
+  scriptList:
+  - 'Mrs. Crow|Now, why in the name of the Moon am I all the way in the back? '
+  - "Mrs. Crow|If Mr. Crow thinks he should handle this alone, he\u2019s got another
+    thing coming\u2026"
+  - "Mrs. Crow|I\u2019d bet a pretty fingerbone that the other passengers are frightened.
+    I had better check on them before I go rushing back to the engine."

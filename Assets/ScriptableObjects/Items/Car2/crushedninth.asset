@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: crushedninth
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 7a3fbdc0ac118de4ca969d3bc14af951, type: 3}
-  itemName: crushed leaf
-  inspectDialogue: Crushing the leaf releases the oils and seasonings, but it needs
-    a carrier.
+  itemName: Ninth seasoning
+  inspectDialogue: 'A favored condiment for the Inder Rat Shadow, among others. '

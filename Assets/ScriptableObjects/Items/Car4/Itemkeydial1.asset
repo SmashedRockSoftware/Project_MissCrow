@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemkeydial1
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemSprite: {fileID: 21300000, guid: a6a8797d72854bb4fbe9b1e90f6df6e5, type: 3}
+  itemName: Drawer knob
+  inspectDialogue: It has a picture of a sun on it. She likes to hide this one in
+    particular.

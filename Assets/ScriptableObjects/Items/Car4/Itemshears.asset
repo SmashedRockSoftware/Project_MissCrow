@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemshears
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: da16b2a7fb7f4bc4f84928e7079675a3, type: 3}
   itemName: Shears
   inspectDialogue: "This could cut things down. Although Saffron would be cross with
     me should I take them, I don\u2019t see her breaking character long enough to

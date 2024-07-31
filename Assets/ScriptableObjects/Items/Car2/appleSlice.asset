@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: appleSlice
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 9bd83b97dcaad5d4192ba3177692dfbb, type: 3}
-  itemName: apple slice
-  inspectDialogue: An apple slice, an apple a day to keep the witchdoctor away
+  itemName: Apple slice
+  inspectDialogue: "Just what the critter needs. Now, to season it\u2026"

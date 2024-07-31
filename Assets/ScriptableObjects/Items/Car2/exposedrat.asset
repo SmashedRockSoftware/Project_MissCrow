@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: exposedrat
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: A rat on a shelf
-  inspectDialogue: They look scared, I think we can calm them somehow
+  itemName: Inder Rat
+  inspectDialogue: There you are! Oh, won't you come down? I promise it's safe.
