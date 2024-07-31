@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
+  m_Name: Entry5
+  m_EditorClassIdentifier: 
+  scriptList:
+  - Mrs. Crow|Tinny, look at you! You need to shed. I just got these shears, allow
+    me to-
+  - Cheftin|N-no, Mrs. Crow!
+  - "Mrs. Crow|Oh, pumpkin, what\u2019s the matter?"
+  - "Cheftin|I\u2019m s-scared, Mrs. Crow."
+  - "Cheftin|They\u2019ve been arguing for ages."
+  - Cheftin|Although I suppose it is rather one-sided.
+  - "Mrs. Crow|Won\u2019t you unravel? I promise I won\u2019t let anything happen
+    to you."
+  - Cheftin|Okay, Mrs. Crow. For you.

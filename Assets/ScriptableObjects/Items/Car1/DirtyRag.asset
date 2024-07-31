@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 7039e26ef9c51854c9d614013884246b, type: 3}
   itemName: Filthy rag
-  inspectDialogue: Now this is more like it! A clean rag is a happy rag!
+  inspectDialogue: 'Saffron must have forgotten to clean this. It''s covered in grease. '

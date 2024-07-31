@@ -336,11 +336,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7959504282745850726, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8104301971212099104}
+      addedObject: {fileID: 119219543442812752}
     - targetCorrespondingSourceObject: {fileID: 7959504282745850726, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 119219543442812752}
+      addedObject: {fileID: 66644587659151546}
+    - targetCorrespondingSourceObject: {fileID: 7959504282745850726, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4449406299248838923}
   m_SourcePrefab: {fileID: 100100000, guid: 514a0ee905855394f872bd202779a408, type: 3}
 --- !u!1 &132978253607135690 stripped
 GameObject:
@@ -427,26 +431,6 @@ MonoBehaviour:
   talkAction: {fileID: 0}
   pickupAction: {fileID: 0}
   useAction: {fileID: 0}
---- !u!114 &8104301971212099104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132978253607135690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be856e9b7dbea4a47bc124a998deaf50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
-  locationOverride: {fileID: 0}
-  pickupRadius: 1.25
-  forcePickupAfter: 5
-  onPickup:
-    m_PersistentCalls:
-      m_Calls: []
-  hideGameobject: 1
 --- !u!114 &119219543442812752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,3 +448,44 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InpectionDialogue: 
+--- !u!114 &66644587659151546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132978253607135690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a2c4b72f8d4cd4b8cc4d7b548685ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDropable: 1
+--- !u!114 &4449406299248838923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132978253607135690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba9395f56bd94ca9142933a5020c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredCombo: {fileID: 11400000, guid: d63ad13da1a21804d9409920ed4b1372, type: 2}
+  OnCombination:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e92b463774667bd42889e5372dfb3b36, type: 2}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1

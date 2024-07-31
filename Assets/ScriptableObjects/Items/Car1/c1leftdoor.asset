@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
   itemName: Door
-  inspectDialogue: A door to the back, I bet its lovely out there
+  inspectDialogue: 'The best view of the passing shadow wood. '

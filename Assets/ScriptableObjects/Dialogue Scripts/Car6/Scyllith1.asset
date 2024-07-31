@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
+  m_Name: Scyllith1
+  m_EditorClassIdentifier: 
+  scriptList:
+  - "Scyllith|Then there is no piercing the veil? Surely the Dust Mystics have one
+    among their number\u2026"
+  - Mr. Crow|No, mighty Scyllith. Many Shadows before you have, in rage or in grief,
+    sought their council. They can certainly help you heal. But none can help you
+    pass the veil.
+  - "Scyllith|It\u2019s not fair. There is no justice in this. Where is the balance?
+    Are you content with these foul laws?"
+  - Scyllith|I... I had only just earned my title. Had just passed my trials. And
+    I am expected to let it go, because someone got bored.
+  - Mrs. Crow|Miss Scyllith, would you care for a bit of tea while you talk?

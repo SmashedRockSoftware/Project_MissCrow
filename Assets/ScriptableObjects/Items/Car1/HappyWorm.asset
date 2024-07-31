@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HappyWorm
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: Happy wire worm
-  inspectDialogue: Finally resting, I shouldn't disturb them
+  itemName: Bundled up Wier Worm
+  inspectDialogue: Nothing like a warm blanket to assuage one's fears.
