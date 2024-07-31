@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: mortarandpestle
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: mortar and pestle
-  inspectDialogue: A mortar and pestle to grind spices, a nice one too
+  itemName: Mortar and pestle
+  inspectDialogue: "The perfect thing for getting something good and crushed. Nuts,
+    seeds, leaves\u2026\r\n"

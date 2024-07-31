@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: furnace
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: furnace
-  inspectDialogue: A furnace with a roaring fire
+  itemName: Furnace
+  inspectDialogue: A furnace with a roaring fire.

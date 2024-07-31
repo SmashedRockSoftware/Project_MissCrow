@@ -94,4 +94,8 @@ public class AudioAssistant : MonoBehaviour
 
         Destroy(audiosrc.gameObject, audioClip.length);
     }
+
+    public void PlayDialogueResourceSound() {
+
+    }
 }

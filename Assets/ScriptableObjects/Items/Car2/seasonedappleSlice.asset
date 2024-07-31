@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: seasonedappleSlice
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: bddb1dced50d8ed4c9ba76fdc23f2ffd, type: 3}
-  itemName: seasoned apple slice
-  inspectDialogue: An apple slice, an apple a day to keep the witchdoctor away
+  itemName: Seasoned apple slice
+  inspectDialogue: Now, what to cook it on?

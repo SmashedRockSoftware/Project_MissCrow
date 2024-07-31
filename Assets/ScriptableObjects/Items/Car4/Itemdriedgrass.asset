@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemdriedgrass
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 2dedfc278d5376246ab88985d11b39c4, type: 3}
   itemName: Dried grass
-  inspectDialogue: "This grass does not come from Duskwild. The land of the sun is
+  inspectDialogue: "This grass does not come from Duskwild. The land of the Sun is
     supposedly filled with grasses like this. I\u2019ve never been!"

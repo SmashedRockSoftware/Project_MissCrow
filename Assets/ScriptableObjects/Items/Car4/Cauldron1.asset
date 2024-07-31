@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Cauldron1
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: 
-  inspectDialogue: FIX_ME
+  itemName: Cauldron
+  inspectDialogue: "I hope she cleaned it since the last time she used it. We don\u2019t
+    need any strange reactions\u2026"

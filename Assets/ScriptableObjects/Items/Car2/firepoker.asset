@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: firepoker
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: a937ddb1cba4e054ba550d21e490d526, type: 3}
-  itemName: firepoker
-  inspectDialogue: 'A firepoker, better careful, could poke an eye out
-
-'
+  itemSprite: {fileID: 21300000, guid: f58dd1883ffded24f8072511170feade, type: 3}
+  itemName: Firepoker
+  inspectDialogue: This should give me the leverage to move anything big. Come to
+    think of it, it might just be too useful to leave behind.

@@ -24,4 +24,8 @@ public class AnimateObject : MonoBehaviour
     public void PlaySetAnimaiton() {
         animator.Play(animationString);
     }
+
+    public void SetScale(float scale) {
+        transform.localScale = new Vector3(scale, scale, scale);
+    }
 }

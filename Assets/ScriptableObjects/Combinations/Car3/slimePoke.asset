@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: slimePoke
   m_EditorClassIdentifier: 
   requiredItems:
-  - {fileID: 11400000, guid: 3c298379d5387094cae5f03c5b415443, type: 2}
+  - {fileID: 11400000, guid: 2aa894e3ed9d12b4ab57da847e87817f, type: 2}
   - {fileID: 11400000, guid: 7736e75222653ac4c86a14baba4fe271, type: 2}
   cleanUpAfterCombo: []
   combinedItem: {fileID: 0}

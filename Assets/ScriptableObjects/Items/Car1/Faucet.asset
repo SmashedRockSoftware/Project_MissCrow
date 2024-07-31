@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
   itemName: Faucet
-  inspectDialogue: Well, it's still working, I suppose. Though the water pressure
-    could use a bit of a boost.
+  inspectDialogue: A water faucet. Cant use it with all this junk

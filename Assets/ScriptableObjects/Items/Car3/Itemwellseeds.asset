@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f32075852d34d04882cccf2861e7b6c, type: 3}
   m_Name: Itemwellseeds
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: 70ca26ec0f9198b41898070534043b8f, type: 3}
   itemName: Well seeds
   inspectDialogue: Cold seeds from a soaked Well bulb.

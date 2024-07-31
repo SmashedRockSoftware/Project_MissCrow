@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
+  m_Name: Puzzleresolve4
+  m_EditorClassIdentifier: 
+  scriptList:
+  - Saffron|ust like that, I return to life! How easy it is to forget the qualities
+    of the living world!
+  - Saffron|The colors are just as dark and dreary, the smells as stuffed with dust,
+    the passing trees as tangled as they were before, and yet I witness them with
+    the wonder of a worm!
+  - SaffronTell me, Mrs. Crow, how does it feel?
+  - Mrs. Crow|How does what feel, little Saffron?
+  - "Saffron|I\u2019m so very curious, beloved caretaker, how it must feel to possess
+    power over life and death! How does it feel to be a god? A true divine? "
+  - Mrs. Crow|You were not dead, and I am most certainly not a divine.
+  - "Saffron|You\u2019re no fun, ma\u2019am\u2026"
+  - Mrs. Crow|Come, dove, would you tell me what had frightened you so? The entire
+    train is out of sorts.
+  - "Saffron|Oh, she is a mighty beast. Your beau has a handle on it, last I heard.
+    My, my, the shaking and the shouting! She is like to crawl on the roof and snatch
+    my unliving soul from my very carapace\u2026!"
+  - "Mrs. Crow|\u201CHas a handle on it,\u201D has he\u2026?"
+  - 'Saffron|My, Mrs. Crow, is that a shade of betrayal I hear in your voice? '

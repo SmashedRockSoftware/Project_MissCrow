@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: WireWorm
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
-  itemName: A Wire worm
-  inspectDialogue: A wire worm in a jar. Ah! poor thing is shaking, must be cold.
+  itemName: Wier Worm
+  inspectDialogue: 'Our little Shadow is so very disturbed. I need to make sure he
+    calms down so he doesn''t hurt himself. '
