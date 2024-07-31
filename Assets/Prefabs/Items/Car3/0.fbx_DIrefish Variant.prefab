@@ -68,6 +68,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: 0.fbx_DIrefish Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9111668806587088214, guid: 8b8a5a4cfaadae647b7b77d7ded1b391,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2735996989836434832, guid: 8b8a5a4cfaadae647b7b77d7ded1b391,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
