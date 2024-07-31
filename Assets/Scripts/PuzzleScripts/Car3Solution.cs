@@ -19,7 +19,7 @@ public class Car3Solution : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.G)) { OnSolved.Invoke(); }
     }
 
     public void SetColdTemp() {
