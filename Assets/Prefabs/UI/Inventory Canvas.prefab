@@ -271,11 +271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c57265fd2edc44ab709ff7a8177b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropTargets: []
   itemPrefab: {fileID: 5913103390449705919, guid: e9dc4a653c42b3e4b9fc99f874eca8eb,
     type: 3}
   itemParent: {fileID: 4048771978652520277}
-  minDistance: 30
-  minDropTargetDistance: 70
+  minDistance: 40
+  minDropTargetDistance: 150
 --- !u!114 &5101928395810001373
 MonoBehaviour:
   m_ObjectHideFlags: 0
