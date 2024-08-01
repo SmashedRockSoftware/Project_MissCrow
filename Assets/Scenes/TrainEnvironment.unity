@@ -23955,11 +23955,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1963305120}
     m_Modifications:
-    - target: {fileID: 391699663945261780, guid: 9921719d942287548ba41ee4b3d8a887,
-        type: 3}
-      propertyPath: openTime
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1152906247229853120, guid: 9921719d942287548ba41ee4b3d8a887,
         type: 3}
       propertyPath: m_Name
@@ -24019,11 +24014,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5362290675522271426, guid: 9921719d942287548ba41ee4b3d8a887,
-        type: 3}
-      propertyPath: openTime
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -69707,19 +69697,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1963305120}
     m_Modifications:
-    - target: {fileID: 7143929788419218, guid: 67d049353fc938649b41492ef4beea96, type: 3}
-      propertyPath: openTime
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2811542238981734783, guid: 67d049353fc938649b41492ef4beea96,
         type: 3}
       propertyPath: m_Name
       value: Car1 Items
-      objectReference: {fileID: 0}
-    - target: {fileID: 4996707933250061118, guid: 67d049353fc938649b41492ef4beea96,
-        type: 3}
-      propertyPath: openTime
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8454519550139734946, guid: 67d049353fc938649b41492ef4beea96,
         type: 3}
