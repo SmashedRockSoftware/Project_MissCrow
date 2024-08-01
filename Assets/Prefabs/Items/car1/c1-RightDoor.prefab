@@ -1578,6 +1578,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 581634667098521160}
+    - targetCorrespondingSourceObject: {fileID: 1370851052595870615, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479189761818829791}
   m_SourcePrefab: {fileID: 100100000, guid: 514a0ee905855394f872bd202779a408, type: 3}
 --- !u!1 &3114372978150826698 stripped
 GameObject:
@@ -1681,6 +1685,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InpectionDialogue: I can't leave yet, that poor thing is shaking
+--- !u!114 &1479189761818829791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3114372978150826698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5dff96fce55774086b087f44c69b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorTransform: {fileID: 4210754241234988274}
+  openPosition: {x: -12.18, y: 7.07, z: 7.61}
+  duration: 1
+  openTime: 10
 --- !u!1 &3541036574570952264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
@@ -1743,6 +1763,12 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.63, y: -3.7, z: -6.58}
   m_TimeToStationary: 0.5
+--- !u!4 &4210754241234988274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
+    type: 3}
+  m_PrefabInstance: {fileID: 4052752022522501469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &7620628776690938846 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5908631464110156419, guid: 514a0ee905855394f872bd202779a408,
