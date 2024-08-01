@@ -34,7 +34,7 @@ Transform:
   - {fileID: 3732885623351800880}
   - {fileID: 1023995334264336931}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6541745878050220438
 GameObject:
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
         type: 3}
       propertyPath: combinations.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
         type: 3}
@@ -498,6 +498,12 @@ PrefabInstance:
       propertyPath: combinations.Array.data[18]
       value: 
       objectReference: {fileID: 11400000, guid: d63ad13da1a21804d9409920ed4b1372,
+        type: 2}
+    - target: {fileID: 7389792963893364664, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7,
+        type: 3}
+      propertyPath: combinations.Array.data[19]
+      value: 
+      objectReference: {fileID: 11400000, guid: cfab4374f82cf26429f8ffa866112791,
         type: 2}
     m_RemovedComponents:
     - {fileID: 386396262434589911, guid: 7fdfd1fa4503a5046b0bcf376a2d13c7, type: 3}

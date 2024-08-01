@@ -30,6 +30,7 @@ public class Cauldron : MonoBehaviour
         OnFailed.Invoke();
         Debug.Log("Failed to get the right ingredients");
         DialogueUI.Instance.DisplayGrannyText("Gee, that was dangerous, better see if something can help me with this potion");
+        Elements.Clear();
     }
 
     public void WhackPotion() {
@@ -38,7 +39,7 @@ public class Cauldron : MonoBehaviour
         if(Elements.Count != SolutionElements.Count) { FailedPuzzle(); return; }
 
         for (int i = 0; i < Elements.Count; i++) {
-            if (Elements[i] != SolutionElements[i]) {
+            if (Elements[i].typeOfElement != SolutionElements[i].typeOfElement) {
                 goodPotion = false;
                 break;
             }

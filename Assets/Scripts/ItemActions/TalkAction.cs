@@ -22,6 +22,10 @@ public class TalkAction : MonoBehaviour
         Destroy(this);
     }
 
+    public void SetDialogueScript(DialogueScript _dialogueScript) {
+        dialogueScript = _dialogueScript;
+    }
+
     public void TalkToObject() {
         if(!isTalkAble) { return; }
 

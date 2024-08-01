@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -123,10 +121,13 @@ public class Inventory : MonoBehaviour
         currentObjects.Add(objectDropped.GetComponent<Item>().itemData);
         currentObjects.Add(closestItem.GetComponent<Item>().itemData);
 
-        if (closestItem.GetComponent<DropTargets>().shouldIgnoreCombo) { 
-            closestItem.gameObject.SendMessage("DroppedOn", objectDropped); 
-            Debug.Log("Ignorning combo for " + objectDropped.name + " " + closestItem.name); 
-            return;
+        if (closestItem.TryGetComponent<DropTargets>(out DropTargets drop)) {
+            if (drop.shouldIgnoreCombo) {
+                //if (closestItem.GetComponent<DropTargets>().shouldIgnoreCombo) { 
+                closestItem.gameObject.SendMessage("DroppedOn", objectDropped);
+                Debug.Log("Ignorning combo for " + objectDropped.name + " " + closestItem.name);
+                return;
+            }
         }
 
         var Combo = CheckCombinations(currentObjects);
