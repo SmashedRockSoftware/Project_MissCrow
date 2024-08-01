@@ -37,6 +37,8 @@ public class DialogueUI : MonoBehaviour
 
     GameObject[] layerdSwappedObjs;
 
+    GrannySounds grannySounds;
+
     private void Awake() {
         Instance = this;
     }
@@ -45,6 +47,7 @@ public class DialogueUI : MonoBehaviour
         cam = Camera.main;
         dialoguePoint = GameObject.Find("dialoguePoint").transform;  //TODO this is likely to break
         if (dialoguePoint == null) Debug.LogError("DialogueUI::Start() Could not find the DialogPoint gameobject by name.  Create an empty object and place it above the player or else dialogue wont work");
+        grannySounds = FindObjectOfType<GrannySounds>();
     }
 
     void RecursivelyChangeLayer(GameObject obj, int layerMask) {
@@ -109,6 +112,8 @@ public class DialogueUI : MonoBehaviour
             return;
         }
 
+        grannySounds?.InpectingAnItem();
+
         string nextLine = dialogueText[dialogueIndex];
         string[] splitLine = nextLine.Split('|');
 
@@ -137,6 +142,8 @@ public class DialogueUI : MonoBehaviour
     public void DisplayGrannyText(string text) {
         grannyPanel.SetActive(true); 
         grannyText.text = text;
+
+        grannySounds?.InpectingAnItem();
 
         lifeTime = grannyDisplayTime;
     }

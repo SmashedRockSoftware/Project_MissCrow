@@ -23,6 +23,8 @@ public class SlidingDoorAnimation : MonoBehaviour
     }
 
     public void OpenDoor() {
+        if(isOpen) { return; }
+
         tween?.Kill(true);
         isOpen = true;
         tween = doorTransform.DOMove(openPosition, duration);
@@ -31,6 +33,8 @@ public class SlidingDoorAnimation : MonoBehaviour
     }
 
     public void CloseDoor() {
+        if (!isOpen) { return; }
+
         tween?.Kill(true);
         isOpen = false;
         tween = doorTransform.DOMove(closePosition, duration);
