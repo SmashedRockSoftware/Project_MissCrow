@@ -92,8 +92,9 @@ public class PlayerMovement : MonoBehaviour
     public void GoTo(Item _item) {
         Transform itemTransform = _item.transform;
         nextItem = _item;
-        //if(_item.locationOverride != null)
-        //    itemTransform = _item.locationOverride.transform;
+
+        if(_item.locationOverride != null)
+            itemTransform = _item.locationOverride.transform;
 
         GoTo(itemTransform);
     }
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
         OnMovementFinishes?.Invoke();
 
-        LookAt(nextPosition);
+        LookAt(nextItem.transform.position);
     }
 
     [SerializeField] float length = 1f;
