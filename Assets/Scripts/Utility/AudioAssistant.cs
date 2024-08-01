@@ -46,7 +46,7 @@ public class AudioAssistant : MonoBehaviour
             Debug.Log("1No sound for " + name);
             audioClip = Resources.Load<AudioClip>("Sounds/Generic/" + soundName);
         }
-        else { Debug.Log("sound for " + name); }
+        else { /*Debug.Log("sound found for " + name);*/ }
 
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;

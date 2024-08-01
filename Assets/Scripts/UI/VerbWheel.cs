@@ -49,31 +49,52 @@ public class VerbWheel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int maxIndex = 3;
+        {
+            //int maxIndex = 3;
 
-        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-        if(Input.GetKeyDown(KeyCode.Q)) scrollInput = -0.1f;
-        if (Input.GetKeyDown(KeyCode.E)) scrollInput = 0.1f;
-        if (scrollInput != 0f) {
-            if (scrollInput > 0f) {
-                int i = 0;
-                do {
-                    i++;
-                    currentIndex++; 
-                    if (currentIndex > maxIndex) { currentIndex = 0; }
-                    if (i > verbWheelPoints.Count) break;
-                } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
-            }
-            else if (scrollInput < 0f) {
-                int i = 0;
-                do {
-                    i++;
-                    currentIndex--;
-                    if (currentIndex < 0) { currentIndex = maxIndex; }
-                    if (i > verbWheelPoints.Count) break;
-                } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
-            }
+            //float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+            //if(Input.GetKeyDown(KeyCode.Q)) scrollInput = -0.1f;
+            //if (Input.GetKeyDown(KeyCode.E)) scrollInput = 0.1f;
+
+            //if (scrollInput != 0f) {
+            //    if (scrollInput > 0f) {
+            //        int i = 0;
+            //        do {
+            //            i++;
+            //            currentIndex++; 
+            //            if (currentIndex > maxIndex) { currentIndex = 0; }
+            //            if (i > verbWheelPoints.Count) break;
+            //        } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
+            //    }
+            //    else if (scrollInput < 0f) {
+            //        int i = 0;
+            //        do {
+            //            i++;
+            //            currentIndex--;
+            //            if (currentIndex < 0) { currentIndex = maxIndex; }
+            //            if (i > verbWheelPoints.Count) break;
+            //        } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
+            //    }
+            //}
         }
+
+        switch (PlayerCursor.Instance.currentCursorState) {
+            case CursorState.None: 
+                break;
+            case CursorState.Look:
+                currentIndex = 0;
+                break;
+            case CursorState.Talk:
+                currentIndex = 2;
+                break;
+            case CursorState.Take:
+                currentIndex = 1;
+                break;
+            case CursorState.Use:
+                currentIndex = 3;
+                break;
+        }
+        
 
         wheel.transform.DOLocalRotate(verbWheelPoints[currentIndex].rotationOfPoint, duration);
 
@@ -106,28 +127,12 @@ public class VerbWheel : MonoBehaviour
                     break;
                 }
             }
-
         }
         else if (hoveringItems.Count == 2) {
-            
-            ////TODO add combo
-            //TODO grab render underneath and change the secondary material to a different color outline, then clean it up somehow
-            //itemNameText.text = hoveringItems[0].itemData.itemName + " " + hoveringItems[1].itemData.itemName;
-
-            //TODO grab render underneath and change the secondary material to a different color outline, then clean it up somehow
             textObject.gameObject.SetActive(false);
             hoveringItems[0].MarkIsCombining();
             hoveringItems[1].MarkIsCombining();
-            //if (hoveringItems[0].TryGetComponent<Renderer>(out Renderer rend)) {
-            //    rend.materials[1] = comboMaterial;
-            //}
-            //if (hoveringItems[1].TryGetComponent<Renderer>(out Renderer rendr)) {
-
-            //}
             backgroundObject.gameObject.SetActive(false);
-            //comboText.gameObject.SetActive(true);
-
-            //comboText.text = "Combine <u>" + hoveringItems[0].itemData.itemName + "</u> with <u>" + hoveringItems[1].itemData.itemName + "</u>";
         }
     }
 
@@ -154,15 +159,19 @@ public class VerbWheel : MonoBehaviour
 
     private void HideVerbWheel() {
         if (comboText == null) return;
-        if (tweenBg == null) return;
-        if (tweenTx == null) return;
-
-        if (backgroundObject == null) return;
         if (textObject == null) return;
+        if (backgroundObject == null) return;
+
+        textObject.gameObject.SetActive(false);
+        verbWheelPoints[0].text.gameObject.SetActive(false);
+        verbWheelPoints[1].text.gameObject.SetActive(false);
+        verbWheelPoints[2].text.gameObject.SetActive(false);
+        verbWheelPoints[3].text.gameObject.SetActive(false);
 
         comboText.gameObject.SetActive(false);
-        tweenBg.Kill(false);
-        tweenTx.Kill(false);
+
+        if (tweenBg != null) tweenBg.Kill(false);
+        if (tweenTx != null) tweenTx.Kill(false);
 
         tweenBg = backgroundObject.transform.DOScale(Vector3.zero, closeDuration).OnComplete(() => { backgroundObject.SetActive(false); });
         tweenTx = textObject.transform.DOScale(Vector3.zero, closeDuration).OnComplete(() => { textObject.SetActive(false); });
