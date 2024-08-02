@@ -11,6 +11,8 @@ public class CameraManager : MonoBehaviour {
 
     public CameraChangedDelegate CameraChanged;
 
+    public CinemachineVirtualCamera currentCamera;
+
     // Start is called before the first frame update
     private void Start() {
         instance = this;
@@ -35,8 +37,10 @@ public class CameraManager : MonoBehaviour {
 
         foreach (var cam in virtualCameras) {
             if (cam == null) continue;
-            if (cam == wantedCamera)
+            if (cam == wantedCamera) {
+                currentCamera = cam;
                 cam.gameObject.SetActive(true);
+            }
             else
                 cam.gameObject.SetActive(false);
         }
