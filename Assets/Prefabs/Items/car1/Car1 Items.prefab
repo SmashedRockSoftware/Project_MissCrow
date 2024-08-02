@@ -6808,6 +6808,7 @@ GameObject:
   - component: {fileID: 5009862165305428161}
   - component: {fileID: 6176357377195296783}
   - component: {fileID: 6933818835330148024}
+  - component: {fileID: 5172985767949069530}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -6887,7 +6888,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 7.3e-44, w: 4.59e-42}
+  m_BoundingSphereOverride: {x: 1.499385e+10, y: 1e-45, z: 1.02e-43, w: 2.14e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6915,6 +6916,21 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &5172985767949069530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949524257952547476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 30
+  distance: 0
 --- !u!1 &4964528658511305203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8012,6 +8028,7 @@ GameObject:
   - component: {fileID: 4956591462627804237}
   - component: {fileID: 3669647029941262410}
   - component: {fileID: 8700245334723887167}
+  - component: {fileID: 801244827776572318}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -8091,7 +8108,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 1.54e-43, w: 3.5397e-41}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1e-45, z: 1.02e-43, w: 2.8e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -8119,6 +8136,21 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &801244827776572318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7838961392269509876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceLod1: 15
+  distanceLod2: 30
+  distance: 0
 --- !u!1 &8172157388016481749
 GameObject:
   m_ObjectHideFlags: 0

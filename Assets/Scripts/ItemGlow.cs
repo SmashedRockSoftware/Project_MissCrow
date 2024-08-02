@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemGlow : MonoBehaviour
@@ -16,6 +17,9 @@ public class ItemGlow : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         rend = rend.GetComponent<Renderer>();
+        if(rend == null)
+            Debug.Log("Renderer has not been assigned, we cant glow! " + rend.gameObject.name);
+
         defaultOutline = Resources.Load<Material>("Material/defaultOutline");
         combinedOutline = Resources.Load<Material>("Material/combinedOutline");
 
@@ -29,12 +33,28 @@ public class ItemGlow : MonoBehaviour
     }
 
     private void MakeObjectGlow() {
-        Material[] materials = {
-            rend.material,
-            outlineMaterial,
-        };
+        if (rend == null) return;
 
-        rend.materials = materials;
+        List<Material> materials = new List<Material>();
+        materials.AddRange(rend.materials.ToList());
+
+        bool alreadyHightlighted = false;
+        alreadyHightlighted = CheckIfAlreadyOutlined(materials, alreadyHightlighted);
+
+        if (!alreadyHightlighted)
+            materials.Add(outlineMaterial);
+
+        rend.materials = materials.ToArray();
+
+        bool CheckIfAlreadyOutlined(List<Material> materials, bool alreadyHightlighted) {
+            for (int i = 0; i < materials.Count; i++) {
+                if (materials[i].name.Contains(outlineMaterial.name)) {
+                    alreadyHightlighted = true;
+                }
+            }
+
+            return alreadyHightlighted;
+        }
     }
 
     public void MarkAsCombined() {
@@ -54,11 +74,22 @@ public class ItemGlow : MonoBehaviour
     }
 
     private void RemoveGlow() {
-        Material[] materials = {
-            rend.material,
-        };
+        if (rend == null) return;
 
-        rend.materials = materials;
+        List<Material> materials = new List<Material>();
+        materials.AddRange(rend.materials.ToList());
+
+        RemoveOutlinedMaterials(materials);
+
+        rend.materials = materials.ToArray();
+
+        void RemoveOutlinedMaterials(List<Material> materials) {
+            for (int i = 0; i < materials.Count; i++) {
+                if (materials[i].name.Contains(outlineMaterial.name)) {
+                    materials.RemoveAt(i);
+                }
+            }
+        }
     }
 
     void Update() {
