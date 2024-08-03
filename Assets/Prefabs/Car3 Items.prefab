@@ -211,7 +211,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6, z: 5, w: -7}
+  m_BoundingSphereOverride: {x: -0.43149838, y: 14645264, z: 7.83e-43, w: 2.4e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -273,6 +273,37 @@ Transform:
   - {fileID: 2876832913721369392}
   - {fileID: 4095054701972161541}
   m_Father: {fileID: 3405548206073824239}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1032922295398640489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9064729538290811917}
+  m_Layer: 0
+  m_Name: locationOverride
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9064729538290811917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032922295398640489}
+  m_LocalRotation: {x: -0.22869322, y: -0.30820358, z: -0.21963091, w: -0.8969238}
+  m_LocalPosition: {x: -0.057, y: 0.0108, z: -0.0024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4343237629397626187}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049599590538705540
@@ -9368,7 +9399,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8439877140458929199, guid: fda494ae6bb972b4ebd968849a354b74, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda494ae6bb972b4ebd968849a354b74, type: 3}
@@ -9482,7 +9514,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3071202255674781976, guid: a2a7dba9b1358de4fa4df73678087b3e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a7dba9b1358de4fa4df73678087b3e, type: 3}
@@ -9819,10 +9852,21 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5785989008921714458, guid: 72fd3daa3a176434389781569afc9b39, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1428952295786928597, guid: 72fd3daa3a176434389781569afc9b39,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9064729538290811917}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fd3daa3a176434389781569afc9b39, type: 3}
+--- !u!4 &4343237629397626187 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1428952295786928597, guid: 72fd3daa3a176434389781569afc9b39,
+    type: 3}
+  m_PrefabInstance: {fileID: 3428065144352093342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7340201436450784890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5354583449094533860, guid: 72fd3daa3a176434389781569afc9b39,
@@ -10027,7 +10071,8 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 750876667046779919, guid: 8573d252f9a4b554191062db1c4b46e2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8573d252f9a4b554191062db1c4b46e2, type: 3}
@@ -10857,6 +10902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InpectionDialogue
       value: I can't leave yet, that poor thing is stuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825552920661930656, guid: 82ae698cad3d28a43ad6cce82c3e52f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
