@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static event System.Action OnUnPaused;
     public static event System.Action OnCursorChange;
 
-    bool LOCKEDCURSORVISIBILTY = false;
+    bool LOCKEDCURSORVISIBILTY = true;
     CursorLockMode LOCKEDCURSORLOCKEDMODE = CursorLockMode.Confined;
 
     bool UNLOCKEDCURSORVISIBILTY = true;

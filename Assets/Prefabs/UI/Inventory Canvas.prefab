@@ -137,8 +137,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 80, y: 80}
   m_Spacing: {x: 5, y: 5}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 2
+  m_ConstraintCount: 1
 --- !u!114 &1377152936144658569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +277,9 @@ MonoBehaviour:
   itemParent: {fileID: 4048771978652520277}
   minDistance: 40
   minDropTargetDistance: 150
+  layerMask1:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &5101928395810001373
 MonoBehaviour:
   m_ObjectHideFlags: 0

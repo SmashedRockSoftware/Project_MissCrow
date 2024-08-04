@@ -17,6 +17,10 @@ public class PlayerCursor : MonoBehaviour
 
     [SerializeField] Vector3[] offsets = { new Vector3(0, -50, 0), new Vector3(0, -70, 0), new Vector3(0, -90, 0), new Vector3(0, -110, 0), };
 
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     Camera cam;
 
     private void Awake() {
@@ -24,6 +28,7 @@ public class PlayerCursor : MonoBehaviour
     }
     private void Start() {
         cam = Camera.main;
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
     void Update() {

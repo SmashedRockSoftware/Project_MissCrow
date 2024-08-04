@@ -7,6 +7,7 @@ using TMPro;
 public class VerbWheel : MonoBehaviour
 {
     [SerializeField] int currentIndex = 1;
+    [SerializeField] List<verbWheelVector> verbWheelVectors = new List<verbWheelVector>();
     [SerializeField] List<verbWheelEntry> verbWheelPoints = new List<verbWheelEntry>();
     [SerializeField] Image wheel;
     [SerializeField] float duration = 0.5f;
@@ -21,12 +22,14 @@ public class VerbWheel : MonoBehaviour
     public static VerbWheel instance;
 
     [Space]
+    [SerializeField] GameObject nonRotbgObject;
     [SerializeField] GameObject backgroundObject;
     Vector3 backgroundObjectSize;
     [SerializeField] GameObject textObject;
     Vector3 textObjectSize;
     [SerializeField] float openDuration = 0.25f;
     [SerializeField] float closeDuration = 0.1f;
+    Tween tweenNonRotBg;
     Tween tweenBg;
     Tween tweenTx;
 
@@ -121,6 +124,15 @@ public class VerbWheel : MonoBehaviour
             verbWheelPoints[2].text.gameObject.SetActive(item.talkAction != null);
             verbWheelPoints[3].text.gameObject.SetActive(item.useAction != null);
 
+            int currentIndex = 0;
+            for (int i = 0; i < verbWheelPoints.Count; i++) {
+                if (verbWheelPoints[i].text.gameObject.activeInHierarchy) {
+                    verbWheelPoints[i].point = verbWheelVectors[currentIndex].point;
+                    verbWheelPoints[i].rotationOfPoint = verbWheelVectors[currentIndex].rotationOfPoint;
+                    currentIndex++;
+                }
+            }
+
             for (int i = 0; i < verbWheelPoints.Count; i++) {
                 if (verbWheelPoints[i].text.gameObject.activeInHierarchy) {
                     currentIndex = i;
@@ -137,8 +149,13 @@ public class VerbWheel : MonoBehaviour
     }
 
     private void ShowVerbWheel() {
+        tweenNonRotBg.Kill(false);
         tweenBg.Kill(false);
         tweenTx.Kill(false);
+
+        nonRotbgObject.transform.localScale = Vector3.zero;
+        tweenNonRotBg = nonRotbgObject.transform.DOScale(backgroundObjectSize, openDuration);
+        nonRotbgObject.SetActive(true);
 
         backgroundObject.transform.localScale = Vector3.zero;
         tweenBg = backgroundObject.transform.DOScale(backgroundObjectSize, openDuration);
@@ -170,12 +187,20 @@ public class VerbWheel : MonoBehaviour
 
         comboText.gameObject.SetActive(false);
 
+        if (tweenNonRotBg != null) tweenNonRotBg.Kill(false);
         if (tweenBg != null) tweenBg.Kill(false);
         if (tweenTx != null) tweenTx.Kill(false);
 
+        tweenNonRotBg = nonRotbgObject.transform.DOScale(Vector3.zero, closeDuration).OnComplete(() => { nonRotbgObject.SetActive(false); });
         tweenBg = backgroundObject.transform.DOScale(Vector3.zero, closeDuration).OnComplete(() => { backgroundObject.SetActive(false); });
         tweenTx = textObject.transform.DOScale(Vector3.zero, closeDuration).OnComplete(() => { textObject.SetActive(false); });
     }
+}
+
+[System.Serializable]
+public class verbWheelVector {
+    public Image point;
+    public Vector3 rotationOfPoint;
 }
 
 [System.Serializable]
