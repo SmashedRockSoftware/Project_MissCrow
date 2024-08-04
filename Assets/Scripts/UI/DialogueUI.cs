@@ -51,6 +51,7 @@ public class DialogueUI : MonoBehaviour
     }
 
     void RecursivelyChangeLayer(GameObject obj, int layerMask) {
+        if (obj == null) return;
         // Set the layer of the current object
         obj.layer = layerMask;
 
@@ -68,6 +69,8 @@ public class DialogueUI : MonoBehaviour
         var mask = LayerMask.NameToLayer("DialogueLayer");
         RecursivelyChangeLayer(item.gameObject, mask);
         foreach (var obj in objsToMove) {
+            if(obj == null) continue;
+
             obj.layer = mask;
         }
 
@@ -88,6 +91,7 @@ public class DialogueUI : MonoBehaviour
     public void ExitDialogue() {
         RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
         foreach (var obj in layerdSwappedObjs) {
+            if (obj == null) continue;
             obj.layer = originalLayerMask;
         }
 
