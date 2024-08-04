@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1548,6 +1548,7 @@ PrefabInstance:
     - {fileID: 8545179808578701425, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 9003578170514990061, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 4159912167404684762, guid: 514a0ee905855394f872bd202779a408, type: 3}
+    - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7274364244099741081, guid: 514a0ee905855394f872bd202779a408,
@@ -1720,3 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDropable: 1
+  shouldIgnoreCombo: 0
+  onDroppedOn:
+    m_PersistentCalls:
+      m_Calls: []

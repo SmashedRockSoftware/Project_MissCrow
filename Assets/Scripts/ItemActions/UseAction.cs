@@ -27,6 +27,6 @@ public class UseAction : MonoBehaviour
         onUse.Invoke();
         Inventory.Instance.ItemBeingUsed(item.itemData);
 
-        //AudioAssistant.instance.PlayResourceSoundAtPoint(itemData, USESOUNDSTR, transform.position);
+        AudioAssistant.instance.PlayResourceSoundAtPoint(item.itemData, USESOUNDSTR, transform.position);
     }
 }

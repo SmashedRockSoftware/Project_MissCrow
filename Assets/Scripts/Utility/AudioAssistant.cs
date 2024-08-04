@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 
 public class AudioAssistant : MonoBehaviour
 {
     [SerializeField] AudioSource audioSource;
 
     public static AudioAssistant instance;
+    Camera cam;
+
+    float maxDistance = 30f;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +20,7 @@ public class AudioAssistant : MonoBehaviour
 
     private void Start() {
         //audioSource = GetComponent<AudioSource>();
+        cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -48,6 +53,8 @@ public class AudioAssistant : MonoBehaviour
         }
         else { /*Debug.Log("sound found for " + name);*/ }
 
+        position = ForceSoundsToBeNearCam(position);
+
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;
         audiosrc.Play();
@@ -67,11 +74,21 @@ public class AudioAssistant : MonoBehaviour
         }
         else { Debug.Log("sound for " + name); }
 
+        position = ForceSoundsToBeNearCam(position);
+
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;
         audiosrc.Play();
 
         Destroy(audiosrc.gameObject, audioClip.length);
+    }
+
+    private Vector3 ForceSoundsToBeNearCam(Vector3 position) {
+        if (Vector3.Distance(position, cam.transform.position) > maxDistance) {
+            position = cam.transform.position;
+        }
+
+        return position;
     }
 
     public void PlayResourceSoundAtPoint(BadCombo badComboData, string soundName, Vector3 position) {
@@ -87,6 +104,8 @@ public class AudioAssistant : MonoBehaviour
 
         if (audioClip == null)
             audioClip = Resources.Load<AudioClip>("Sounds/Generic/" + soundName);
+
+        position = ForceSoundsToBeNearCam(position);
 
         var audiosrc = Instantiate(audioSource, position, Quaternion.identity, transform);
         audiosrc.clip = audioClip;

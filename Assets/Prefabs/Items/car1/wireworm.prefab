@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1714,6 +1714,7 @@ PrefabInstance:
     - {fileID: 4182031298603095392, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 6449672682156585933, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 9130352633730632889, guid: 514a0ee905855394f872bd202779a408, type: 3}
+    - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -2012,6 +2013,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDropable: 1
+  shouldIgnoreCombo: 0
+  onDroppedOn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &6593177448150557509
 AudioSource:
   m_ObjectHideFlags: 0

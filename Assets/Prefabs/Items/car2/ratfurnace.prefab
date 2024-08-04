@@ -4863,7 +4863,7 @@ PrefabInstance:
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -6376,6 +6376,7 @@ PrefabInstance:
     - {fileID: 8958062788903422297, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 544389937585507890, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 1815747459669666302, guid: 514a0ee905855394f872bd202779a408, type: 3}
+    - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -6528,6 +6529,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDropable: 1
+  shouldIgnoreCombo: 0
+  onDroppedOn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!137 &7269209700371128223 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 9170359703360235919, guid: 514a0ee905855394f872bd202779a408,

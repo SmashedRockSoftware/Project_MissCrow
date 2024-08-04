@@ -85,7 +85,7 @@ public class ItemGlow : MonoBehaviour
 
         void RemoveOutlinedMaterials(List<Material> materials) {
             for (int i = 0; i < materials.Count; i++) {
-                if (materials[i].name.Contains(outlineMaterial.name)) {
+                if (materials[i].name.Contains(defaultOutline.name) || materials[i].name.Contains(combinedOutline.name)) {
                     materials.RemoveAt(i);
                 }
             }

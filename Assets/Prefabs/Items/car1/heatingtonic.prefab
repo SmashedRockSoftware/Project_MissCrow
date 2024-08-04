@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1548,6 +1548,7 @@ PrefabInstance:
     - {fileID: 7689182545697117063, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 7959504282745850726, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 2762087375952271001, guid: 514a0ee905855394f872bd202779a408, type: 3}
+    - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
@@ -1622,6 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7fb64e050d74d46b0068c6e6c669dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationString: 
 --- !u!1 &2477612078580194535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3784228867106058748, guid: 514a0ee905855394f872bd202779a408,
