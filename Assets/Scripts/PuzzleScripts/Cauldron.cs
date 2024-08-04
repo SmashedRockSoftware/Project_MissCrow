@@ -36,8 +36,22 @@ public class Cauldron : MonoBehaviour
     public void WhackPotion() {
         bool goodPotion = true;
 
-        if(Elements.Count != SolutionElements.Count) { FailedPuzzle(); return; }
+        if (Elements.Count != SolutionElements.Count) { FailedPuzzle(); return; }
 
+        goodPotion = CheckIfCorrectIngredients();
+
+        if (goodPotion) {
+            SolvePuzzle();
+        }
+        else {
+            FailedPuzzle();
+        }
+
+        Elements.Clear();
+    }
+
+    private bool CheckIfCorrectIngredients() {
+        bool goodPotion = true;
         for (int i = 0; i < Elements.Count; i++) {
             if (Elements[i].typeOfElement != SolutionElements[i].typeOfElement) {
                 goodPotion = false;
@@ -45,13 +59,7 @@ public class Cauldron : MonoBehaviour
             }
         }
 
-        if(goodPotion) {
-            SolvePuzzle();
-        } else {
-            FailedPuzzle();
-        }
-
-        Elements.Clear();
+        return goodPotion;
     }
 
     public void DroppedOn(GameObject objectDropped) {
@@ -74,8 +82,14 @@ public class Cauldron : MonoBehaviour
             elemnt.typeOfElement = PotionElementTypes.sunPowder;
         else if (data == loonShale)
             elemnt.typeOfElement = PotionElementTypes.loonShale;
+        else
+            elemnt.typeOfElement = PotionElementTypes.wrong;
 
         Elements.Add(elemnt);
+
+        if (!CheckIfCorrectIngredients()) {
+            FailedPuzzle();
+        }
     }
 
     // Update is called once per frame
@@ -96,4 +110,5 @@ public enum PotionElementTypes {
     rareMud,
     sunPowder,
     loonShale,
+    wrong
 }

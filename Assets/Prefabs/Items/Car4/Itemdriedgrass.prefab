@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8638017032824169560, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6449672682156585933, guid: 514a0ee905855394f872bd202779a408, type: 3}
@@ -320,6 +325,7 @@ PrefabInstance:
     - {fileID: 3315144262031063117, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 4700758960890143526, guid: 514a0ee905855394f872bd202779a408, type: 3}
     - {fileID: 7299619669916390210, guid: 514a0ee905855394f872bd202779a408, type: 3}
+    - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
@@ -474,6 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDropable: 1
+  shouldIgnoreCombo: 0
   onDroppedOn:
     m_PersistentCalls:
       m_Calls: []
