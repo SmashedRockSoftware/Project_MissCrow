@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class Item : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     public ItemScriptableObject itemData;
-    [HideInInspector] public Transform locationOverride;
+    public Transform locationOverride;
 
     [HideInInspector] public InspectAction inspectAction;
     [HideInInspector] public TalkAction talkAction;

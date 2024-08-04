@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee28855153b3be4bab64d31a86d48b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomMin: 10.01
-  randomMax: 20.01
+  randomMin: 25
+  randomMax: 45
 --- !u!1 &1967814715177386890
 GameObject:
   m_ObjectHideFlags: 0

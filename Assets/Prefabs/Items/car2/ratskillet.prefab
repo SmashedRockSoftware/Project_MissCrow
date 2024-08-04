@@ -1551,6 +1551,10 @@ PrefabInstance:
     - {fileID: 1753419566778947665, guid: 514a0ee905855394f872bd202779a408, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 189906487536451211}
     - targetCorrespondingSourceObject: {fileID: 7274364244099741081, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
@@ -1725,3 +1729,37 @@ MonoBehaviour:
   onDroppedOn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &5477025747157599488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
+    type: 3}
+  m_PrefabInstance: {fileID: 4978803721698535957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &189906487536451211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5477025747157599488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ba9395f56bd94ca9142933a5020c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredCombo: {fileID: 11400000, guid: 66759dee94370ed41a1abc0fb7d78308, type: 2}
+  OnCombination:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5477025747157599488}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
