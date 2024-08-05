@@ -48,8 +48,10 @@ public class Car5 : MonoBehaviour
     const string idle = "ArmatureChefTin|ChefTinidleup";
     const string dialogue = "ArmatureChefTin|ChefTinidletalk-250";
     const string giveItem = "ArmatureChefTin|ChefTingive-100";
-
+    private const string talkIdle = "ArmatureChefTin|ChefTinidletalk-250";
     [SerializeField] bool entryUpdate = true;
+
+    [SerializeField] AnimateObject animateObject;
 
     //TinState tinState = TinState.dialogue1;
 
@@ -93,24 +95,31 @@ public class Car5 : MonoBehaviour
 
         if(dropped == itemScriptableObject1) {
             GameManager.Instance.EnterTalkingMode(virtualCamera.transform, item, objectsToMoveToLayer, dialogueScript2.scriptList);
+            animateObject.PlayAnimaiton(talkIdle);
+            Inventory.Instance.RemoveItem(dropped);
             requestedItem = itemScriptableObject2;
         }
 
         if (dropped == itemScriptableObject2) {
             GameManager.Instance.EnterTalkingMode(virtualCamera.transform, item, objectsToMoveToLayer, dialogueScript3.scriptList);
+            animateObject.PlayAnimaiton(talkIdle);
+            Inventory.Instance.RemoveItem(dropped);
             requestedItem = itemScriptableObject3;
         }
 
         if (dropped == itemScriptableObject3) {
             GameManager.Instance.EnterTalkingMode(virtualCamera.transform, item, objectsToMoveToLayer, dialogueScript4.scriptList);
+            animateObject.PlayAnimaiton(talkIdle);
+            Inventory.Instance.RemoveItem(dropped);
             requestedItem = itemScriptableObject4;
         }
 
         if (dropped == itemScriptableObject4) {
             GameManager.Instance.EnterTalkingMode(virtualCamera.transform, item, objectsToMoveToLayer, dialogueGive.scriptList);
+            animateObject.PlayAnimaiton("ArmatureChefTin|ChefTinidletalk-250 0");
+            Inventory.Instance.RemoveItem(dropped);
             lastDialogue.Invoke();
         }
-
     }
 
     //// Update is called once per frame

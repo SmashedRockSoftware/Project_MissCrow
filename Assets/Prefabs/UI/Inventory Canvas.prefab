@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387768238865194656}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: InventoryGameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +280,7 @@ MonoBehaviour:
   layerMask1:
     serializedVersion: 2
     m_Bits: 0
+  inventoryGameObject: {fileID: 45705179420335847}
 --- !u!114 &5101928395810001373
 MonoBehaviour:
   m_ObjectHideFlags: 0

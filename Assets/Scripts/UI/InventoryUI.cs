@@ -17,6 +17,8 @@ public class InventoryUI : MonoBehaviour
     Camera cam;
     [SerializeField] private LayerMask layerMask1;
 
+    [SerializeField] GameObject inventoryGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +100,6 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.SetActive(GameManager.Instance.currentGameState != GameState.InDialogue);   
+        inventoryGameObject.SetActive(GameManager.Instance.currentGameState != GameState.InDialogue);   
     }
 }
