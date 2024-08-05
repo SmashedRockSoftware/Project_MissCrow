@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4583606000285067369}
   - component: {fileID: 2631361421593490133}
   - component: {fileID: 2852905538557574787}
-  - component: {fileID: 6106595195184693793}
   m_Layer: 0
   m_Name: Point Light (4)
   m_TagString: Untagged
@@ -53,7 +52,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -110,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 3
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: -1
   m_LightLayerMask: 1
   m_RenderingLayers: 1
   m_CustomShadowLayers: 0
@@ -119,21 +118,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &6106595195184693793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228912705340928441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceLod1: 15
-  distanceLod2: 30
-  distance: 0
 --- !u!1 &486088844530118613
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +657,7 @@ GameObject:
   - component: {fileID: 7635658308452259163}
   - component: {fileID: 106173272193843833}
   - component: {fileID: 2167274280833703597}
-  - component: {fileID: 5722090048934354461}
+  - component: {fileID: 8391536421806591898}
   m_Layer: 0
   m_Name: Point Light (5)
   m_TagString: Untagged
@@ -715,7 +699,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -781,7 +765,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &5722090048934354461
+--- !u!114 &8391536421806591898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -793,8 +777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceLod1: 15
-  distanceLod2: 30
+  distanceToDisable: 20
+  distanceToShadows: 15
   distance: 0
 --- !u!1 &1830351337253270664
 GameObject:
@@ -1101,7 +1085,7 @@ GameObject:
   - component: {fileID: 896332756395045214}
   - component: {fileID: 8555518940909193403}
   - component: {fileID: 4698564851261738351}
-  - component: {fileID: 4038418866698504616}
+  - component: {fileID: 5618792777922525202}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -1143,7 +1127,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -1209,7 +1193,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &4038418866698504616
+--- !u!114 &5618792777922525202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1221,8 +1205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceLod1: 15
-  distanceLod2: 30
+  distanceToDisable: 20
+  distanceToShadows: 15
   distance: 0
 --- !u!1 &2922761867787660490
 GameObject:
@@ -1568,7 +1552,7 @@ GameObject:
   - component: {fileID: 9109182014049574688}
   - component: {fileID: 6465565934346348345}
   - component: {fileID: 4094934265202433377}
-  - component: {fileID: 4981849172346957847}
+  - component: {fileID: 5552829191298384566}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -1610,7 +1594,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -1648,7 +1632,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1, y: 11, z: 5, w: -12}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 9.1e-44, w: 4.4875e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1676,7 +1660,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &4981849172346957847
+--- !u!114 &5552829191298384566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1688,8 +1672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceLod1: 15
-  distanceLod2: 30
+  distanceToDisable: 20
+  distanceToShadows: 15
   distance: 0
 --- !u!1 &4249235171879085008
 GameObject:
@@ -3060,13 +3044,14 @@ GameObject:
   - component: {fileID: 2117831627261210916}
   - component: {fileID: 1462285751740602097}
   - component: {fileID: 8476093816491120939}
-  - component: {fileID: 5627598210964402141}
+  - component: {fileID: 4269869532639100251}
+  - component: {fileID: 1765072061891291653}
   m_Layer: 0
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2117831627261210916
 Transform:
@@ -3102,7 +3087,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -3134,13 +3119,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.6114618e-38}
+  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 1.01e-43, w: 4.6478e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3168,7 +3153,24 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &5627598210964402141
+--- !u!114 &4269869532639100251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166202999702070215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61095f4adea171428361cb5529a36fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesBetweenUpdates: 4
+  varianceBetweenUpdates: 2
+  rangeRange: 5
+  intensityRange: 20
+  positionRange: 0.015
+--- !u!114 &1765072061891291653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3180,8 +3182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceLod1: 15
-  distanceLod2: 30
+  distanceToDisable: 20
+  distanceToShadows: 15
   distance: 0
 --- !u!1 &7357871349370646820
 GameObject:
