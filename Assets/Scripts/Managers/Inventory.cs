@@ -80,6 +80,10 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(ItemScriptableObject item) {
+        items.Remove(item);
+    }
+
     public void ItemBeingUsed(ItemScriptableObject item) {
         foreach (var used in useEvents) {
             if (used.requiredItem == item) {

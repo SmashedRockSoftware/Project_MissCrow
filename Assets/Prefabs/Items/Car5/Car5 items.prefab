@@ -5200,15 +5200,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2928766785406526399}
-  m_LocalRotation: {x: -0.031181192, y: 0.012591869, z: 0.0003975276, w: 0.9994344}
-  m_LocalPosition: {x: 69.06, y: 6.5, z: -6.5}
+  m_LocalRotation: {x: -0.09090584, y: 0.24885628, z: 0.013012648, w: 0.9641771}
+  m_LocalPosition: {x: 63.42, y: 5.935, z: -1.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2065264266211070931}
   m_Father: {fileID: 2054820364437383166}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.473, y: 29.052, z: -1.174}
 --- !u!114 &3395601681594778746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5225,7 +5225,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 5
+  m_Priority: 999
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -7243,7 +7243,7 @@ GameObject:
   - component: {fileID: 8375735601572586788}
   - component: {fileID: 1543393365221337637}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TinHitboxCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
