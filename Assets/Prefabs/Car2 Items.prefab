@@ -777,8 +777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToDisable: 20
-  distanceToShadows: 15
+  distanceToDisable: 22
+  distanceToShadows: 20
   distance: 0
 --- !u!1 &1830351337253270664
 GameObject:
@@ -1205,8 +1205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToDisable: 20
-  distanceToShadows: 15
+  distanceToDisable: 22
+  distanceToShadows: 20
   distance: 0
 --- !u!1 &2922761867787660490
 GameObject:
@@ -1632,7 +1632,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 6e-44, z: 9.1e-44, w: 4.4875e-41}
+  m_BoundingSphereOverride: {x: 7.16e-43, y: 6.1438972e-18, z: 7.19e-43, w: 1.9709e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1672,8 +1672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToDisable: 20
-  distanceToShadows: 15
+  distanceToDisable: 22
+  distanceToShadows: 20
   distance: 0
 --- !u!1 &4249235171879085008
 GameObject:
@@ -3182,8 +3182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf8ad0d01cb92248b8e58bd5887c6f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToDisable: 20
-  distanceToShadows: 15
+  distanceToDisable: 22
+  distanceToShadows: 20
   distance: 0
 --- !u!1 &7357871349370646820
 GameObject:
