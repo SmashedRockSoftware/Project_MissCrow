@@ -1176,6 +1176,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3801239507000646628, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141174987965460984, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.0999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141174987965460984, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.6999817
+      objectReference: {fileID: 0}
     - target: {fileID: 8896703506334572621, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
         type: 3}
       propertyPath: m_Pivot.x
