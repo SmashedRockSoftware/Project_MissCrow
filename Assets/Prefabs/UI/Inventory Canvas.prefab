@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387768238865194656}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: InventoryDisplayObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropTargets: []
+  inventoryDisplayObject: {fileID: 45705179420335847}
   itemPrefab: {fileID: 5913103390449705919, guid: e9dc4a653c42b3e4b9fc99f874eca8eb,
     type: 3}
   itemParent: {fileID: 4048771978652520277}

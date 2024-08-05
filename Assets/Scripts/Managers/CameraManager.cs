@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour {
     public CameraChangedDelegate CameraChanged;
 
     public CinemachineVirtualCamera currentCamera;
+    bool preventCameraChange;
 
     // Start is called before the first frame update
     private void Start() {
@@ -20,17 +21,17 @@ public class CameraManager : MonoBehaviour {
         virtualCameras = FindObjectsOfType(typeof(CinemachineVirtualCamera), true) as CinemachineVirtualCamera[];
     }
 
-    //public void SetCameraToHidden(GameObject obj) {
-    //    foreach (var cam in virtualCameras) {
-    //        if (cam == obj) {
-    //            cam.gameObject.SetActive(false);
-    //            break;
-    //        }
-    //    }
-    //}
+    public void SetLockedCameraToVisible(CinemachineVirtualCamera wantedCamera) {
+        SetCameraToVisible(wantedCamera);
+        preventCameraChange = true;
+    }
+
+    public void UnlockCamera() {
+        preventCameraChange = false;
+    }
 
     public void SetCameraToVisible(CinemachineVirtualCamera wantedCamera) {
-        //var wantedCamera = obj.GetComponent<CinemachineVirtualCamera>();
+        if (preventCameraChange) return;
         if (wantedCamera == null) return;
 
         CameraChanged?.Invoke(wantedCamera.transform);

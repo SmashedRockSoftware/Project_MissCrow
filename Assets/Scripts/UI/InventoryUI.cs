@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour
     private const float MaxDistance = 200f;
     [SerializeField] List<DropTargets> dropTargets = new List<DropTargets>();
     List<GameObject> inventory = new List<GameObject>();
+    [SerializeField] GameObject inventoryDisplayObject;
     [SerializeField] GameObject itemPrefab;
     [SerializeField] Transform itemParent;
     [SerializeField] float minDistance = 1f;
@@ -98,6 +99,6 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.SetActive(GameManager.Instance.currentGameState != GameState.InDialogue);   
+        inventoryDisplayObject.SetActive(GameManager.Instance.currentGameState != GameState.InDialogue);   
     }
 }

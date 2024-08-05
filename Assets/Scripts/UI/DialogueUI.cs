@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -63,23 +64,27 @@ public class DialogueUI : MonoBehaviour
     }
 
     public void EnterDialogue(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
-        dialogueItem = item;
+        CameraManager.instance.SetLockedCameraToVisible(camera.GetComponent<CinemachineVirtualCamera>());
 
-        originalLayerMask = item.gameObject.layer;
-        var mask = LayerMask.NameToLayer("DialogueLayer");
-        RecursivelyChangeLayer(item.gameObject, mask);
-        foreach (var obj in objsToMove) {
-            if(obj == null) continue;
+        {
+            originalLayerMask = item.gameObject.layer;
+            var mask = LayerMask.NameToLayer("Default");
+            RecursivelyChangeLayer(item.gameObject, mask);
+            foreach (var obj in objsToMove) {
+                if (obj == null) continue;
 
-            obj.layer = mask;
+                obj.layer = mask;
+            }
+
+            layerdSwappedObjs = objsToMove;
+
+            dialoguePanel.SetActive(false);
+            dialogueCamera.transform.position = camera.transform.position;
+            dialogueCamera.transform.rotation = camera.transform.rotation;
+            dialogueCamera.gameObject.SetActive(true);
         }
 
-        layerdSwappedObjs = objsToMove;
-
-        dialoguePanel.SetActive(true);
-        dialogueCamera.transform.position = camera.transform.position;
-        dialogueCamera.transform.rotation = camera.transform.rotation;
-        dialogueCamera.gameObject.SetActive(true);
+        dialogueItem = item;
 
         dialogueTextPanel.SetActive(true);
         dialogueText = dialogueScript;
@@ -90,10 +95,13 @@ public class DialogueUI : MonoBehaviour
 
     public void ExitDialogue() {
         RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
+
         foreach (var obj in layerdSwappedObjs) {
             if (obj == null) continue;
             obj.layer = originalLayerMask;
         }
+
+        CameraManager.instance.UnlockCamera();
 
         layerdSwappedObjs = null;
 
