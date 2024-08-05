@@ -71,6 +71,8 @@ public class Inventory : MonoBehaviour
     }
 
     public void AddItem(ItemScriptableObject item) {
+        if(items.Contains(item)) return;
+
         items.Add(item);
 
         foreach (var picked in pickupEvents) {
