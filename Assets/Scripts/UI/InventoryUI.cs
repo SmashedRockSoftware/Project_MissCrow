@@ -98,6 +98,6 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.SetActive(GameManager.Instance.currentGameState != GameState.InDialogue);   
     }
 }
