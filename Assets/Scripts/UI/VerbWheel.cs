@@ -145,6 +145,7 @@ public class VerbWheel : MonoBehaviour
             hoveringItems[0].MarkIsCombining();
             hoveringItems[1].MarkIsCombining();
             backgroundObject.gameObject.SetActive(false);
+            nonRotbgObject.SetActive(false);
         }
     }
 
