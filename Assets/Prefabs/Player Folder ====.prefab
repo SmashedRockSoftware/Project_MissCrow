@@ -32,7 +32,7 @@ Transform:
   - {fileID: 8541732315109040448}
   - {fileID: 5964005012686255724}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7352350441027661448
 MonoBehaviour:
@@ -254,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8081667737448980051}
   m_LocalRotation: {x: -0, y: -0.60876626, z: -0, w: -0.7933496}
-  m_LocalPosition: {x: -14.939999, y: 3.703, z: 3.85}
+  m_LocalPosition: {x: 81.623, y: 3.703, z: 4.272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -518,11 +518,16 @@ MonoBehaviour:
   inspectClips:
   - {fileID: 8300000, guid: 743417907d153ec4da8e722cd91f1b17, type: 3}
   - {fileID: 8300000, guid: f004d6141d5f7154697ac805cb64c49d, type: 3}
+  - {fileID: 8300000, guid: b08f1725e8ab0aa4e8079c9abdc5f212, type: 3}
+  - {fileID: 8300000, guid: 65bb3122967adbb48832d042dfc664d5, type: 3}
+  - {fileID: 8300000, guid: 17cd306d68cf9de4c9ca929db242e1b5, type: 3}
   goingClips:
   - {fileID: 8300000, guid: d86758133fb08d247a05905fc1b71a54, type: 3}
   - {fileID: 8300000, guid: f004d6141d5f7154697ac805cb64c49d, type: 3}
-  inspectLinesAmount: 25
-  goingLinesAmount: 25
+  - {fileID: 8300000, guid: dcfb5596aecdb144da6db3f2ceb0c9d2, type: 3}
+  - {fileID: 8300000, guid: 60b48c379d3228c47a8f46121445db67, type: 3}
+  inspectLinesAmount: 75
+  goingLinesAmount: 75
 --- !u!82 &8612755469711095614
 AudioSource:
   m_ObjectHideFlags: 0
