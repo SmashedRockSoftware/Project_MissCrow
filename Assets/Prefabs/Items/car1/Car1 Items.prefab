@@ -14532,6 +14532,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5549675452573081031, guid: 0c3cce5243604114aadff81f801ff2ac,
         type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549675452573081031, guid: 0c3cce5243604114aadff81f801ff2ac,
+        type: 3}
       propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 868953144662753012}
