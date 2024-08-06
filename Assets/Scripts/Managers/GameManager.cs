@@ -83,9 +83,9 @@ public class GameManager : MonoBehaviour
     {
     }
 
-    public void EnterTalkingMode(DialogueScript dialogueScript) {
-        EnterTalkingMode(dialogueScript.startingVirtualCamera.transform, dialogueScript.item, dialogueScript.objectsToMoveToLayer, dialogueScript.scriptList);
-    }
+    //public void EnterTalkingMode(DialogueScript dialogueScript) {
+    //    EnterTalkingMode(dialogueScript.startingVirtualCamera.transform, dialogueScript.item, dialogueScript.objectsToMoveToLayer, dialogueScript.scriptList);
+    //}
 
     public void EnterTalkingMode(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         inTalkingMode = true;

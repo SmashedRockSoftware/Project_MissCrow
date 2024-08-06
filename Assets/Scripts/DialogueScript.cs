@@ -7,9 +7,9 @@ using UnityEngine;
 public class DialogueScript : ScriptableObject
 {
     public List<string> scriptList = new List<string>();
-    public List<CinemachineVirtualCamera> cameraShotList = new List<CinemachineVirtualCamera>();
+    //public List<CinemachineVirtualCamera> cameraShotList = new List<CinemachineVirtualCamera>();
 
-    public CinemachineVirtualCamera startingVirtualCamera;
-    public Item item;
-    public GameObject[] objectsToMoveToLayer;
+    //public CinemachineVirtualCamera startingVirtualCamera;
+    //public Item item;
+    //public GameObject[] objectsToMoveToLayer;
 }
