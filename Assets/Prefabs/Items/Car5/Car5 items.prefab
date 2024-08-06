@@ -6398,6 +6398,7 @@ GameObject:
   - component: {fileID: 6240891517472052295}
   - component: {fileID: 2885745043797423698}
   - component: {fileID: 4685928702338297496}
+  - component: {fileID: 8165806260906819580}
   m_Layer: 0
   m_Name: EntranceTrigger
   m_TagString: Untagged
@@ -6563,6 +6564,25 @@ MonoBehaviour:
       m_Calls: []
   delayEnter: 0
   delayExit: 0
+--- !u!114 &8165806260906819580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612824763630927134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &3682083650676600882
 GameObject:
   m_ObjectHideFlags: 0
