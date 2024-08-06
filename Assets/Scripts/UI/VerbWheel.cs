@@ -52,34 +52,7 @@ public class VerbWheel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        {
-            //int maxIndex = 3;
-
-            //float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-            //if(Input.GetKeyDown(KeyCode.Q)) scrollInput = -0.1f;
-            //if (Input.GetKeyDown(KeyCode.E)) scrollInput = 0.1f;
-
-            //if (scrollInput != 0f) {
-            //    if (scrollInput > 0f) {
-            //        int i = 0;
-            //        do {
-            //            i++;
-            //            currentIndex++; 
-            //            if (currentIndex > maxIndex) { currentIndex = 0; }
-            //            if (i > verbWheelPoints.Count) break;
-            //        } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
-            //    }
-            //    else if (scrollInput < 0f) {
-            //        int i = 0;
-            //        do {
-            //            i++;
-            //            currentIndex--;
-            //            if (currentIndex < 0) { currentIndex = maxIndex; }
-            //            if (i > verbWheelPoints.Count) break;
-            //        } while (!verbWheelPoints[currentIndex].text.gameObject.activeInHierarchy);
-            //    }
-            //}
-        }
+        if (GameManager.Instance.currentGameState != GameState.InGame) { return; }
 
         switch (PlayerCursor.Instance.currentCursorState) {
             case CursorState.None: 
@@ -112,6 +85,8 @@ public class VerbWheel : MonoBehaviour
     }
 
     public void HoverEnter(Item item) {
+        if(GameManager.Instance.currentGameState != GameState.InGame) { return; }
+
         hoveringItems.Add(item);
 
         ShowVerbWheel();

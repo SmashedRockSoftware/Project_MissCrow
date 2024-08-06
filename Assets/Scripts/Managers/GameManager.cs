@@ -56,6 +56,18 @@ public class GameManager : MonoBehaviour
         UnlockCursor();
     }
 
+    public void UnCutsceneGame() {
+        currentGameState = GameState.InGame;
+        //OnUnPaused.Invoke();
+        //LockCursor();
+    }
+
+    public void CutsceneGame() {
+        currentGameState = GameState.InCutscene;
+        //OnPaused.Invoke();
+        //UnlockCursor();
+    }
+
     public void UnlockCursor() {
         Cursor.lockState = UNLOCKEDCURSORLOCKEDMODE;
         Cursor.visible = UNLOCKEDCURSORVISIBILTY;
@@ -69,11 +81,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float scrollInput = Input.GetAxis("Mouse ScrollWheel");
-
-        //if (scrollInput != 0f) {
-        //    SwitchCursor(scrollInput);
-        //}
     }
 
     public void EnterTalkingMode(DialogueScript dialogueScript) {
@@ -90,36 +97,13 @@ public class GameManager : MonoBehaviour
         inTalkingMode = false;
         currentGameState = GameState.InGame;
     }
-
-    //void SwitchCursor(float scrollDirection) {
-    //    int currentCursorIndex = (int)currentCursorState;
-    //    int totalCursors = Enum.GetValues(typeof(CursorState)).Length;
-
-    //    if (scrollDirection > 0f) {
-    //        // Scroll up, switch to next cursor
-    //        currentCursorIndex = (currentCursorIndex + 1) % totalCursors;
-    //    }
-    //    else if (scrollDirection < 0f) {
-    //        // Scroll down, switch to previous cursor
-    //        currentCursorIndex = (currentCursorIndex - 1 + totalCursors) % totalCursors;
-    //    }
-
-    //    currentCursorState = (CursorState)currentCursorIndex;
-    //    OnCursorChange.Invoke();
-    //}
 }
 
 public enum GameState {
     InGame,
     InDialogue,
     InNotebook,
+    InCutscene,
     Paused
 }
-
-//public enum CursorState {
-//    None,
-//    Look,
-//    Talk,
-//    Take
-//}
 

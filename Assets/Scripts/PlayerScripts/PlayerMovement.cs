@@ -33,13 +33,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake() {
         instance = this;
+        m_Camera = Camera.main;
+        agent = gameObject.GetComponent<NavMeshAgent>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        m_Camera = Camera.main;
-        agent = gameObject.GetComponent<NavMeshAgent>();
         origSpeed = agent.speed;
     }
 
