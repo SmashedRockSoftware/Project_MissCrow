@@ -87,6 +87,13 @@ public class GameManager : MonoBehaviour
     //    EnterTalkingMode(dialogueScript.startingVirtualCamera.transform, dialogueScript.item, dialogueScript.objectsToMoveToLayer, dialogueScript.scriptList);
     //}
 
+    public void EnterCutsceneMode(List<string> dialogueScript) {
+        inTalkingMode = true;
+        currentGameState = GameState.InDialogue;
+        //DialogueUI.Instance.EnterDialogue(dialogueScript);
+        DialogueUI.Instance.EnterCutscene(dialogueScript);
+    }
+
     public void EnterTalkingMode(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
@@ -94,6 +101,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void ExitTalkingMode() {
+        inTalkingMode = false;
+        currentGameState = GameState.InGame;
+    }
+
+    public void ExitCutsceneMode() {
         inTalkingMode = false;
         currentGameState = GameState.InGame;
     }

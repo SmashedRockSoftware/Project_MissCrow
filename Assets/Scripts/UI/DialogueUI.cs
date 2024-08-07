@@ -62,6 +62,32 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
+    public void EnterCutscene(List<string> dialogueScript) {
+        //dialogueItem = item;
+
+        //originalLayerMask = item.gameObject.layer;
+        //var mask = LayerMask.NameToLayer("DialogueLayer");
+        //RecursivelyChangeLayer(item.gameObject, mask);
+        //foreach (var obj in objsToMove) {
+        //    if (obj == null) continue;
+
+        //    obj.layer = mask;
+        //}
+
+        //layerdSwappedObjs = objsToMove;
+
+        //dialoguePanel.SetActive(true);
+        //dialogueCamera.transform.position = camera.transform.position;
+        //dialogueCamera.transform.rotation = camera.transform.rotation;
+        //dialogueCamera.gameObject.SetActive(true);
+
+        dialogueTextPanel.SetActive(true);
+        dialogueText = dialogueScript;
+
+        dialogueIndex = 0;
+        DisplayNextDialogue();
+    }
+
     public void EnterDialogue(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         dialogueItem = item;
 
@@ -89,10 +115,14 @@ public class DialogueUI : MonoBehaviour
     }
 
     public void ExitDialogue() {
-        RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
-        foreach (var obj in layerdSwappedObjs) {
-            if (obj == null) continue;
-            obj.layer = originalLayerMask;
+        if(dialogueItem != null)
+            RecursivelyChangeLayer(dialogueItem.gameObject, originalLayerMask);
+
+        if (layerdSwappedObjs != null) {
+            foreach (var obj in layerdSwappedObjs) {
+                if (obj == null) continue;
+                obj.layer = originalLayerMask;
+            }
         }
 
         layerdSwappedObjs = null;

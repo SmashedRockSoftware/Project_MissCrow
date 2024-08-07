@@ -41,7 +41,8 @@ public class CutsceneTrigger : MonoBehaviour {
     void CallEventEnter() {
         OnEnter.Invoke();
 
-        GameManager.Instance.EnterTalkingMode(startingVirtualCamera.transform, item, objectsToMoveToLayer, dialogueScript.scriptList);
+        GameManager.Instance.EnterCutsceneMode(dialogueScript.scriptList);
+        //GameManager.Instance.EnterTalkingMode(startingVirtualCamera.transform, item, objectsToMoveToLayer, dialogueScript.scriptList);
     }
 }
 

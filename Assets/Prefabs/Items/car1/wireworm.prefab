@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7856c4b18f584244ba818186ea9b0a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueScript: {fileID: 11400000, guid: 344b0eedc89aac24a83039f72edd86c7, type: 2}
+  dialogueScript: {fileID: 11400000, guid: dad2fa9849144634d8f5a46db6fd6871, type: 2}
   virtualCamera: {fileID: 1491490480217637671}
   onTalk:
     m_PersistentCalls:
@@ -2015,6 +2015,9 @@ MonoBehaviour:
   isDropable: 1
   shouldIgnoreCombo: 0
   onDroppedOn:
+    m_PersistentCalls:
+      m_Calls: []
+  onMovmentFinDroppedOn:
     m_PersistentCalls:
       m_Calls: []
 --- !u!82 &6593177448150557509
