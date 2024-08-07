@@ -11,6 +11,11 @@ public class SlidingDoorAnimation : MonoBehaviour
     [SerializeField] float duration = 1f;
     [SerializeField] float openTime = 10f;
 
+    [Space]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] float openingPitch = 1f;
+    [SerializeField] float closingPitch = 0.8f;
+
     bool isOpen = false;
 
     Tween tween;
@@ -18,6 +23,8 @@ public class SlidingDoorAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         closePosition = doorTransform.position;
         CloseDoor();
     }
@@ -29,13 +36,22 @@ public class SlidingDoorAnimation : MonoBehaviour
     }
 
     public void OpenDoor() {
-        if(isOpen) { return; }
+        if (isOpen) { return; }
 
         tween?.Kill(true);
         isOpen = true;
         tween = doorTransform.DOMove(closePosition - openPosition, duration);
 
         Invoke(nameof(CloseDoor), openTime);
+
+        PlayDoorSlidingSound(openingPitch);
+    }
+
+    private void PlayDoorSlidingSound(float pitch = 1f) {
+        if (audioSource && !audioSource.isPlaying) { 
+            audioSource.pitch = pitch;
+            audioSource.Play();
+        }
     }
 
     public void CloseDoor() {
@@ -44,6 +60,8 @@ public class SlidingDoorAnimation : MonoBehaviour
         tween?.Kill(true);
         isOpen = false;
         tween = doorTransform.DOMove(closePosition, duration);
+
+        PlayDoorSlidingSound(closingPitch);
     }
 
     private void OnDrawGizmos() {
