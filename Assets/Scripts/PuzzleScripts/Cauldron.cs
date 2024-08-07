@@ -16,6 +16,9 @@ public class Cauldron : MonoBehaviour
     [SerializeField] ItemScriptableObject loonShale;
     [SerializeField] ItemScriptableObject firePoker;
 
+    [SerializeField] AudioSource itemAddedSource;
+    [SerializeField] AudioSource whackSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,8 @@ public class Cauldron : MonoBehaviour
 
     public void WhackPotion() {
         bool goodPotion = true;
+
+        whackSource.Play();
 
         if (Elements.Count != SolutionElements.Count) { FailedPuzzle(); return; }
 
@@ -74,6 +79,8 @@ public class Cauldron : MonoBehaviour
             return;
         }
 
+        itemAddedSource.Play();
+
         var elemnt = new PotionElement();
 
         if (data == rareMud)
@@ -89,7 +96,7 @@ public class Cauldron : MonoBehaviour
 
         if (!CheckIfCorrectIngredients()) {
             FailedPuzzle();
-        }
+        } 
     }
 
     // Update is called once per frame
