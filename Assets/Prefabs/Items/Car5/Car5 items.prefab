@@ -7303,7 +7303,7 @@ GameObject:
   - component: {fileID: 9028471792719434204}
   - component: {fileID: 7718730703773078468}
   - component: {fileID: 5961604186960631574}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Entry-dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7318,8 +7318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4775642745408946081}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.17999, y: 6.73, z: 3.789}
-  m_LocalScale: {x: 1.85323, y: 2.317, z: 2.317}
+  m_LocalPosition: {x: 65.17999, y: 4.202989, z: 3.789}
+  m_LocalScale: {x: 1.85323, y: 0.1, z: 2.317}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3814576374642529583}
