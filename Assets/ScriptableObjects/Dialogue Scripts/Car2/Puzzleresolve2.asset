@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
   m_Name: Puzzleresolve2
   m_EditorClassIdentifier: 
-  scriptList: []
+  scriptList:
+  - Puzzleresolve 2 empty
