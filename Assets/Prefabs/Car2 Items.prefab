@@ -2278,7 +2278,7 @@ GameObject:
   - component: {fileID: 7703008328231456024}
   - component: {fileID: 575100480989164831}
   m_Layer: 0
-  m_Name: Entry
+  m_Name: Entry-dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
