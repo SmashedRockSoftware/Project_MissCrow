@@ -8,6 +8,7 @@ public class CutsceneTrigger : MonoBehaviour {
     [SerializeField] private protected string requiredTag = "Player";  //The tag we want to see to trigger
     [Tooltip("Unity event, which will execute when the required tag enters the collider")]
     [SerializeField] private protected UnityEvent OnEnter;
+    [SerializeField] private protected UnityEvent OnExitDialogue;
 
     [Tooltip("Delays the event firing after entering for X seconds")]
     [SerializeField] private float delayEnter;
@@ -38,10 +39,20 @@ public class CutsceneTrigger : MonoBehaviour {
         }
     }
 
+    public void OnExit() {
+        GameManager.OnExitDialogue -= OnExit;
+        OnExitDialogue.Invoke();
+    }
+
+    private void OnDisable() {
+        GameManager.OnExitDialogue -= OnExit;
+    }
+
     void CallEventEnter() {
         OnEnter.Invoke();
 
         GameManager.Instance.EnterCutsceneMode(dialogueScript.scriptList);
+        GameManager.OnExitDialogue += OnExit;
         //GameManager.Instance.EnterTalkingMode(startingVirtualCamera.transform, item, objectsToMoveToLayer, dialogueScript.scriptList);
     }
 }

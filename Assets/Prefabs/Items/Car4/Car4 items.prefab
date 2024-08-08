@@ -15637,6 +15637,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 7286463e85d51274d8ebf60d251c4f11, type: 2}
@@ -20818,6 +20821,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 120f88f40328f164e88d72178878421f, type: 2}
@@ -31954,6 +31960,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 5aa759e86e23b7a48a23f1d735d5836c, type: 2}

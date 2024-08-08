@@ -5749,7 +5749,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.91, y: 0.67, z: 2.63}
+  m_Size: {x: 3.51, y: 0.67, z: 2.63}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1004537958335766885
 Rigidbody:
@@ -5825,6 +5825,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 0c40f96ec9107914989fc3a1a9baf0f9, type: 2}
@@ -55204,7 +55207,7 @@ GameObject:
   - component: {fileID: 1051310903021744741}
   - component: {fileID: 3765409593437707514}
   - component: {fileID: 5466583727881146514}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: trigger to give shears and firepoker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

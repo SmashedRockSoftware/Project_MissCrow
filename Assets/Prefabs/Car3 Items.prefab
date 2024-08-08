@@ -121,6 +121,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angle: 5
   axis: {x: 0, y: 0, z: 1}
+--- !u!1 &183439392678951696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3085550865974102523}
+  - component: {fileID: 8733784285310004997}
+  m_Layer: 0
+  m_Name: inspect Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3085550865974102523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183439392678951696}
+  m_LocalRotation: {x: -0.028499218, y: -0.1498999, z: 0.0043158215, w: 0.98828095}
+  m_LocalPosition: {x: -26.190983, y: -8.596354, z: -7.9921536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3633449578805615659}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8733784285310004997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183439392678951696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 50
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: fbea2fe210ffa0d48b84340c73288496, type: 2}
 --- !u!1 &262741035980268801
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +425,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: c3eac4704671bf547830c0eef3acd1b7, type: 2}
@@ -3259,6 +3311,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: c03a8b2d8972b8e418426303af0e5fa8, type: 2}
@@ -8468,7 +8523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3633449578805615659
 Transform:
   m_ObjectHideFlags: 0
@@ -8482,6 +8537,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3858122341638687841}
+  - {fileID: 3085550865974102523}
   m_Father: {fileID: 3405548206073824239}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

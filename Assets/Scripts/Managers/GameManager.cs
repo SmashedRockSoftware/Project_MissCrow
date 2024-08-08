@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public static event System.Action OnUnPaused;
     public static event System.Action OnCursorChange;
 
+    public static event System.Action OnExitDialogue;
+
     bool LOCKEDCURSORVISIBILTY = true;
     CursorLockMode LOCKEDCURSORLOCKEDMODE = CursorLockMode.Confined;
 
@@ -106,17 +108,20 @@ public class GameManager : MonoBehaviour
     public void EnterTalkingMode(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
+        PlayerMovement.instance.StopMovement();
         DialogueUI.Instance.EnterDialogue(camera, item, objsToMove, dialogueScript);
     }
 
     public void ExitTalkingMode() {
         inTalkingMode = false;
         currentGameState = GameState.InGame;
+        OnExitDialogue?.Invoke();
     }
 
     public void ExitCutsceneMode() {
         inTalkingMode = false;
         currentGameState = GameState.InGame;
+        OnExitDialogue?.Invoke();
     }
 }
 
