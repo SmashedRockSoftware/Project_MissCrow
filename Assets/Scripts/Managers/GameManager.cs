@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -92,6 +93,12 @@ public class GameManager : MonoBehaviour
         currentGameState = GameState.InDialogue;
         //DialogueUI.Instance.EnterDialogue(dialogueScript);
         DialogueUI.Instance.EnterCutscene(dialogueScript);
+    }
+
+    public void EnterFirstInspectMode(CinemachineVirtualCamera camera, GameObject[] objsToMove, List<string> dialogueScript) {
+        inTalkingMode = true;
+        currentGameState = GameState.InDialogue;
+        DialogueUI.Instance.EnterFirstInspect(camera, objsToMove, dialogueScript);
     }
 
     public void EnterTalkingMode(Transform camera, Item item, GameObject[] objsToMove, List<string> dialogueScript) {

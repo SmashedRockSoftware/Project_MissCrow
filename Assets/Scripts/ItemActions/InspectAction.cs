@@ -10,6 +10,8 @@ public class InspectAction : MonoBehaviour
     [SerializeField] UnityEvent onInspect;
     [SerializeField] string InpectionDialogue;
 
+    [SerializeField] FirstInspect firstInspect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,12 @@ public class InspectAction : MonoBehaviour
     }
 
     public void Inspect() {
+        if(firstInspect != null) {
+            firstInspect.PerformFirstInspection();
+            firstInspect = null;
+            return;
+        }
+
         if(InpectionDialogue == "")
             DialogueUI.Instance.DisplayGrannyText(itemData.inspectDialogue);
         else

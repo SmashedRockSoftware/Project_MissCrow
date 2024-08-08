@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour {
     public CameraChangedDelegate CameraChanged;
 
     public CinemachineVirtualCamera currentCamera;
+    bool canChange = true;
 
     // Start is called before the first frame update
     private void Start() {
@@ -29,9 +30,18 @@ public class CameraManager : MonoBehaviour {
     //    }
     //}
 
-    public void SetCameraToVisible(CinemachineVirtualCamera wantedCamera) {
+    public void ReleaseForcedCamera() {
+        canChange = true;
+    }
+
+    public void SetCameraToVisible(CinemachineVirtualCamera wantedCamera, bool force = false) {
         //var wantedCamera = obj.GetComponent<CinemachineVirtualCamera>();
+        if (!canChange) return;
         if (wantedCamera == null) return;
+
+        if (force) {
+            canChange = false;
+        }
 
         CameraChanged?.Invoke(wantedCamera.transform);
 

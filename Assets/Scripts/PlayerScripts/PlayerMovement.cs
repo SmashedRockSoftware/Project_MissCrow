@@ -81,6 +81,10 @@ public class PlayerMovement : MonoBehaviour
     //    }
     //}
 
+    public void StopMovement() {
+        agent.isStopped = true;
+    }
+
     public void LookAt(Transform target) {
         rotateToFace = agent.transform.DOLookAt(new Vector3(target.position.x, transform.position.y, target.position.z), 1f);
     }
@@ -105,6 +109,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void GoTo(Vector3 _location) {
+        agent.isStopped = false;
         rotateToFace.Kill();
 
         gameObject.SendMessage("GoingToLocation");

@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &590271618231545517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6677272202497257857}
+  - component: {fileID: 7867236181363366724}
+  m_Layer: 0
+  m_Name: FirstInspect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6677272202497257857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590271618231545517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7548847990099234071}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7867236181363366724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590271618231545517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c01331dae70314db860a10b25ca9e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueScript: {fileID: 11400000, guid: dad2fa9849144634d8f5a46db6fd6871, type: 2}
+  virtualCamera: {fileID: 0}
+  objectsToMoveToLayer: []
 --- !u!1 &4171948358681132444
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 167159653513622959, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1720,6 +1767,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5334346055190581405}
+    - targetCorrespondingSourceObject: {fileID: 7015470015320922020, guid: 514a0ee905855394f872bd202779a408,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6677272202497257857}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 655852626352844565, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
@@ -1753,10 +1804,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1607268727426700767}
-    - targetCorrespondingSourceObject: {fileID: 1953707215489881682, guid: 514a0ee905855394f872bd202779a408,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2972818773132544010}
     - targetCorrespondingSourceObject: {fileID: 1953707215489881682, guid: 514a0ee905855394f872bd202779a408,
         type: 3}
       insertIndex: -1
@@ -1834,7 +1881,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 2972818773132544010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TalkAction, Assembly-CSharp
         m_MethodName: RemoveTalkingAbility
         m_Mode: 1
@@ -1978,28 +2025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   InpectionDialogue: 
---- !u!114 &2972818773132544010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334727758759496929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7856c4b18f584244ba818186ea9b0a55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueScript: {fileID: 11400000, guid: dad2fa9849144634d8f5a46db6fd6871, type: 2}
-  virtualCamera: {fileID: 1491490480217637671}
-  onTalk:
-    m_PersistentCalls:
-      m_Calls: []
-  objectsToMoveToLayer:
-  - {fileID: 6467623327781561520}
-  - {fileID: 1334727758759496929}
-  - {fileID: 0}
-  isTalkAble: 1
+  firstInspect: {fileID: 7867236181363366724}
 --- !u!114 &2718345294139660908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,9 +2148,9 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 691603325045627571}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6467623327781561520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5789531978523082243, guid: 514a0ee905855394f872bd202779a408,
+--- !u!4 &7548847990099234071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7015470015320922020, guid: 514a0ee905855394f872bd202779a408,
     type: 3}
   m_PrefabInstance: {fileID: 691603325045627571}
   m_PrefabAsset: {fileID: 0}

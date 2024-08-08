@@ -94,6 +94,7 @@ public class PlayerCursor : MonoBehaviour
     private void InpectAnItem(Item _item) {
         //DialogueUI.Instance.DisplayGrannyText(_item.itemData.inspectDialogue);
         _item.GetComponent<InspectAction>().Inspect();
+        PlayerMovement.instance.StopMovement();
         PlayerMovement.instance.LookAt(_item.transform);
         gameObject.SendMessage("InpectingAnItem");
     }
