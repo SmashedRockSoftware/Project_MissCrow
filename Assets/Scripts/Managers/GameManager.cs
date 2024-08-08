@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     public void EnterCutsceneMode(List<string> dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
+        PlayerMovement.instance.StopMovement();
         //DialogueUI.Instance.EnterDialogue(dialogueScript);
         DialogueUI.Instance.EnterCutscene(dialogueScript);
     }
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
     public void EnterFirstInspectMode(CinemachineVirtualCamera camera, GameObject[] objsToMove, List<string> dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
+        PlayerMovement.instance.StopMovement();
         DialogueUI.Instance.EnterFirstInspect(camera, objsToMove, dialogueScript);
     }
 
