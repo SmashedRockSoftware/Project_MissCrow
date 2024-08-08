@@ -1090,6 +1090,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.8509804
       objectReference: {fileID: 0}
+    - target: {fileID: 2550225841747036544, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3801239507000646628, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
         type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -1110,6 +1115,186 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].name
+      value: Mrs. Crow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].name
+      value: Mr. Crow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].name
+      value: Saffron
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].name
+      value: Cheftin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].name
+      value: Scyllith
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].maxPitch
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].minPitch
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].maxPitch
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].minPitch
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].maxPitch
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].minPitch
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].maxPitch
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].minPitch
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].maxPitch
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].minPitch
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].startingPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].startingPitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].startingPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].startingPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].startingPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].chattersSFX.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].chattersSFX.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].chattersSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].chattersSFX.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].chattersSFX.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].chattersSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f004d6141d5f7154697ac805cb64c49d, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].chattersSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d86758133fb08d247a05905fc1b71a54, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[0].chattersSFX.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 743417907d153ec4da8e722cd91f1b17, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].chattersSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 743417907d153ec4da8e722cd91f1b17, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].chattersSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f004d6141d5f7154697ac805cb64c49d, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[1].chattersSFX.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d86758133fb08d247a05905fc1b71a54, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[2].chattersSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 550318b9e5d29fa4180138948edb8e34, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[3].chattersSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 12e722c8fbbae8e45a6da9d84f154c5a, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].chattersSFX.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d08c520a33b1634a9904634eca5b7d6, type: 3}
+    - target: {fileID: 4653394111235154940, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
+        type: 3}
+      propertyPath: chatterSounds.Array.data[4].chattersSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: def4d0b71c29283439f8d74d0df8e0e9, type: 3}
     - target: {fileID: 5762643315535672945, guid: 6dd5f2593113f7a4ab525d2ccf733c2c,
         type: 3}
       propertyPath: m_IsActive

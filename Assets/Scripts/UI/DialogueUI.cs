@@ -40,6 +40,8 @@ public class DialogueUI : MonoBehaviour
 
     GrannySounds grannySounds;
 
+    [SerializeField] List<ChatterSounds> chatterSounds = new List<ChatterSounds>();
+
     private void Awake() {
         Instance = this;
     }
@@ -182,7 +184,10 @@ public class DialogueUI : MonoBehaviour
         string nextLine = dialogueText[dialogueIndex];
         string[] splitLine = nextLine.Split('|');
 
-        if(splitLine.Length > 1) {
+        var chatterName = "";
+
+        if (splitLine.Length > 1) {
+            chatterName = splitLine[0];
             nameTextMeshDialogue.text = splitLine[0];
             textMeshDialogue.text = splitLine[1];
         }
@@ -190,14 +195,27 @@ public class DialogueUI : MonoBehaviour
             nameTextMeshDialogue.text = "";
             textMeshDialogue.text = splitLine[0];
         }
-           
+
         if (dialogueIndex >= dialogueText.Count - 1) {
             dialogueButton.text = "End";
-        } else {
+        }
+        else {
             dialogueButton.text = "Next";
         }
 
+        PlayChatterSounds(chatterName);
+
         dialogueIndex++;
+
+        void PlayChatterSounds(string chatterName) {
+            if (chatterName != "") {
+                foreach (var chatter in chatterSounds) {
+                    if (chatterName.ToLower().Contains(chatter.name.ToLower())) {
+                        chatter.PlayChatter(cam.transform.position);
+                    }
+                }
+            }
+        }
     }
 
     public bool IsGrannyPanelInUse() {
@@ -232,5 +250,25 @@ public class DialogueUI : MonoBehaviour
         if(dialogueItem != null && Input.GetKeyDown(KeyCode.Space)) {
             DisplayNextDialogue();
         }
+    }
+}
+
+[System.Serializable]
+public class ChatterSounds {
+    public string name = "";
+    [SerializeField] AudioClip[] chattersSFX;
+    [SerializeField] AudioSource audioSource;
+
+    [SerializeField] float minPitch = 0.8f, maxPitch = 1.2f, startingPitch = 1f;
+
+    public void PlayChatter(Vector3 postion) {
+        audioSource.transform.position = postion;
+
+        if (chattersSFX.Length > 0) { 
+            audioSource.clip = chattersSFX[Random.Range(0, chattersSFX.Length - 1)];
+        }
+
+        audioSource.pitch = startingPitch + Random.Range(minPitch, maxPitch);
+        audioSource.Play();
     }
 }
