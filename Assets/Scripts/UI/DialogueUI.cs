@@ -42,6 +42,9 @@ public class DialogueUI : MonoBehaviour
 
     [SerializeField] List<ChatterSounds> chatterSounds = new List<ChatterSounds>();
 
+    public string CurrentDialogLine = "";
+    public static event System.Action OnNextDialogue;
+
     private void Awake() {
         Instance = this;
     }
@@ -179,9 +182,11 @@ public class DialogueUI : MonoBehaviour
             return;
         }
 
-        grannySounds?.InpectingAnItem();
+        OnNextDialogue?.Invoke();
+        //grannySounds?.InpectingAnItem();
 
         string nextLine = dialogueText[dialogueIndex];
+        CurrentDialogLine = nextLine;
         string[] splitLine = nextLine.Split('|');
 
         var chatterName = "";

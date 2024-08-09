@@ -10,6 +10,9 @@ public class DropTargets : MonoBehaviour
     [SerializeField] UnityEvent onDroppedOn;
     [SerializeField] UnityEvent onMovmentFinDroppedOn;
 
+    [SerializeField] UnityEvent OnCorrectItem;
+    [SerializeField] ItemScriptableObject correctItem;
+
     public void SetDropAllowance(bool allowance) {
         isDropable = allowance;
     }
@@ -27,6 +30,12 @@ public class DropTargets : MonoBehaviour
 
     public void DroppedOn(GameObject objectDropped) {
         onDroppedOn.Invoke();
+
+        if(objectDropped.TryGetComponent<Item>(out Item item)) {
+            if(item.itemData == correctItem) {
+                OnCorrectItem.Invoke();
+            }
+        }
     }
 
     public void MovementFinDroppedOn() {

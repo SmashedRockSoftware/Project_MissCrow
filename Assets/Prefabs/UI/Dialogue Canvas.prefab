@@ -211,6 +211,7 @@ MonoBehaviour:
   dialogueButton: {fileID: 2837353350713280570}
   textMeshDialogue: {fileID: 7375908472587584077}
   nameTextMeshDialogue: {fileID: 8237825503656241957}
+  chatterSounds: []
 --- !u!1 &2619308984740944020
 GameObject:
   m_ObjectHideFlags: 0

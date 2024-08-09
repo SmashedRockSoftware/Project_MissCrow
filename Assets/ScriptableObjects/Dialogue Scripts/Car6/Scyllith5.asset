@@ -12,18 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f260ce7d3ea4cb42ac81c1002d90eb7, type: 3}
   m_Name: Scyllith5
   m_EditorClassIdentifier: 
-  scriptList:
-  - Scyllith|A burden is lifted.
-  - Mrs. Crow|If you wish to leave the train, it's best to go around without a great
-    big sword through your heart.
-  - Scyllith|I do not understand. I spurned your help, yet you ease my turmoil.
-  - "Mrs. Crow|It\u2019s what we do, Shadow. The living world is filled with injustice,
-    but this place, this land which straddles True Death, is for healing, for meditation\u2026
-    and for talking. But if you aren\u2019t ready, you aren\u2019t ready. That\u2019s
-    that!"
-  - "Scyllith|When I leave\u2026 I\u2019ll be back here eventually, won\u2019t I?"
-  - "Mrs. Crow|Yes, Miss Scyllith. That\u2019s the way of it."
-  - "Scyllith|Then so be it. I\u2019ll seek answers, I\u2019ll seek justice, and
-    when all is truly at an end\u2026"
-  - "Mrs. Crow|We\u2019ll be waiting. Only when you\u2019re ready, beautiful Shadow. "
-  - Mr. Crow|Well said, Mrs. Crow!
+  scriptList: []
