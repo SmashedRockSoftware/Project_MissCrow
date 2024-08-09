@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 
+
 public class Car6 : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
@@ -42,10 +43,31 @@ public class Car6 : MonoBehaviour
 
     [SerializeField] PlayableDirector playableGivenTeaDirector;
 
+    [SerializeField] AnimateObject teleportAnimatedObject;
+    const string TELEUSE = "Teleport1|Teleportmagicuse";
+    [SerializeField] GameObject telePortParticle;
+    [SerializeField] GameObject telePortParticle1;
+
+    [SerializeField] AnimateObject knightSwordRemoveAnimateObject;
+    //Teleport1|Teleportmagicuse
+
     //[SerializeField] AnimateObject teaFogObject;
     //const string TEAFOG = "ArmatureTeafog1|Teafogmake-480";
 
     [SerializeField] ItemScriptableObject spiderTea;
+
+    [Space]
+    [SerializeField] GameObject knightSword;
+    [SerializeField] AnimateObject animatedKnightSword;
+    [SerializeField] AnimateObject crowBanishAnimatedObject;
+    const string SWRDANIM = "ArmatureScyllith|KnightswordRemove";
+    const string SCYFOUR = "ArmatureScyllith|ScyllithFourth-100";
+    const string CRWMAGI = "Armature_001|Teleportmagicuse";
+    const string CRWBANI = "ArmatureCrowbanish1|Crowbanishanimation";
+
+    [SerializeField] float beforeTalkSwordTime = 3f;
+    [SerializeField] int nextLevel = 2;
+    //
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +78,9 @@ public class Car6 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.P)) {
+            OnFinishedDialogueTeleport();
+        }
     }
 
     public void GivenSpiderTea() {
@@ -71,9 +95,41 @@ public class Car6 : MonoBehaviour
         GameManager.OnExitDialogue += OnFinishedDialogueTeleport;
     }
 
+    public void OnSwordPickedup() {
+        knightSword.gameObject.SetActive(false);
+        animatedKnightSword.gameObject.SetActive(true);
+        crowBanishAnimatedObject.gameObject.SetActive(true);
+        animatedKnightSword.PlayAnimaiton(SWRDANIM);
+        mrCrowAnimateObject.PlayAnimaiton(CRWMAGI);
+        crowBanishAnimatedObject.PlayAnimaiton(CRWBANI);
+        StartCoroutine(SwordCoRoutine());
+
+        //knightSwordRemoveAnimateObject.PlayAnimaiton("Knightsword|KnightswordRemove");
+        //teleportAnimatedObject.PlayAnimaiton("ArmatureScyllith|ScyllithFourth-100");
+    }
+
+    IEnumerator SwordCoRoutine() {
+        yield return new WaitForSeconds(beforeTalkSwordTime);
+        teleportedScyllithAnimateObject.PlayAnimaiton(SCYFOUR);
+        GameManager.Instance.EnterCutsceneMode(dialogueScript[2].scriptList);
+        GameManager.OnExitDialogue += OnFinishedGame;
+
+        //
+    }
+
+    public void OnFinishedGame() {
+        GameManager.OnExitDialogue -= OnFinishedGame;
+        gameObject.SendMessage("FadeThenLoadLevel", nextLevel);
+    }
+
     public void OnFinishedDialogueTeleport() {
         scyllithAnimateObject.gameObject.SetActive(false);
         teleportedScyllithAnimateObject.gameObject.SetActive(true);
+
+        telePortParticle.SetActive(true);
+        telePortParticle1.SetActive(true);
+
+        teleportAnimatedObject.PlayAnimaiton(TELEUSE);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -130,6 +186,8 @@ public class Car6 : MonoBehaviour
 
         //NextDialogue();
     }
+
+
 
     void TriggerEntered() {
         if (!firstEnter) return;

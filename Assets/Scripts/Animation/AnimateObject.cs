@@ -18,6 +18,7 @@ public class AnimateObject : MonoBehaviour
     }
 
     public void PlayAnimaiton(string animation) {
+        if(animator == null) animator = gameObject.GetComponent<Animator>();
         animator.Play(animation);
     }
 
