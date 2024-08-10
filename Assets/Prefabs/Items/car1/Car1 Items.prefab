@@ -5635,7 +5635,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -6828,7 +6828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &691800074278932640
 Transform:
   m_ObjectHideFlags: 0
@@ -6989,6 +6989,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 0ddc231666dbbe641a72b30661f3d460, type: 2}
@@ -7252,7 +7255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2453202804450759427
 Transform:
   m_ObjectHideFlags: 0
@@ -7414,6 +7417,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 4eb99f1f5684b114f804c71decb8949b, type: 2}
@@ -8984,7 +8990,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 999
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}

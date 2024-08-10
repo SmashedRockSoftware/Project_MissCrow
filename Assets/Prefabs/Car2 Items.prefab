@@ -2541,6 +2541,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: 83d14908c126c7c41b9acdc08aa10ac3, type: 2}
@@ -3524,7 +3527,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -3988,6 +3991,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+  OnExitDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   delayEnter: 0
   delayExit: 0
   dialogueScript: {fileID: 11400000, guid: f1937c44826d3854a81e9dc630eccfb8, type: 2}
@@ -4451,7 +4457,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}

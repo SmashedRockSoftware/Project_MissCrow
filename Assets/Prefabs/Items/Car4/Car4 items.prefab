@@ -25966,7 +25966,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -31129,7 +31129,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 1
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -37831,3 +37831,7 @@ MonoBehaviour:
   onMovmentFinDroppedOn:
     m_PersistentCalls:
       m_Calls: []
+  OnCorrectItem:
+    m_PersistentCalls:
+      m_Calls: []
+  correctItem: {fileID: 0}

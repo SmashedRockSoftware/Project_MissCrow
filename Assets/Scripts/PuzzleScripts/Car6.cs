@@ -59,7 +59,7 @@ public class Car6 : MonoBehaviour
     [Space]
     [SerializeField] GameObject knightSword;
     [SerializeField] AnimateObject animatedKnightSword;
-    [SerializeField] AnimateObject crowBanishAnimatedObject;
+    [SerializeField] GameObject crowBanishAnimatedObject;
     const string SWRDANIM = "ArmatureScyllith|KnightswordRemove";
     const string SCYFOUR = "ArmatureScyllith|ScyllithFourth-100";
     const string CRWMAGI = "Armature_001|Teleportmagicuse";
@@ -101,7 +101,7 @@ public class Car6 : MonoBehaviour
         crowBanishAnimatedObject.gameObject.SetActive(true);
         animatedKnightSword.PlayAnimaiton(SWRDANIM);
         mrCrowAnimateObject.PlayAnimaiton(CRWMAGI);
-        crowBanishAnimatedObject.PlayAnimaiton(CRWBANI);
+        //crowBanishAnimatedObject.PlayAnimaiton(CRWBANI);
         StartCoroutine(SwordCoRoutine());
 
         //knightSwordRemoveAnimateObject.PlayAnimaiton("Knightsword|KnightswordRemove");
