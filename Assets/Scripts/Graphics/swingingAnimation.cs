@@ -20,7 +20,7 @@ public class swingingAnimation : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         //tween = swingingTransform.DORotate(endRotation, duration).SetLoops(-1, LoopType.Yoyo).SetEase(ease);
-        if(startRotation == Vector3.zero) startRotation = transform.position;
+        //if(startRotation == Vector3.zero) startRotation = transform.position;
         DoRandomRotateTime();
     }
 
