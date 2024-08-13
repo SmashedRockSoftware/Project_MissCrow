@@ -80444,8 +80444,8 @@ MonoBehaviour:
   spiderTea: {fileID: 11400000, guid: 923609ac93cc3774e96a428e1d651efa, type: 2}
   knightSword: {fileID: 1999400972661845421}
   animatedKnightSword: {fileID: 3476775517686730119}
-  crowBanishAnimatedObject: {fileID: 0}
-  beforeTalkSwordTime: 3
+  crowBanishAnimatedObject: {fileID: 7161069709446949852}
+  beforeTalkSwordTime: 4
   nextLevel: 2
 --- !u!114 &4512978332966813597
 MonoBehaviour:
@@ -82376,6 +82376,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationString: ArmatureCrowbanish1|Crowbanishanimation
+--- !u!1 &7161069709446949852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6947123927840385860, guid: fe00f0e9372b4f949b85736666aa9b78,
+    type: 3}
+  m_PrefabInstance: {fileID: 218458194793447576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7506069397641195878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7720001864841474558, guid: fe00f0e9372b4f949b85736666aa9b78,
