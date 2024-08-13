@@ -7731,7 +7731,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.6769558e-17, z: 7.19e-43, w: 1.25e-43}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1.02e-43, w: 3.66e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -9104,7 +9104,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.4e-44, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 2.3250651e+23, y: -1.07810656e-10, z: 1.02e-43, w: 6e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -14820,6 +14820,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8b0b7d1c63780f140a454ff07d156c4e, type: 2}
+    - target: {fileID: 7895165715446364280, guid: ef248f1292120344f86efe48aee44dca,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3676adb17c578364e95ba3c27d5fbdf9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -14887,6 +14892,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2475065484001815192}
     m_Modifications:
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DragAndDropComboHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HintToUseH, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7131929174750185134, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8435788918104150788, guid: 55b961f549ba0ed4fbebc8bca4abab8e,
         type: 3}
       propertyPath: m_RootOrder
@@ -15060,6 +15095,11 @@ PrefabInstance:
       propertyPath: openPosition.z
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 959781992340516615, guid: 82ae698cad3d28a43ad6cce82c3e52f9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1e4f0412dcafa84da47d5bda84a7000, type: 3}
     - target: {fileID: 1200823730573776251, guid: 82ae698cad3d28a43ad6cce82c3e52f9,
         type: 3}
       propertyPath: m_Extents.z
@@ -15080,6 +15120,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3044189084804116023, guid: 82ae698cad3d28a43ad6cce82c3e52f9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1e4f0412dcafa84da47d5bda84a7000, type: 3}
     - target: {fileID: 6999431265387893336, guid: 82ae698cad3d28a43ad6cce82c3e52f9,
         type: 3}
       propertyPath: m_RootOrder
@@ -15334,6 +15379,11 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6593177448150557509, guid: 850d68784d330324882ce0e38ac9ecd9,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d017b0485c79a74fbfe84df046ac478, type: 3}
     - target: {fileID: 6593177448150557509, guid: 850d68784d330324882ce0e38ac9ecd9,
         type: 3}
       propertyPath: rolloffMode
@@ -15591,6 +15641,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DragAndDropComboHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HintToUseH, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493377017972654012, guid: 3c3f71006f2d528499698962ed637281,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15748,6 +15828,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: heatingtonic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DragAndDropComboHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HintToUseH, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213010036235016771, guid: 335055480351dd74e99425bcc8926509,
+        type: 3}
+      propertyPath: onPickup.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

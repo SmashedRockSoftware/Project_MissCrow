@@ -11,6 +11,9 @@ public class HintToUseH : MonoBehaviour
 
     [SerializeField] GameObject hintText;
 
+    [Space]
+    [SerializeField] GameObject comboHint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +40,9 @@ public class HintToUseH : MonoBehaviour
 
             timer = timeTillHint;
         }
+    }
+
+    public void DragAndDropComboHint() {
+        comboHint.SetActive(true);
     }
 }
