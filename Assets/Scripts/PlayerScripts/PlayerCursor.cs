@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerCursor : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class PlayerCursor : MonoBehaviour
                 currentItem = null;
                 SwitchCursor(0.1f);
 
-                if (Input.GetMouseButtonUp(0)) {
+                if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject()) {
                     PlayerMovement.instance.GoTo(hit.point);
                 }
             }
