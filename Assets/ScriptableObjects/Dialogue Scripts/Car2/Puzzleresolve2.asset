@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Puzzleresolve2
   m_EditorClassIdentifier: 
   scriptList:
-  - Puzzleresolve 2 empty
+  - "Mrs. Crow|Get yourself cozy. I\u2019ll see what the ruckus is about and put
+    it to rights, just you wait!"
+  - 'Mrs. Crow|And I promise to bring this firepoker back. I might need to bring
+    it along with me. '

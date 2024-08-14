@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Scyllith5
   m_EditorClassIdentifier: 
   scriptList:
-  - THIS IS THE END
-  - AND ITS EMPTY DIALOGUE
-  - EMMA! PLS FIX
+  - Scyllith|A burden is lifted. Thank you, Shade.
+  - Mrs. Crow|It is the least I could do. That, and listen.
+  - Scyllith|They were massacred. My own family, right in front of me. Vengeance
+    must be sought. You understand this, do you not? Would you trap me here?
+  - Mrs. Crow|No, great Shadow. You are free to leave, and quite free to haunt those
+    who have wronged you. It sounds like they sorely deserve it.
+  - Scyllith|And one day, I will return to your train, whether or not I will it.
+  - "Mrs. Crow|Yes, Miss Scyllith. That\u2019s the way of it."
+  - "Scyllith|Then so be it. I\u2019ll seek answers, I\u2019ll seek justice, and
+    when all is truly at an end\u2026"
+  - "Mrs. Crow|We\u2019ll be waiting. Only when you\u2019re ready, of course."
