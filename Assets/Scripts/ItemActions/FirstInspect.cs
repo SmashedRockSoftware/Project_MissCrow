@@ -6,12 +6,16 @@ using UnityEngine.Events;
 
 public class FirstInspect : MonoBehaviour {
     [SerializeField] DialogueScript dialogueScript;
+    [SerializeField] TextAsset dialogueScriptTextAsset;
     [SerializeField] CinemachineVirtualCamera virtualCamera;
 
     [SerializeField] GameObject[] objectsToMoveToLayer;
 
     public void PerformFirstInspection() {
-        GameManager.Instance.EnterFirstInspectMode(virtualCamera, objectsToMoveToLayer, dialogueScript.scriptList);
+        if(dialogueScriptTextAsset != null)
+            GameManager.Instance.EnterFirstInspectMode(virtualCamera, objectsToMoveToLayer, dialogueScriptTextAsset);
+        else 
+            GameManager.Instance.EnterFirstInspectMode(virtualCamera, objectsToMoveToLayer, dialogueScript.scriptList);
     }
 }
 

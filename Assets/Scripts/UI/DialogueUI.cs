@@ -1,11 +1,12 @@
 using Cinemachine;
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueUI : MonoBehaviour
+public class DialogueUI : MonoBehaviour, IDialogueInterface
 {
     public static DialogueUI Instance;
 
@@ -45,8 +46,12 @@ public class DialogueUI : MonoBehaviour
     public string CurrentDialogLine = "";
     public static event System.Action OnNextDialogue;
 
+    InkDialogueManager inkDialogueManager;
+
     private void Awake() {
         Instance = this;
+
+        inkDialogueManager = gameObject.GetComponent<InkDialogueManager>();
     }
 
     private void Start() {
@@ -92,6 +97,61 @@ public class DialogueUI : MonoBehaviour
 
         dialogueIndex = 0;
         DisplayNextDialogue();
+    }
+
+    public void EnterCutscene(TextAsset dialogueScript) {
+        //dialogueItem = item;
+
+        //originalLayerMask = item.gameObject.layer;
+        //var mask = LayerMask.NameToLayer("DialogueLayer");
+        //RecursivelyChangeLayer(item.gameObject, mask);
+        //foreach (var obj in objsToMove) {
+        //    if (obj == null) continue;
+
+        //    obj.layer = mask;
+        //}
+
+        //layerdSwappedObjs = objsToMove;
+
+        //dialoguePanel.SetActive(true);
+        //dialogueCamera.transform.position = camera.transform.position;
+        //dialogueCamera.transform.rotation = camera.transform.rotation;
+        //dialogueCamera.gameObject.SetActive(true);
+
+        dialogueTextPanel.SetActive(true);
+        //dialogueText = dialogueScript;
+
+        dialogueIndex = 0;
+        inkDialogueManager.StartDialogue(dialogueScript); //TODO
+    }
+
+    public void EnterFirstInspect(CinemachineVirtualCamera camera, GameObject[] objsToMove, TextAsset dialogueScript) {
+        //dialogueItem = item;
+
+        //originalLayerMask = item.gameObject.layer;
+        var mask = LayerMask.NameToLayer("DialogueLayer");
+        //RecursivelyChangeLayer(item.gameObject, mask);
+        foreach (var obj in objsToMove) {
+            if (obj == null) continue;
+
+            obj.layer = mask;
+        }
+
+        layerdSwappedObjs = objsToMove;
+
+        //dialoguePanel.SetActive(true);
+        dialogueCamera.transform.position = camera.transform.position;
+        dialogueCamera.transform.rotation = camera.transform.rotation;
+        dialogueCamera.gameObject.SetActive(true);
+
+        CameraManager.instance.SetCameraToVisible(camera, true);
+
+        dialogueTextPanel.SetActive(true);
+        //dialogueText = dialogueScript;
+
+        dialogueIndex = 0;
+
+        inkDialogueManager.StartDialogue(dialogueScript);
     }
 
     public void EnterFirstInspect(CinemachineVirtualCamera camera, GameObject[] objsToMove, List<string> dialogueScript) {
@@ -177,6 +237,12 @@ public class DialogueUI : MonoBehaviour
     }
 
     public void DisplayNextDialogue() {
+        if (dialogueText == null) {
+            inkDialogueManager.NextDialougue();
+            return;
+        }
+
+
         if (dialogueIndex == dialogueText.Count) {
             ExitDialogue();
             return;
@@ -255,6 +321,32 @@ public class DialogueUI : MonoBehaviour
         if(dialogueItem != null && Input.GetKeyDown(KeyCode.Space)) {
             DisplayNextDialogue();
         }
+    }
+
+    public void DisplayDialogue(string dialogue, bool canContinue) {
+        CurrentDialogLine = dialogue;
+        dialogueButton.text = canContinue ? "Next" : "End";
+        textMeshDialogue.text = dialogue;
+    }
+
+    public void NextButtonVisibility(bool isVisible) {
+        dialogueButton.gameObject.SetActive(isVisible);
+    }
+
+    public void SetTextVisibility(bool isVisible) {
+        textMeshDialogue.gameObject.SetActive(isVisible);
+    }
+
+    public void RemoveAllChoiceButtons() {
+        //throw new System.NotImplementedException();  //TODO ignore
+    }
+
+    public void AddChoiceButton(string buttonText, System.Action<Choice> onSelect, Choice choice) {
+        throw new System.NotImplementedException();  //TODO ignore
+    }
+
+    public void DisplayName(string name) {
+        nameTextMeshDialogue.text = name;
     }
 }
 

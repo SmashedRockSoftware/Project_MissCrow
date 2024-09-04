@@ -12,6 +12,7 @@ public class Car6 : MonoBehaviour
     [SerializeField] Item item;
     [SerializeField] GameObject[] objectsToMoveToLayer;
     [SerializeField] DialogueScript[] dialogueScript;
+    [SerializeField] TextAsset ScylithCombo1;
 
     [Space]
     [Tooltip("Only objects with this tag will trigger this trigger, leave blank to allow anything to trigger this trigger")]
@@ -38,8 +39,8 @@ public class Car6 : MonoBehaviour
     const string SCYLTURN = "ArmatureScyllith|Scyllithturn-100";
     const string SCYLRUN = "ArmatureScyllith|Scyllithrun-148";
     const string SCYLTEL = "ArmatureScyllith|ScyllithTeleported-50";
-    const string END1 = "Mrs. Crow|Miss Scyllith, would you care for a bit of tea while you talk?";
-    const string END2 = "Scyllith|I am the mighty Scyllith, princess of the great Kharitbr House. I will not be condescended to!";
+    const string END1 = "Miss Scyllith, would you care for a bit of tea while you talk?";
+    const string END2 = "I am the mighty Scyllith, princess of the great Kharitbr House. I will not be condescended to!";
 
     [SerializeField] PlayableDirector playableGivenTeaDirector;
 
@@ -153,6 +154,18 @@ public class Car6 : MonoBehaviour
         DialogueUI.OnNextDialogue -= OnNextDialogue;
     }
 
+    public void animatedEvent(string value) {
+        if (value == "ScyllithTurn") {
+            scyllithAnimateObject.PlayAnimaiton(SCYLTURN);
+            return;
+        }
+
+        if (value == "ScyllithLeave") {
+            scyllithAnimateObject.PlayAnimaiton(SCYLRUN);
+            return;
+        }
+    }
+
     public void OnNextDialogue() {
         if (DialogueUI.Instance.CurrentDialogLine == END1) {
             scyllithAnimateObject.PlayAnimaiton(SCYLTURN);
@@ -200,7 +213,11 @@ public class Car6 : MonoBehaviour
     }
 
     private void NextDialogue() {
-        GameManager.Instance.EnterCutsceneMode(dialogueScript[currentIndex].scriptList);
+        if(currentIndex == 0) {
+            GameManager.Instance.EnterCutsceneMode(ScylithCombo1);
+        } else
+            GameManager.Instance.EnterCutsceneMode(dialogueScript[currentIndex].scriptList);
+
         currentIndex++;
     }
 }

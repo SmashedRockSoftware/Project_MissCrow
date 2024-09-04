@@ -17,6 +17,7 @@ public class CutsceneTrigger : MonoBehaviour {
 
     [Space]
     [SerializeField] DialogueScript dialogueScript;
+    [SerializeField] TextAsset dialogueTextAsset;
     //public List<string> scriptList = new List<string>();
     public List<CinemachineVirtualCamera> cameraShotList = new List<CinemachineVirtualCamera>();
 
@@ -51,7 +52,11 @@ public class CutsceneTrigger : MonoBehaviour {
     void CallEventEnter() {
         OnEnter.Invoke();
 
-        GameManager.Instance.EnterCutsceneMode(dialogueScript.scriptList);
+        if(dialogueTextAsset != null) 
+            GameManager.Instance.EnterCutsceneMode(dialogueTextAsset);
+        else
+            GameManager.Instance.EnterCutsceneMode(dialogueScript.scriptList);
+
         GameManager.OnExitDialogue += OnExit;
         //GameManager.Instance.EnterTalkingMode(startingVirtualCamera.transform, item, objectsToMoveToLayer, dialogueScript.scriptList);
     }

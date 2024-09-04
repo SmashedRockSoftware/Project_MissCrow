@@ -98,7 +98,22 @@ public class GameManager : MonoBehaviour
         DialogueUI.Instance.EnterCutscene(dialogueScript);
     }
 
+    public void EnterCutsceneMode(TextAsset dialogueScript) {
+        inTalkingMode = true;
+        currentGameState = GameState.InDialogue;
+        PlayerMovement.instance.StopMovement();
+        //DialogueUI.Instance.EnterDialogue(dialogueScript);
+        DialogueUI.Instance.EnterCutscene(dialogueScript);
+    }
+
     public void EnterFirstInspectMode(CinemachineVirtualCamera camera, GameObject[] objsToMove, List<string> dialogueScript) {
+        inTalkingMode = true;
+        currentGameState = GameState.InDialogue;
+        PlayerMovement.instance.StopMovement();
+        DialogueUI.Instance.EnterFirstInspect(camera, objsToMove, dialogueScript);
+    }
+
+    public void EnterFirstInspectMode(CinemachineVirtualCamera camera, GameObject[] objsToMove, TextAsset dialogueScript) {
         inTalkingMode = true;
         currentGameState = GameState.InDialogue;
         PlayerMovement.instance.StopMovement();
